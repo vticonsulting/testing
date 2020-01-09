@@ -1,6 +1,22 @@
 module.exports = {
-  stories: ["../src/**/*.stories.(js|mdx)"],
+  stories: [
+    "../src/components/intro.stories.mdx", // load intro first
+    "../src/**/*.stories.(js|mdx)"],
   addons: [
-    "@storybook/addon-docs/preset"
+    "@storybook/addon-actions",
+    "@storybook/addon-links",
+    "@storybook/addon-events",
+    "@storybook/addon-notes",
+    "@storybook/addon-knobs",
+    "@storybook/addon-options",
+    "@storybook/addon-backgrounds",
+    "@storybook/addon-a11y",
+    "@storybook/addon-jest",
+    "@storybook/addon-viewport",
+    {
+      name: "@storybook/addon-docs",
+      options: { configureJSX: true }
+
+    }
   ],
 };

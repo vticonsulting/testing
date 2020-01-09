@@ -6,7 +6,14 @@ module.exports = {
   extends: ["plugin:vue/essential", "@vue/prettier"],
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off"
+    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
+    "vue/component-name-in-template-casing": [`error`, `PascalCase`],
+    "vue/no-v-html": `off`
+    // 'vue/html-closing-bracket-spacing': [`error`, {
+    //   startTag: `never`,
+    //   endTag: `never`,
+    //   selfClosingTag: `never`,
+    // }],
   },
   parserOptions: {
     parser: "babel-eslint"

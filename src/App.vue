@@ -10,43 +10,21 @@
 <script>
 export default {
   mounted() {
-    const link = document.createElement("link");
-    link.setAttribute("rel", "stylesheet");
-    link.setAttribute(
-      "href",
-      "https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500,700"
-    );
-    link.dataset.saviHead = "true";
-    document.head.appendChild(link);
+    // const link = document.createElement("link");
+    // link.setAttribute("rel", "stylesheet");
+    // link.setAttribute(
+    //   "href",
+    //   "https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,500,700"
+    // );
+    // link.dataset.saviHead = "true";
+    // document.head.appendChild(link);
   },
   destroyed() {
-    const link = document.querySelector("head > [data-savi-head]");
-    if (!link) {
-      return;
-    }
-    document.head.removeChild(link);
+    // const link = document.querySelector("head > [data-savi-head]");
+    // if (!link) {
+    //   return;
+    // }
+    // document.head.removeChild(link);
   }
 };
 </script>
-<style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>

@@ -1,0 +1,17 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import InfoButton from './InfoButton.vue';
+
+<Meta title='InfoButton' component={InfoButton} />
+
+# InfoButton
+
+Some **markdown** description, or whatever you want.
+
+<Story name='basic' height='400px'>{{
+  components: { InfoButton },
+  template: '<info-button label="I\'m a button!"/>',
+}}</Story>
+
+## Props
+
+<Props of={InfoButton} />
