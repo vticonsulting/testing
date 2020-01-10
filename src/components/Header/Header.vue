@@ -1,6 +1,6 @@
 <template>
   <header
-    class="flex items-center justify-between py-4 px-8 text-white bg-blue-700"
+    class="flex items-center justify-between py-4 px-4 text-white bg-blue-700"
   >
     <!-- <nav id="nav">
       <router-link to="/">Home</router-link> |
