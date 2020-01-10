@@ -1,1 +1,1 @@
-import "@/plugins/fontawesome";
+// import "@/plugins/fontawesome";
