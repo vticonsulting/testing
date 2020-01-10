@@ -1,13 +1,12 @@
 <template>
   <button
-    class="button"
-    :style="{ color, borderColor: color }"
+    class="py-1 px-4 border rounded-full shadow focus:outline-none focus:shadow-outline bg-white"
     :class="{ rounded }"
     @click="onClick"
     @dblclick="onDoubleClick"
     :disabled="isDisabled"
   >
-    <slot />!
+    <slot />
   </button>
 </template>
 
@@ -45,15 +44,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.rounded {
-  border-radius: 5px;
-}
-.button {
-  border: 3px solid;
-  padding: 10px 20px;
-  background-color: white;
-  outline: none;
-}
-</style>

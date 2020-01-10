@@ -1,6 +1,6 @@
 module.exports = {
   stories: [
-    "../src/components/intro.stories.mdx", // load intro first
+    "../src/intro.stories.mdx", // load intro first
     "../src/**/*.stories.(js|mdx)"],
   addons: [
     "@storybook/addon-actions",
@@ -8,7 +8,6 @@ module.exports = {
     "@storybook/addon-events",
     "@storybook/addon-notes",
     "@storybook/addon-knobs",
-    "@storybook/addon-options",
     "@storybook/addon-backgrounds",
     "@storybook/addon-a11y",
     "@storybook/addon-jest",

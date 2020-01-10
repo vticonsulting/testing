@@ -1,5 +1,5 @@
 <template>
   <div class="home">
-    Home Page
+    <router-link to="/dashboard">Dashboard</router-link>
   </div>
 </template>

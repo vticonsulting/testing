@@ -1,12 +1,14 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-    <button id="test-button" @click="push">Test Button</button>
+  <div class="flex items-center justify-center flex-1 w-full max-w-6xl mx-auto">
+    <BaseButton id="test-button" class="text-white bg-green-600" @click="push">
+      Pledge Online
+    </BaseButton>
   </div>
 </template>
 
 <script>
 export default {
+  name: "Dashboard",
   methods: {
     push() {
       // eslint-disable-next-line

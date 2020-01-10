@@ -9,6 +9,10 @@ import { withA11y } from '@storybook/addon-a11y';
 
 import Button from '../src/components/Button'
 
+/* eslint-disable import/no-extraneous-dependencies */
+import '@fortawesome/fontawesome-pro/css/all.css'
+
+
 addDecorator(withA11y);
 
 Vue.component('Button', Button)

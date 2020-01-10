@@ -1,16 +1,27 @@
-import MyButton from "./Button.vue";
+import { action } from "@storybook/addon-actions";
+
+import BaseButton from "./Button.vue";
 
 export default {
   title: "Button",
-  component: MyButton
+  component: BaseButton
 };
 
-export const Rounded = () => ({
-  components: { MyButton },
-  template: '<my-button :rounded="true">A Button with rounded edges</my-button>'
+export const Default = () => ({
+  components: { BaseButton },
+  template:
+    '<BaseButton :rounded="true">A Button with rounded edges</BaseButton>'
 });
 
-export const Square = () => ({
-  components: { MyButton },
-  template: '<my-button :rounded="false">A Button with square edges</my-button>'
+export const Primary = () => ({
+  components: { BaseButton },
+  template: '<BaseButton :rounded="false">Primary Button</BaseButton>'
+});
+
+export const Secondary = () => ({
+  components: { BaseButton },
+  template: '<BaseButton @click="action">Secondary Button</BaseButton>',
+  methods: {
+    action: action("clicked")
+  }
 });
