@@ -7,15 +7,11 @@ import Vue from 'vue'
 import Vuex from 'vuex';
 import { withA11y } from '@storybook/addon-a11y';
 
-import HelloWorld from '../src/components/HelloWorld.vue'
-import Badge from '../src/components/Badge'
-import MyButton from '../src/components/Button'
+import Button from '../src/components/Button'
 
 addDecorator(withA11y);
 
-Vue.component('HelloWorld', HelloWorld)
-Vue.component('Badge', Badge)
-Vue.component('my-button', MyButton)
+Vue.component('Button', Button)
 
 Vue.use(Vuex)
 
