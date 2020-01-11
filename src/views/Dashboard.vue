@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-center flex-1 w-full max-w-6xl mx-auto">
+  <div class="w-full max-w-6xl mx-auto">
     <BaseButton id="test-button" class="text-white bg-green-600" @click="push">
       Pledge Online
     </BaseButton>

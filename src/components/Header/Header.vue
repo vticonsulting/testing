@@ -2,10 +2,6 @@
   <header
     class="flex items-center justify-between py-4 px-4 text-white bg-blue-700"
   >
-    <!-- <nav id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/dashboard">Dashboard</router-link>
-    </nav> -->
     <a href="#">
       <svg class="h-6 w-6 fill-current" viewBox="0 0 448 512">
         <path
