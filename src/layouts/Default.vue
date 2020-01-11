@@ -1,5 +1,8 @@
 <template>
-  <div class="flex flex-col min-h-screen">
+  <div
+    class="flex flex-col min-h-screen"
+    style="min-height: -webkit-fill-available"
+  >
     <TheHeader />
     <main class="flex-1">
       <slot />
