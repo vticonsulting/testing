@@ -1,0 +1,35 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+import Default from './Default.vue'
+import NoSidebar from './NoSidebar.vue'
+
+<Meta title="Layouts" />
+
+# Default Layout
+
+Some **markdown** description, or whatever you want.
+
+<Preview>
+  <Story name="Default">
+    {{
+      components: { Default },
+      template: '<Default></Default>',
+    }}
+  </Story>
+</Preview>
+
+# No Sidebar
+
+<Preview>
+  <Story name="NoSidebar">
+    {{
+      components: { NoSidebar },
+      template: '<NoSidebar>No Sidebar</NoSidebar>',
+    }}
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={NoSidebar} />
+
+
