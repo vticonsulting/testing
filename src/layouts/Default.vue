@@ -1,22 +1,15 @@
 <template>
-  <div
-    class="flex flex-col min-h-screen"
-    style="min-height: -webkit-fill-available"
-  >
+  <section class="min-h-screen">
     <TheHeader />
-    <main class="flex-1">
-      <slot />
-    </main>
-    <TheFooter />
-  </div>
+    <slot />
+  </section>
 </template>
 
 <script>
 import TheHeader from '../components/Header'
-import TheFooter from '../components/Footer'
 
 export default {
   name: 'DefaultLayout',
-  components: { TheHeader, TheFooter },
+  components: { TheHeader },
 }
 </script>

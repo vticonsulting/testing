@@ -1,9 +1,9 @@
 <template>
-  <div class="w-full max-w-6xl mx-auto rounded bg-white pt-4 lg:pt-10">
+  <main class="w-full max-w-6xl mx-auto bg-white pt-28 lg:pt-40">
     <!-- Participant Cards -->
     <div class="lg:flex mb-6 lg:mb-8 px-3 lg:px-0">
       <!-- Participant Card -->
-      <div class="w-full mb-3 lg:mb-0 lg:mx-2 p-4 border-2 border-gray-300 bg-white">
+      <div class="w-full mb-3 lg:mb-0 lg:mx-2 p-4 border-2 rounded-lg border-gray-300 bg-white">
         <div class="flex w-full mb-3 lg:px-3 relative">
           <div class="media-left mr-4">
             <a>
@@ -78,7 +78,7 @@
       </button>
 
       <!-- Video -->
-      <div class="h-48 mx-2 mb-6 bg-gray-300" />
+      <div class="h-48 mx-2 mb-6 bg-gray-300 rounded" />
 
       <!-- Playlist -->
       <div class="flex mx-2 mb-6 border-b">
@@ -181,7 +181,7 @@
         </div>
       </button>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>

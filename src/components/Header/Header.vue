@@ -1,14 +1,12 @@
 <template>
-  <header class="app-header h-24 lg:h-32 py-4 px-4 text-white bg-cover bg-center bg-blue-700">
+  <header
+    v-scroll="handleScroll"
+    class="app-header fixed w-full px-4 text-white bg-cover bg-center bg-blue-700 z-30"
+  >
     <div class="flex items-center justify-between w-full h-full max-w-6xl mx-auto">
       <slot>
         <div class="flex items-center">
-          <button
-            class="mr-3"
-            type="button"
-            name="menu-toggle"
-            @click="toggle"
-          >
+          <button class="mr-3" type="button" name="menu-toggle" @click="toggle">
             <svg
               class="h-8 w-8 stroke-current stroke-2"
               viewBox="0 0 24 24"
@@ -16,24 +14,9 @@
               stroke-linecap="round"
               stroke-linejoin="round"
             >
-              <line
-                x1="3"
-                y1="12"
-                x2="21"
-                y2="12"
-              />
-              <line
-                x1="3"
-                y1="6"
-                x2="21"
-                y2="6"
-              />
-              <line
-                x1="3"
-                y1="18"
-                x2="21"
-                y2="18"
-              />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="18" x2="21" y2="18" />
             </svg>
           </button>
           <img
@@ -42,19 +25,14 @@
             class="rounded-full shadow-md w-16 h-16 lg:w-20 lg:h-20 mb-0 mr-3"
           >
           <div>
-            <h1 class="page-header text-xl sm:text-2xl md:text-3xl lg:text-3xl text-white leading-none font-light shadow">
-              Roosevelt Franklin Elementary School
-            </h1>
+            <h1
+              class="page-header text-xl sm:text-2xl md:text-3xl lg:text-3xl text-white leading-none font-light shadow"
+            >Roosevelt Franklin Elementary School</h1>
           </div>
         </div>
       </slot>
       <nav class="flex items-center justify-between">
-        <button
-          type="button"
-          name="alert-toggle"
-          @click="toggle"
-          class="ml-3"
-        >
+        <button type="button" name="alert-toggle" @click="toggle" class="ml-3">
           <svg
             class="h-8 w-8 fill-current stroke-current stroke-2 transform duration-500 ease-in-out"
             viewBox="0 0 24 24"
@@ -72,9 +50,21 @@
 </template>
 
 <script>
+import Scroll from '@/directives/scroll'
+
 export default {
   name: 'Header',
+  directives: {
+    Scroll,
+  },
   methods: {
+    handleScroll (evt, el) {
+      if (window.scrollY > 50) {
+        el.classList.add('shrink')
+      } else {
+        el.classList.remove('shrink')
+      }
+    },
     toggle (e) {
       this.$emit('toggle', e.currentTarget.name)
     },
@@ -84,8 +74,25 @@ export default {
 
 <style>
 .app-header {
-  background-image:
-    linear-gradient(
+  @apply py-3;
+  transition: all 0.4s ease-in-out;
+}
+
+.app-header.shrink {
+  @apply py-1;
+}
+
+@screen lg {
+  .app-header {
+    @apply py-6;
+  }
+  .app-header.shrink {
+    @apply py-2;
+  }
+}
+
+.app-header {
+  background-image: linear-gradient(
       180deg,
       rgba(70, 87, 143, 0.9) 10%,
       rgba(8, 1, 52, 0.8) 100%
