@@ -1,8 +1,19 @@
 <template>
-  <div id="app" class="antialiased text-gray-700 bg-blue-100">
+  <div
+    id="app"
+    class="antialiased text-gray-700"
+  >
+    <!-- <div class="py-2 flex items-center justify-center w-full bg-blue-900 text-blue-100">
+      <div class="px-3 w-full max-w-6xl mx-auto">
+        <a href="/dashboard" class="text-sm border-b border-transparent transform hover:border-gray-200 duration-300 ease-in-out">
+          Return to classic dashboard
+        </a>
+      </div>
+    </div> -->
     <component :is="layout">
       <router-view />
     </component>
+
   </div>
 </template>
 <script>

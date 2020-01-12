@@ -3,12 +3,12 @@
     class="
       block
       leading-none
-      w-full
+      inline-block
       mx-auto
       py-2
       px-4
       bg-white
-      rounded
+      rounded-md
       border-2
       font-semibold
       shadow-md
@@ -18,9 +18,9 @@
       lg:max-w-xs
     "
     :class="[classObject]"
+    :disabled="isDisabled"
     @click="onClick"
     @dblclick="onDoubleClick"
-    :disabled="isDisabled"
   >
     <!-- @slot Default to label prop -->
     <slot>{{ label }}</slot>

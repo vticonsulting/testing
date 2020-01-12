@@ -9,11 +9,13 @@ import '@/plugins'
 
 import Default from './layouts/Default.vue'
 import NoSidebar from './layouts/NoSidebar.vue'
+import Avatar from '@/components/Avatar'
 import BaseButton from '@/components/Button'
 
 Vue.component('default-layout', Default)
 Vue.component('no-sidebar-layout', NoSidebar)
 Vue.component('BaseButton', BaseButton)
+Vue.component('Avatar', Avatar)
 
 Vue.config.productionTip = false
 

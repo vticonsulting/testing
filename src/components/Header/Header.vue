@@ -1,24 +1,72 @@
 <template>
-  <header
-    class="flex items-center justify-between py-4 px-4 text-white bg-blue-700"
-  >
-    <nav class="flex items-center justify-between w-full max-w-6xl mx-auto">
-      <button type="button" name="menu-toggle" @click="toggle">
-        <svg class="h-6 w-6 fill-current" viewBox="0 0 448 512">
-          <path
-            class="shadow"
-            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
-          />
-        </svg>
-      </button>
-      <button type="button" name="alert-toggle" @click="toggle">
-        <svg class="h-6 w-6 fill-current" viewBox="0 0 448 512">
-          <path
-            d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z"
-          />
-        </svg>
-      </button>
-    </nav>
+  <header class="app-header h-24 lg:h-32 py-4 px-4 text-white bg-cover bg-center bg-blue-700">
+    <div class="flex items-center justify-between w-full h-full max-w-6xl mx-auto">
+      <slot>
+        <div class="flex items-center">
+          <img
+            src="/v3-assets/dashboard/images/thomas_jefferson.png"
+            alt="2000px-Georgia_Athletics_logo.svg.png"
+            class="rounded-full shadow-md w-16 h-16 lg:w-20 lg:h-20 mb-0 mr-3"
+          >
+          <div>
+            <h1 class="page-header text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white leading-none font-light shadow">
+              Roosevelt Franklin Elementary School
+            </h1>
+          </div>
+        </div>
+      </slot>
+      <nav class="flex items-center justify-between">
+        <button
+          type="button"
+          name="alert-toggle"
+          @click="toggle"
+          class="mr-4"
+        >
+          <svg
+            class="h-8 w-8 stroke-current stroke-1 transform duration-500 ease-in-out"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+            <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+          </svg>
+        </button>
+        <button
+          type="button"
+          name="menu-toggle"
+          @click="toggle"
+        >
+          <svg
+            class="h-8 w-8 stroke-current stroke-1"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line
+              x1="3"
+              y1="12"
+              x2="21"
+              y2="12"
+            />
+            <line
+              x1="3"
+              y1="6"
+              x2="21"
+              y2="6"
+            />
+            <line
+              x1="3"
+              y1="18"
+              x2="21"
+              y2="18"
+            />
+          </svg>
+        </button>
+      </nav>
+    </div>
   </header>
 </template>
 
@@ -33,3 +81,15 @@ export default {
   },
 }
 </script>
+
+<style>
+.app-header {
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(70, 87, 143, 0.9) 10%,
+      rgba(8, 1, 52, 0.8) 100%
+    ),
+    url(/v3-assets/dashboard/images/header_bg.jpg);
+}
+</style>
