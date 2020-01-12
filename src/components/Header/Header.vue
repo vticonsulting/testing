@@ -75,7 +75,6 @@ export default {
   name: 'Header',
   methods: {
     toggle (e) {
-      console.log('toggled')
       this.$emit('toggle', e.currentTarget.name)
     },
   },

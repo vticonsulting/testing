@@ -3,13 +3,21 @@
     id="app"
     class="antialiased text-gray-700"
   >
-    <!-- <div class="py-2 flex items-center justify-center w-full bg-blue-900 text-blue-100">
+    <div class="some-element py-2 flex items-center justify-center w-full">
       <div class="px-3 w-full max-w-6xl mx-auto">
         <a href="/dashboard" class="text-sm border-b border-transparent transform hover:border-gray-200 duration-300 ease-in-out">
           Return to classic dashboard
         </a>
       </div>
-    </div> -->
+    </div>
+    <div class="some-element darker py-2 flex items-center justify-center w-full">
+      <div class="px-3 w-full max-w-6xl mx-auto">
+        <a href="/dashboard" class="text-sm border-b border-transparent transform hover:border-gray-200 duration-300 ease-in-out">
+          Return to classic dashboard
+        </a>
+      </div>
+    </div>
+
     <component :is="layout">
       <router-view />
     </component>
@@ -44,3 +52,18 @@ export default {
   },
 }
 </script>
+
+<style>
+.some-element {
+  background-color: hsla(
+    var(--h, 120),
+    var(--s, 50),
+    var(--l, 50),
+    var(--a, 1)
+  );
+}
+
+.some-element.darker {
+  --l: 20;
+}
+</style>
