@@ -1,50 +1,37 @@
 <template>
   <header
     v-scroll="handleScroll"
-    class="app-header fixed w-full px-4 text-white bg-cover bg-center bg-blue-700 z-30"
+    class="app-header z-30 fixed w-full text-white bg-cover bg-center bg-blue-700"
   >
     <div class="flex items-center justify-between w-full h-full max-w-6xl mx-auto">
+      <!-- @slot Default Header -->
       <slot>
         <div class="flex items-center">
-          <button class="mr-3" type="button" name="menu-toggle" @click="toggle">
-            <svg
-              class="h-8 w-8 stroke-current stroke-2"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <line x1="3" y1="12" x2="21" y2="12" />
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <line x1="3" y1="18" x2="21" y2="18" />
-            </svg>
-          </button>
           <img
             src="/v3-assets/dashboard/images/thomas_jefferson.png"
             alt="2000px-Georgia_Athletics_logo.svg.png"
-            class="rounded-full shadow-md w-16 h-16 lg:w-20 lg:h-20 mb-0 mr-3"
+            class="rounded-full shadow-md w-16 h-16 lg:w-20 lg:h-20 mb-0 mx-3"
           >
           <div>
             <h1
-              class="page-header text-xl sm:text-2xl md:text-3xl lg:text-3xl text-white leading-none font-light shadow"
+              class="page-header text-xl sm:text-xl md:text-2xl lg:text-3xl text-white leading-none font-light shadow"
             >Roosevelt Franklin Elementary School</h1>
           </div>
         </div>
       </slot>
-      <nav class="flex items-center justify-between">
-        <button type="button" name="alert-toggle" @click="toggle" class="ml-3">
-          <svg
-            class="h-8 w-8 fill-current stroke-current stroke-2 transform duration-500 ease-in-out"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
-            <path d="M13.73 21a2 2 0 0 1-3.46 0" />
-          </svg>
-        </button>
-      </nav>
+      <button class="mr-3" type="button" name="menu-toggle" @click="toggle">
+        <svg
+          class="h-8 w-8 stroke-current stroke-2"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
     </div>
   </header>
 </template>
@@ -59,7 +46,7 @@ export default {
   },
   methods: {
     handleScroll (evt, el) {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 10) {
         el.classList.add('shrink')
       } else {
         el.classList.remove('shrink')
@@ -74,20 +61,20 @@ export default {
 
 <style>
 .app-header {
-  @apply py-3;
-  transition: all 0.4s ease-in-out;
+  @apply py-3 transform origin-top transition-all duration-500 ease-in-out;
+  /* transition: all 0.4s ease-in-out; */
 }
 
 .app-header.shrink {
-  @apply py-1;
+  @apply py-3;
 }
 
 @screen lg {
   .app-header {
-    @apply py-6;
+    @apply py-8
   }
   .app-header.shrink {
-    @apply py-2;
+    @apply py-3;
   }
 }
 

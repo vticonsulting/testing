@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="bg-white">
     <!-- <div class="some-element py-2 flex items-center justify-center w-full text-white">
       <div class="px-3 w-full max-w-6xl mx-auto">
         <a href="/dashboard" class="text-sm border-b border-transparent transform hover:border-gray-200 duration-300 ease-in-out">

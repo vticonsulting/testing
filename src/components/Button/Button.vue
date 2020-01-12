@@ -1,5 +1,7 @@
 <template>
   <button
+    v-on="$listeners"
+    v-bind="$attrs"
     class="
       block
       leading-none
@@ -33,18 +35,38 @@
  */
 export default {
   name: 'Button',
+  inheritAttrs: false,
   props: {
     label: String,
-    isDestructive: Boolean,
-    isDisabled: Boolean,
     isAnimated: Boolean,
+    isDisabled: {
+      type: Boolean,
+      default: false,
+    },
     isRounded: {
       type: Boolean,
       default: true,
     },
-    isPrimary: Boolean,
-    isSecondary: Boolean,
-    isSmall: Boolean,
+    isPrimary: {
+      type: Boolean,
+      default: false,
+    },
+    isSecondary: {
+      type: Boolean,
+      default: false,
+    },
+    isFullWidth: {
+      type: Boolean,
+      default: false,
+    },
+    isDestructive: {
+      type: Boolean,
+      default: false,
+    },
+    isSmall: {
+      type: Boolean,
+      default: false,
+    },
     item: {
       type: String,
       default: 'Foo',

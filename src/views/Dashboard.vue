@@ -1,5 +1,5 @@
 <template>
-  <main class="w-full max-w-6xl mx-auto bg-white pt-28 lg:pt-40">
+  <div>
     <!-- Participant Cards -->
     <div class="lg:flex mb-6 lg:mb-8 px-3 lg:px-0">
       <!-- Participant Card -->
@@ -11,12 +11,12 @@
             </a>
           </div>
           <div class="self-center flex-1">
-            <h2 class="text-xl">
+            <h2 class="text-gray-700 text-xl">
               John Doe
             </h2>
           </div>
           <div class="self-start text-right">
-            <button class="text-sm has-text-grey">
+            <button class="px-2 text-xs font-bold tracking-wide uppercase text-gray-600 rounded transform duration-300 ease-in-out hover:text-blue-600 focus:outline-none focus:shadow-outline">
               Edit
             </button>
           </div>
@@ -37,7 +37,7 @@
                   Total Pledged $5 of $10
                 </span>
               </h3>
-              <h4 class="text-sm capitalize">
+              <h4 class="text-sm text-gray-700 capitalize">
                 per reading challenge
               </h4>
             </div>
@@ -52,15 +52,15 @@
     </div>
 
     <!-- Enter Pledge Button -->
-    <div class="flex items-center justify-center mb-6 lg:mb-8 px-3">
-      <BaseButton is-primary class="w-full py-3">
+    <!-- <div class="flex items-center justify-center mb-6 lg:mb-8 px-3">
+      <BaseButton is-primary class="w-full py-3" is-disabled>
         Enter Pledge
       </BaseButton>
-    </div>
+    </div> -->
 
     <!-- Dashboard Accordionn -->
     <div class="mx-3 lg:mx-0">
-      <button class="block w-full flex items-center justify-between p-3 text-blue-800 border-t-2 border-gray-300 focus:outline-none focus:shadow-outline my-1">
+      <button class="block w-full rounded flex items-center justify-between p-3 text-gray-800 border-t-2 border-gray-300 focus:outline-none focus:shadow-outline my-1">
         <h1 class="text-lg lg:text-xl text-left font-semibold">
           Program Overview
         </h1>
@@ -77,12 +77,26 @@
         </div>
       </button>
 
-      <!-- Video -->
-      <div class="h-48 mx-2 mb-6 bg-gray-300 rounded" />
+      <div class="md:flex md:items-start">
+        <!-- Video -->
+        <div class="mx-2 md:w-1/2">
+          <div class="w-full mb-3 aspect-ratio-16/9 border-2 bg-gray-200 rounded" />
+        </div>
+
+        <!-- About the Program -->
+        <div class="w-full md:w-1/2 mx-2 mb-6 px-2">
+          <h2 class="mb-2 text-blue-900 font-bold">
+            About the Program
+          </h2>
+          <p class="text-gray-600">
+            <span class="font-semibold text-gray-800">Roosevelt Franklin Elementary School</span> is hosting a two-week fundraiser powered by the Booster team! Instead of selling items, families will gather pledges to help their school, while students experience a world-class character program and participate in the <span class="font-semibold text-gray-800">Roosevelt Franklin Elementary School Reading Challenge</span>. Most students will complete read...
+          </p>
+        </div>
+      </div>
 
       <!-- Playlist -->
       <div class="flex mx-2 mb-6 border-b">
-        <button class="inline-block p-2 border-b-2 border-blue-700 text-blue-700 font-bold">
+        <button class="inline-block p-2 border-b-2 border-blue-700 text-gray-700 font-bold">
           Program Videos
         </button>
         <button class="inline-block p-2 focus:text-gray-900">
@@ -90,18 +104,8 @@
         </button>
       </div>
 
-      <!-- About the Program -->
-      <div class="mx-2 mb-6 px-2">
-        <h2 class="mb-1 text-blue-900 font-bold">
-          About the Program
-        </h2>
-        <p class="">
-          Roosevelt Franklin Elementary School is hosting a two-week fundraiser powered by the Booster team! Instead of selling items, families will gather pledges to help their school, while students experience a world-class character program and participate in the Salesforce /@$!%^&*() Kenny. Most students will complete read...
-        </p>
-      </div>
-
-      <button class="block w-full flex items-center justify-between p-3 border-t-2 border-b-2 border-gray-300 focus:outline-none focus:shadow-outline my-1">
-        <h1 class="text-lg lg:text-xl text-left font-semibold text-blue-800">
+      <button class="block w-full rounded flex items-center justify-between p-3 border-t-2 border-b-2 border-gray-300 focus:outline-none focus:shadow-outline my-1">
+        <h1 class="text-lg lg:text-xl text-left font-semibold text-gray-800">
           School Goals and Stats
         </h1>
         <div>
@@ -116,8 +120,8 @@
           </svg>
         </div>
       </button>
-      <button class="block w-full flex items-center justify-between p-3 border-t-2 border-b-2 border-gray-300 focus:outline-none focus:shadow-outline my-1">
-        <h1 class="text-lg lg:text-xl text-left font-semibold text-blue-800">
+      <button class="block w-full rounded flex items-center justify-between p-3 border-t-2 border-b-2 border-gray-300 focus:outline-none focus:shadow-outline my-1">
+        <h1 class="text-lg lg:text-xl text-left font-semibold text-gray-800">
           How to Get Pledges
         </h1>
         <div>
@@ -132,8 +136,8 @@
           </svg>
         </div>
       </button>
-      <button class="block w-full flex items-center justify-between p-3 border-t-2 border-b-2 border-gray-300 focus:outline-none focus:shadow-outline my-1">
-        <h1 class="text-lg lg:text-xl text-left font-semibold text-blue-800">
+      <button class="block w-full rounded flex items-center justify-between p-3 border-t-2 border-b-2 border-gray-300 focus:outline-none focus:shadow-outline my-1">
+        <h1 class="text-lg lg:text-xl text-left font-semibold text-gray-800">
           Create Student Star Video
         </h1>
         <div>
@@ -148,8 +152,8 @@
           </svg>
         </div>
       </button>
-      <button class="block w-full flex items-center justify-between p-3 border-t-2 border-b-2 border-gray-300 focus:outline-none focus:shadow-outline my-1">
-        <h1 class="text-lg lg:text-xl text-left font-semibold text-blue-800">
+      <button class="block w-full rounded flex items-center justify-between p-3 border-t-2 border-b-2 border-gray-300 focus:outline-none focus:shadow-outline my-1">
+        <h1 class="text-lg lg:text-xl text-left font-semibold text-gray-800">
           Pledges (10)
         </h1>
         <div>
@@ -164,8 +168,8 @@
           </svg>
         </div>
       </button>
-      <button class="block w-full flex items-center justify-between p-3 border-t-2 border-b-2 border-gray-300 focus:outline-none focus:shadow-outline my-1">
-        <h1 class="text-lg lg:text-xl text-left font-semibold text-blue-800">
+      <button class="block w-full rounded flex items-center justify-between p-3 border-t-2 border-b-2 border-gray-300 focus:outline-none focus:shadow-outline my-1">
+        <h1 class="text-lg lg:text-xl text-left font-semibold text-gray-800">
           Our Business Leaderboard
         </h1>
         <div>
@@ -181,7 +185,7 @@
         </div>
       </button>
     </div>
-  </main>
+  </div>
 </template>
 
 <script>
