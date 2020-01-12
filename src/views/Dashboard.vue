@@ -78,12 +78,16 @@
       </button>
 
       <!-- Video -->
-      <div class="h-48 mx-2 mb-6 bg-gray-200" />
+      <div class="h-48 mx-2 mb-6 bg-gray-300" />
 
       <!-- Playlist -->
       <div class="flex mx-2 mb-6 border-b">
-        <button class="inline-block p-2 border-b-2 border-blue-700 text-blue-700 font-bold">Program Videos</button>
-        <button class="inline-block p-2 focus:text-gray-900">Character Videos</button>
+        <button class="inline-block p-2 border-b-2 border-blue-700 text-blue-700 font-bold">
+          Program Videos
+        </button>
+        <button class="inline-block p-2 focus:text-gray-900">
+          Character Videos
+        </button>
       </div>
 
       <!-- About the Program -->

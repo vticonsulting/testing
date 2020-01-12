@@ -3,13 +3,46 @@
     <div class="flex items-center justify-between w-full h-full max-w-6xl mx-auto">
       <slot>
         <div class="flex items-center">
+          <button
+            class="mx-3"
+            type="button"
+            name="menu-toggle"
+            @click="toggle"
+          >
+            <svg
+              class="h-8 w-8 stroke-current stroke-2"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line
+                x1="3"
+                y1="12"
+                x2="21"
+                y2="12"
+              />
+              <line
+                x1="3"
+                y1="6"
+                x2="21"
+                y2="6"
+              />
+              <line
+                x1="3"
+                y1="18"
+                x2="21"
+                y2="18"
+              />
+            </svg>
+          </button>
           <img
             src="/v3-assets/dashboard/images/thomas_jefferson.png"
             alt="2000px-Georgia_Athletics_logo.svg.png"
             class="rounded-full shadow-md w-16 h-16 lg:w-20 lg:h-20 mb-0 mr-3"
           >
           <div>
-            <h1 class="page-header text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white leading-none font-light shadow">
+            <h1 class="page-header text-xl sm:text-2xl md:text-3xl lg:text-3xl text-white leading-none font-light shadow">
               Roosevelt Franklin Elementary School
             </h1>
           </div>
@@ -20,10 +53,10 @@
           type="button"
           name="alert-toggle"
           @click="toggle"
-          class="mr-4"
+          class="mr-3"
         >
           <svg
-            class="h-8 w-8 stroke-current stroke-1 transform duration-500 ease-in-out"
+            class="h-8 w-8 fill-current stroke-current stroke-2 transform duration-500 ease-in-out"
             viewBox="0 0 24 24"
             fill="none"
             stroke-linecap="round"
@@ -31,38 +64,6 @@
           >
             <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
             <path d="M13.73 21a2 2 0 0 1-3.46 0" />
-          </svg>
-        </button>
-        <button
-          type="button"
-          name="menu-toggle"
-          @click="toggle"
-        >
-          <svg
-            class="h-8 w-8 stroke-current stroke-1"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <line
-              x1="3"
-              y1="12"
-              x2="21"
-              y2="12"
-            />
-            <line
-              x1="3"
-              y1="6"
-              x2="21"
-              y2="6"
-            />
-            <line
-              x1="3"
-              y1="18"
-              x2="21"
-              y2="18"
-            />
           </svg>
         </button>
       </nav>

@@ -1,22 +1,22 @@
 <template>
   <div
     id="app"
-    class="antialiased text-gray-700"
+    class="antialiased text-gray-700 transform duration-300 ease-in-out"
   >
-    <div class="some-element py-2 flex items-center justify-center w-full">
+    <!-- <div class="some-element py-2 flex items-center justify-center w-full text-white">
       <div class="px-3 w-full max-w-6xl mx-auto">
         <a href="/dashboard" class="text-sm border-b border-transparent transform hover:border-gray-200 duration-300 ease-in-out">
           Return to classic dashboard
         </a>
       </div>
     </div>
-    <div class="some-element darker py-2 flex items-center justify-center w-full">
+    <div class="some-element darker py-2 flex items-center justify-center w-full text-white">
       <div class="px-3 w-full max-w-6xl mx-auto">
-        <a href="/dashboard" class="text-sm border-b border-transparent transform hover:border-gray-200 duration-300 ease-in-out">
+        <a href="/dashboard" class="text-sm border-b border-transparent transform duration-300 ease-in-out hover:border-gray-200">
           Return to classic dashboard
         </a>
       </div>
-    </div>
+    </div> -->
 
     <component :is="layout">
       <router-view />
@@ -56,14 +56,27 @@ export default {
 <style>
 .some-element {
   background-color: hsla(
-    var(--h, 120),
-    var(--s, 50),
-    var(--l, 50),
+    var(--h, 220),
+    var(--s, 50%),
+    var(--l, 20%),
     var(--a, 1)
   );
 }
 
 .some-element.darker {
-  --l: 20;
+  --l: 10%;
+}
+
+.some-element {
+  animation: var(--animationName, pulse) var(--duration, 2000ms) ease-in-out
+    infinite;
+}
+
+.some-element.faster {
+  --duration: 500ms;
+}
+
+.some-element.shaking {
+  --animationName: shake;
 }
 </style>
