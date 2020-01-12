@@ -1,14 +1,14 @@
-import Vue from "vue";
+import Vue from 'vue'
 
-import { library, dom } from "@fortawesome/fontawesome-svg-core";
+import { library, dom } from '@fortawesome/fontawesome-svg-core'
 
 // Brands (fab)
 import {
   faFacebook,
   faFacebookF,
   faFacebookSquare,
-  faTwitter
-} from "@fortawesome/free-brands-svg-icons";
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons'
 
 // Regular (far)
 import {
@@ -25,11 +25,11 @@ import {
   faSignOut,
   faSquare,
   faTimes as farTimes,
-  faUserEdit as farUserEdit
-} from "@fortawesome/pro-regular-svg-icons";
+  faUserEdit as farUserEdit,
+} from '@fortawesome/pro-regular-svg-icons'
 
 // Light (fal)
-import { faBars, faTimes, faUserEdit } from "@fortawesome/pro-light-svg-icons";
+import { faBars, faTimes, faUserEdit } from '@fortawesome/pro-light-svg-icons'
 
 // Solid Style Icons (fas)
 import {
@@ -73,14 +73,14 @@ import {
   faTrashAlt,
   faUnderline,
   faUser,
-  faUserPlus
-} from "@fortawesome/free-solid-svg-icons";
+  faUserPlus,
+} from '@fortawesome/free-solid-svg-icons'
 
 import {
   FontAwesomeIcon,
   FontAwesomeLayers,
-  FontAwesomeLayersText
-} from "@fortawesome/vue-fontawesome";
+  FontAwesomeLayersText,
+} from '@fortawesome/vue-fontawesome'
 
 library.add(
   faAddressCard,
@@ -145,10 +145,10 @@ library.add(
   faUserEdit,
   faUserPlus,
   farUserEdit
-);
+)
 
-dom.watch();
+dom.watch()
 
-Vue.component("FontAwesomeIcon", FontAwesomeIcon);
-Vue.component("FontAwesomeLayers", FontAwesomeLayers);
-Vue.component("FontAwesomeLayersText", FontAwesomeLayersText);
+Vue.component('FontAwesomeIcon', FontAwesomeIcon)
+Vue.component('FontAwesomeLayers', FontAwesomeLayers)
+Vue.component('FontAwesomeLayersText', FontAwesomeLayersText)

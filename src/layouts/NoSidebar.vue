@@ -9,6 +9,6 @@
 
 <script>
 export default {
-  name: "NoSidebarLayout"
-};
+  name: 'NoSidebarLayout',
+}
 </script>

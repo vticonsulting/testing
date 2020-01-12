@@ -1,7 +1,7 @@
 <template>
   <button
     class="
-      block 
+      block
       leading-none
       w-full
       mx-auto
@@ -10,10 +10,10 @@
       bg-white
       rounded
       border-2
-      font-semibold 
-      shadow-md 
+      font-semibold
+      shadow-md
       hover:shadow
-      focus:outline-none 
+      focus:outline-none
       focus:shadow-outline
       lg:max-w-xs
     "
@@ -32,7 +32,7 @@
  * Use `Button` to highlight key info with a predefined status.
  */
 export default {
-  name: "Button",
+  name: 'Button',
   props: {
     label: String,
     isDestructive: Boolean,
@@ -40,45 +40,45 @@ export default {
     isAnimated: Boolean,
     isRounded: {
       type: Boolean,
-      default: true
+      default: true,
     },
     isPrimary: Boolean,
     isSecondary: Boolean,
     isSmall: Boolean,
     item: {
       type: String,
-      default: "Foo"
-    }
+      default: 'Foo',
+    },
   },
   computed: {
-    classObject() {
+    classObject () {
       return {
-        "text-sm": this.isSmall,
-        "rounded-full": this.isRounded,
-        "transform duration-200 hover:translate-y-1": this.isAnimated,
-        "bg-red-700 hover:bg-red-700 text-white": this.isDestructive,
-        "bg-green-700 hover:bg-green-800 text-white": this.isPrimary,
-        "bg-blue-700 hover:bg-blue-800 text-white": this.isSecondary
-      };
-    }
+        'text-sm': this.isSmall,
+        'rounded-full': this.isRounded,
+        'transform duration-200 hover:translate-y-1': this.isAnimated,
+        'bg-red-700 hover:bg-red-700 text-white': this.isDestructive,
+        'bg-green-700 hover:bg-green-800 text-white': this.isPrimary,
+        'bg-blue-700 hover:bg-blue-800 text-white': this.isSecondary,
+      }
+    },
   },
   methods: {
-    onClick($event) {
+    onClick ($event) {
       /**
        * Emitted when the button is clicked.
        * @event click
        * @type {Event}
        */
-      this.$emit("click", $event);
+      this.$emit('click', $event)
     },
-    onDoubleClick($event) {
+    onDoubleClick ($event) {
       /**
        * Emitted when the button is double clicked.
        * @event doubleClick
        * @type {Event}
        */
-      this.$emit("double-click", $event);
-    }
-  }
-};
+      this.$emit('double-click', $event)
+    },
+  },
+}
 </script>

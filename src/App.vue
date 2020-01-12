@@ -1,20 +1,20 @@
 <template>
-  <div id="app" class="antialiased">
+  <div id="app" class="antialiased text-gray-700 bg-blue-100">
     <component :is="layout">
       <router-view />
     </component>
   </div>
 </template>
 <script>
-const default_layout = "default";
+const default_layout = 'default'
 
 export default {
   computed: {
-    layout() {
-      return (this.$route.meta.layout || default_layout) + "-layout";
-    }
+    layout () {
+      return (this.$route.meta.layout || default_layout) + '-layout'
+    },
   },
-  mounted() {
+  mounted () {
     // const link = document.createElement("link");
     // link.setAttribute("rel", "stylesheet");
     // link.setAttribute(
@@ -24,12 +24,12 @@ export default {
     // link.dataset.saviHead = "true";
     // document.head.appendChild(link);
   },
-  destroyed() {
+  destroyed () {
     // const link = document.querySelector("head > [data-savi-head]");
     // if (!link) {
     //   return;
     // }
     // document.head.removeChild(link);
-  }
-};
+  },
+}
 </script>

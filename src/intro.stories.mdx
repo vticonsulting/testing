@@ -11,6 +11,22 @@ import designSystem from './design-system.png';
 
 Components with no logic, just HTML / CSS that accepts a slot, the content to inject.
 
+## Animation
+
+To maintain performance in our animation timeline, we want to try
+our best to limit our animated properties to a **core four**.
+
+```scss
+// Scale
+.scale-2 {transform: scale(2)}
+// Position
+.translate-x-50 {transform: translateX(50rem)}
+// Rotation
+.rotate-180 {transform: rotate(180deg)}
+// Opacity
+.opacity-05 {opacity: 0.5}
+```
+
 ```js
 import Vue from 'vue'
 ```
