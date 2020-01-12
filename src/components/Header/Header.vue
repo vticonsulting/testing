@@ -4,7 +4,7 @@
       <slot>
         <div class="flex items-center">
           <button
-            class="mx-3"
+            class="mr-3"
             type="button"
             name="menu-toggle"
             @click="toggle"
@@ -53,7 +53,7 @@
           type="button"
           name="alert-toggle"
           @click="toggle"
-          class="mr-3"
+          class="ml-3"
         >
           <svg
             class="h-8 w-8 fill-current stroke-current stroke-2 transform duration-500 ease-in-out"
