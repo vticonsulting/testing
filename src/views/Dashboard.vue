@@ -60,8 +60,8 @@
 
     <!-- Dashboard Accordionn -->
     <div class="mx-3 lg:mx-0">
-      <button class="block w-full flex items-center justify-between p-3 text-blue-800 border-t-2 border-gray-300">
-        <h1 class="text-xl font-semibold">
+      <button class="block w-full flex items-center justify-between p-3 text-blue-800 border-t-2 border-gray-300 focus:outline-none focus:shadow-outline my-1">
+        <h1 class="text-lg lg:text-xl text-left font-semibold">
           Program Overview
         </h1>
         <div>
@@ -91,7 +91,7 @@
       </div>
 
       <!-- About the Program -->
-      <div class="mx-2 mb-6">
+      <div class="mx-2 mb-6 px-2">
         <h2 class="mb-1 text-blue-900 font-bold">
           About the Program
         </h2>
@@ -100,8 +100,8 @@
         </p>
       </div>
 
-      <button class="block w-full flex items-center justify-between p-3 border-t-2 border-gray-300">
-        <h1 class="text-xl font-semibold text-blue-800">
+      <button class="block w-full flex items-center justify-between p-3 border-t-2 border-b-2 border-gray-300 focus:outline-none focus:shadow-outline my-1">
+        <h1 class="text-lg lg:text-xl text-left font-semibold text-blue-800">
           School Goals and Stats
         </h1>
         <div>
@@ -116,8 +116,8 @@
           </svg>
         </div>
       </button>
-      <button class="block w-full flex items-center justify-between p-3 border-t-2 border-gray-300">
-        <h1 class="text-xl font-semibold text-blue-800">
+      <button class="block w-full flex items-center justify-between p-3 border-t-2 border-b-2 border-gray-300 focus:outline-none focus:shadow-outline my-1">
+        <h1 class="text-lg lg:text-xl text-left font-semibold text-blue-800">
           How to Get Pledges
         </h1>
         <div>
@@ -132,8 +132,8 @@
           </svg>
         </div>
       </button>
-      <button class="block w-full flex items-center justify-between p-3 border-t-2 border-gray-300">
-        <h1 class="text-xl font-semibold text-blue-800">
+      <button class="block w-full flex items-center justify-between p-3 border-t-2 border-b-2 border-gray-300 focus:outline-none focus:shadow-outline my-1">
+        <h1 class="text-lg lg:text-xl text-left font-semibold text-blue-800">
           Create Student Star Video
         </h1>
         <div>
@@ -148,8 +148,8 @@
           </svg>
         </div>
       </button>
-      <button class="block w-full flex items-center justify-between p-3 border-t-2 border-gray-300">
-        <h1 class="text-xl font-semibold text-blue-800">
+      <button class="block w-full flex items-center justify-between p-3 border-t-2 border-b-2 border-gray-300 focus:outline-none focus:shadow-outline my-1">
+        <h1 class="text-lg lg:text-xl text-left font-semibold text-blue-800">
           Pledges (10)
         </h1>
         <div>
@@ -164,8 +164,8 @@
           </svg>
         </div>
       </button>
-      <button class="block w-full flex items-center justify-between p-3 border-t-2 border-gray-300">
-        <h1 class="text-xl font-semibold text-blue-800">
+      <button class="block w-full flex items-center justify-between p-3 border-t-2 border-b-2 border-gray-300 focus:outline-none focus:shadow-outline my-1">
+        <h1 class="text-lg lg:text-xl text-left font-semibold text-blue-800">
           Our Business Leaderboard
         </h1>
         <div>
