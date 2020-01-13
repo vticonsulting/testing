@@ -1,0 +1,21 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+import AppHeader from './AppHeader.vue'
+
+<Meta title="App/Header" />
+
+# AppHeader
+
+<Preview>
+  <Story name="Default">
+    {{
+      components: { AppHeader },
+      template: '<AppHeader></AppHeader>',
+    }}
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={AppHeader} />
+
+

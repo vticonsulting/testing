@@ -1,19 +1,19 @@
 <template>
   <section class="flex flex-col min-h-screen">
-    <TheHeader />
+    <AppHeader />
     <main class="flex-1 overflow-auto w-full max-w-6xl mx-auto pt-28 lg:pt-44 pb-32">
       <slot />
     </main>
-    <TheFooter />
+    <AppFooter />
   </section>
 </template>
 
 <script>
-import TheHeader from '../components/Header'
-import TheFooter from '../components/Footer'
+import AppHeader from '../components/AppHeader'
+import AppFooter from '../components/AppFooter'
 
 export default {
   name: 'DefaultLayout',
-  components: { TheHeader, TheFooter },
+  components: { AppHeader, AppFooter },
 }
 </script>

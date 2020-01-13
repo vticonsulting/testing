@@ -3,7 +3,7 @@
     <!-- Participant Cards -->
     <div class="lg:flex mb-6 lg:mb-8 px-3 lg:px-0">
       <!-- Participant Card -->
-      <div class="w-full mb-3 lg:mb-0 lg:mx-2 p-4 border-2 rounded-lg border-gray-300 bg-white">
+      <div class="elevation-1 w-full mb-3 lg:mb-0 lg:mx-2 p-4 border-2 rounded-lg border-gray-300 bg-white">
         <div class="flex w-full mb-3 lg:px-3 relative">
           <div class="media-left mr-4">
             <a>
@@ -25,8 +25,8 @@
         <section class="lg:px-3">
           <div class="mb-4">
             <div class="h-3 rounded-lg bg-gray-300 relative">
-              <span class="z-20 h-full absolute top-0 rounded-lg bg-green-700" style="width: 50%" />
-              <span class="z-10 h-full absolute top-0 rounded-lg bg-orange-600" style="width: 50%" />
+              <span class="z-20 elevation-1 h-full absolute top-0 rounded-lg bg-green-700" style="width: 50%" />
+              <span class="z-10 elevation-1 h-full absolute top-0 rounded-lg bg-orange-600" style="width: 50%" />
             </div>
             <div class="mt-2">
               <h3 class="font-bold flex items-center">
@@ -80,7 +80,7 @@
       <div class="md:flex md:items-start">
         <!-- Video -->
         <div class="mx-2 md:w-1/2">
-          <div class="w-full mb-3 aspect-ratio-16/9 border-2 bg-gray-200 rounded" />
+          <div class="elevation-2 w-full mb-3 aspect-ratio-16/9 border-2 bg-white rounded" />
         </div>
 
         <!-- About the Program -->
@@ -95,14 +95,14 @@
       </div>
 
       <!-- Playlist -->
-      <div class="flex mx-2 mb-6 border-b">
+      <!-- <div class="flex mx-2 mb-6 border-b">
         <button class="inline-block p-2 border-b-2 border-blue-700 text-gray-700 font-bold">
           Program Videos
         </button>
         <button class="inline-block p-2 focus:text-gray-900">
           Character Videos
         </button>
-      </div>
+      </div> -->
 
       <button class="block w-full rounded flex items-center justify-between p-3 border-t-2 border-b-2 border-gray-300 focus:outline-none focus:shadow-outline my-1">
         <h1 class="text-lg lg:text-xl text-left font-semibold text-gray-800">
@@ -168,13 +168,13 @@
           </svg>
         </div>
       </button>
-      <button class="block w-full rounded flex items-center justify-between p-3 border-t-2 border-b-2 border-gray-300 focus:outline-none focus:shadow-outline my-1">
+      <button class="block w-full rounded flex items-center justify-between p-3 border-t-2 border-gray-300 focus:outline-none focus:shadow-outline my-1">
         <h1 class="text-lg lg:text-xl text-left font-semibold text-gray-800">
           Our Business Leaderboard
         </h1>
         <div>
           <svg
-            class="h-8 w-8 stroke-current stroke-1 transform rotate-180 duration-500 ease-in-out"
+            class="h-8 w-8 stroke-current stroke-1 transform duration-500 ease-in-out"
             viewBox="0 0 24 24"
             fill="none"
             stroke-linecap="round"
@@ -189,8 +189,17 @@
 </template>
 
 <script>
+// import resolveConfig from 'tailwindcss/resolveConfig'
+// import tailwindConfig from '../../tailwind.config.js'
+
+// const fullConfig = resolveConfig(tailwindConfig)
+
 export default {
   name: 'Dashboard',
+
+  mounted () {
+
+  },
   methods: {
     push () {
       dataLayer.push({

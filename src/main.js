@@ -11,10 +11,13 @@ import Default from './layouts/Default.vue'
 import NoSidebar from './layouts/NoSidebar.vue'
 import Avatar from '@/components/Avatar'
 import BaseButton from '@/components/Button'
+import PledgeButton from '@/components/PledgeButton'
 
 Vue.component('default-layout', Default)
 Vue.component('no-sidebar-layout', NoSidebar)
+
 Vue.component('BaseButton', BaseButton)
+Vue.component('PledgeButton', PledgeButton)
 Vue.component('Avatar', Avatar)
 
 Vue.config.productionTip = false

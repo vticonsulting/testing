@@ -15,7 +15,7 @@ const image = {
 }
 
 export default {
-  name: 'BaseAvatar',
+  name: 'Avatar',
   status: 'prototype',
   release: '1.0.0',
   props: {

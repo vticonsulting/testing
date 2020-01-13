@@ -2,7 +2,7 @@
 import BaseAvatar from './Avatar.vue'
 
 export default {
-  title: 'Components/Avatar',
+  title: 'Base/Avatar',
 }
 
 export const Default = () => ({

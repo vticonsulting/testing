@@ -34,7 +34,7 @@
  * Use `Button` to highlight key info with a predefined status.
  */
 export default {
-  name: 'Button',
+  name: 'BaseButton',
   inheritAttrs: false,
   props: {
     label: String,
