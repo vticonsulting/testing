@@ -2,7 +2,7 @@
   <img
     :alt="alt"
     :src="src"
-    class="w-16 h-16 shadow border rounded-full bg-white"
+    class="w-16 h-16 elevation-0 border-2 border-gray-300 rounded-full bg-white"
   >
 </template>
 

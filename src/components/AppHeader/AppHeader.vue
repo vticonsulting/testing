@@ -2,21 +2,19 @@
   <header
     v-scroll="handleScroll"
     id="app-header"
-    class="z-30 elevation-8 fixed w-full text-white bg-cover bg-center bg-blue-700"
+    class="z-30 elevation-8 fixed w-full text-white bg-cover bg-center bg-gray-700"
   >
     <div class="flex items-center justify-between w-full h-full max-w-6xl mx-auto">
       <!-- @slot Default Header -->
       <slot>
         <div class="flex items-center">
-          <img
-            src="/v3-assets/dashboard/images/thomas_jefferson.png"
-            alt="2000px-Georgia_Athletics_logo.svg.png"
-            class="rounded-full shadow-md w-16 h-16 lg:w-20 lg:h-20 mb-0 mx-3"
-          >
+          <svg viewBox="0 0 16 16" class="fill-current text-gray-600 rounded-full border-2 border-gray-200 shadow-md w-16 h-16 lg:w-20 lg:h-20 mb-0 mx-3">
+            <circle cx="8" cy="8" r="8" />
+          </svg>
           <div>
             <h1
               class="page-header text-xl sm:text-xl md:text-2xl lg:text-3xl text-white leading-none font-light shadow"
-            >Roosevelt Franklin Elementary School Reading Challenge</h1>
+            >{{ $store.state.schoolName }} <br class="md:hidden"> {{ $store.state.unitType }}</h1>
           </div>
         </div>
       </slot>
@@ -46,6 +44,8 @@ export default {
   data () {
     return {
       menuOpen: false,
+      schoolName: 'Franklin Elementary',
+      unitType: 'Reading Challenge',
     }
   },
   methods: {
@@ -85,8 +85,8 @@ export default {
 #app-header {
   background-image: linear-gradient(
       180deg,
-      rgba(70, 87, 143, 0.9) 10%,
-      rgba(8, 1, 52, 0.8) 100%
+      rgba(0, 0, 0, 0.8) 10%,
+      rgba(0, 0, 0, 0.9) 100%
     ),
     url(/v3-assets/dashboard/images/header_bg.jpg);
 }

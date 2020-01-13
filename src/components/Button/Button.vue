@@ -18,6 +18,14 @@
       focus:outline-none
       focus:shadow-outline
       lg:max-w-xs
+
+      transform
+      origin-center
+      opacity-75
+      hover:opacity-100
+      hover:translate-y-px
+      duration-200
+      ease-in-out
     "
     :class="[classObject]"
     :disabled="isDisabled"
@@ -78,9 +86,9 @@ export default {
         'text-sm': this.isSmall,
         'rounded-full': this.isRounded,
         'transform duration-200 hover:translate-y-1': this.isAnimated,
-        'bg-red-700 hover:bg-red-700 text-white': this.isDestructive,
-        'bg-green-700 hover:bg-green-800 text-white': this.isPrimary,
-        'bg-blue-700 hover:bg-blue-800 text-white': this.isSecondary,
+        'bg-gray-800 hover:bg-gray-900 text-white': this.isPrimary,
+        'bg-gray-700 hover:bg-gray-800 text-white': this.isSecondary,
+        'bg-gray-900 hover:bg-black text-white': this.isDestructive,
       }
     },
   },
