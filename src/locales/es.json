@@ -1,8 +1,9 @@
 {
   "content_info": "Esta experiencia de recaudación de fondos está impulsada por Booster. La misión de Booster es fortalecer las escuelas.",
   "need_help": "¿Necesitas ayuda?",
-  "spanish": "Español?",
+  "lang": "English?",
   "view_rewards": "Ver recompensas",
+  "how_to_get_pledges":"Cómo obtener promesas",
   "program": {
     "overview": {
       "title": "Reseña del programa",
@@ -13,5 +14,14 @@
     "goals_and_stats": {
       "title": "Metas y estadísticas de la escuela"
     }
+  },
+  "student_star_video": {
+    "title": "Video estrella del estudiante"
+  },
+  "the_pledges": {
+    "title": "Promesas"
+  },
+  "business_leaderboard": {
+    "title": "Nuestro marcador de negocios"
   }
 }

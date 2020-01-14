@@ -1,30 +1,31 @@
 <template>
   <div class="default_layout">
     <AppHeader />
+
     <main class="main-content">
       <slot />
-      <div class="text-sm text-center p-3 bg-gray-100">
-        <p>{{ $t('content_info') }}</p>
-        <p>
-          <a class="text-blue-700" href="#">{{ $t('need_help') }}</a> |
-          <a class="text-blue-700" href="#">{{ $t('spanish') }}</a>
-        </p>
-      </div>
-      <!-- <div class="modal-overlay" /> -->
-      <!-- <div class="modal" /> -->
-      <!-- <div class="menu" /> -->
+
+      <AppInfo />
+
+      <!-- <div class="modal-overlay" />
+      <div class="modal" />
+      <div class="menu" /> -->
     </main>
+
     <AppFooter />
+    <AppCookieConsent />
   </div>
 </template>
 
 <script>
+import AppCookieConsent from '../components/AppCookieConsent'
 import AppHeader from '../components/AppHeader'
+import AppInfo from '../components/AppInfo'
 import AppFooter from '../components/AppFooter'
 
 export default {
   name: 'DefaultLayout',
-  components: { AppHeader, AppFooter },
+  components: { AppHeader, AppInfo, AppFooter, AppCookieConsent },
 }
 </script>
 

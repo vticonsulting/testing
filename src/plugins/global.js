@@ -2,25 +2,36 @@ import Vue from 'vue'
 
 import Avatar from '../components/Avatar'
 import BaseButton from '../components/Button'
-import Default from '../layouts/Default.vue'
+import BaseVideo from '../components/Video'
+import ChevronIcon from '../components/ChevronIcon'
+import HelloBar from '../components/HelloBar'
 import HelloWorld from '../components/HelloWorld'
+import HowToGetPledges from '../components/HowToGetPledges'
 import MenuToggle from '../components/MenuToggle'
-import NoSidebar from '../layouts/NoSidebar.vue'
 import PledgeButton from '../components/PledgeButton'
 import ProgramHeader from '../components/ProgramHeader'
 import ProgramOverview from '../components/ProgramOverview'
 import ProgressBar from '../components/ProgressBar'
-import ProgressCard from '../components/ProgressCard'
-
-Vue.component('no-sidebar-layout', NoSidebar)
-Vue.component('default-layout', Default)
+import ParticipantCard from '../components/ParticipantCard'
+import SchoolGoalsAndStats from '../components/SchoolGoalsAndStats'
+import ThePledges from '../components/ThePledges'
+import BusinessLeaderboard from '../components/BusinessLeaderboard'
+import StudentStarVideo from '../components/StudentStarVideo'
 
 Vue.component('Avatar', Avatar)
 Vue.component('BaseButton', BaseButton)
+Vue.component('BaseVideo', BaseVideo)
+Vue.component('ChevronIcon', ChevronIcon)
+Vue.component('HelloBar', HelloBar)
 Vue.component('HelloWorld', HelloWorld)
+Vue.component('HowToGetPledges', HowToGetPledges)
 Vue.component('MenuToggle', MenuToggle)
 Vue.component('PledgeButton', PledgeButton)
 Vue.component('ProgramHeader', ProgramHeader)
 Vue.component('ProgramOverview', ProgramOverview)
 Vue.component('ProgressBar', ProgressBar)
-Vue.component('ProgressCard', ProgressCard)
+Vue.component('ParticipantCard', ParticipantCard)
+Vue.component('SchoolGoalsAndStats', SchoolGoalsAndStats)
+Vue.component('ThePledges', ThePledges)
+Vue.component('BusinessLeaderboard', BusinessLeaderboard)
+Vue.component('StudentStarVideo', StudentStarVideo)
