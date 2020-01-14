@@ -14,9 +14,8 @@
         </a>
       </div>
     </div> -->
-
     <component :is="layout">
-      <router-view />
+      <router-view :users="users" />
     </component>
   </div>
 </template>
@@ -24,12 +23,34 @@
 const default_layout = 'default'
 
 export default {
+  name: 'App',
+  data () {
+    return {
+      users: [],
+    }
+  },
   computed: {
     layout () {
       return (this.$route.meta.layout || default_layout) + '-layout'
     },
   },
+  beforeCreate () {
+    console.log(`[${this.$appName}] App.beforeCreate`)
+  },
+  created () {
+    console.log(`[${this.$appName}] App.created`)
+    this.$http
+      .get('users')
+      .then(res => {
+        this.$store.state.user = res.data[0]
+        console.log('---------------------------')
+        console.log('App.created users retrieved')
+        console.log('---------------------------')
+        console.dir(res.data)
+      })
+  },
   mounted () {
+    console.log(`[${this.$appName}] App.mounted`)
     // const link = document.createElement("link");
     // link.setAttribute("rel", "stylesheet");
     // link.setAttribute(
@@ -40,6 +61,7 @@ export default {
     // document.head.appendChild(link);
   },
   destroyed () {
+    console.log(`[${this.$appName}] App.destroyed`)
     // const link = document.querySelector("head > [data-savi-head]");
     // if (!link) {
     //   return;

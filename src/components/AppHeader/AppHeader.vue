@@ -1,36 +1,27 @@
 <template>
-  <header
+  <div
     v-scroll="handleScroll"
     id="app-header"
     class="z-30 elevation-8 fixed w-full text-white bg-cover bg-center bg-gray-700"
   >
     <div class="flex items-center justify-between w-full h-full max-w-6xl mx-auto">
-      <!-- @slot Default Header -->
+      <!-- @slot Default  -->
       <slot>
-        <div class="flex items-center">
-          <svg viewBox="0 0 16 16" class="fill-current text-gray-600 rounded-full border-2 border-gray-200 shadow-md w-16 h-16 lg:w-20 lg:h-20 mb-0 mx-3">
-            <circle cx="8" cy="8" r="8" />
-          </svg>
-          <div>
-            <h1
-              class="page-header text-xl sm:text-xl md:text-2xl lg:text-3xl text-white leading-none font-light shadow"
-            >{{ $store.state.schoolName }} <br class="md:hidden"> {{ $store.state.unitType }}</h1>
-          </div>
-        </div>
+        <!-- ProgramHeaader -->
+        <ProgramHeader />
       </slot>
+      <!-- MenuToggle -->
       <button
-        @click="menuOpen = !menuOpen"
-        class="text-base hamburger mx-3"
-        :class="[
-          'focus:outline-none', {
-            checked: menuOpen
-          }
-        ]"
+        @click.self="menuOpen = !menuOpen"
+        class="hamburger mx-3 text-base"
+        :class="[{
+          checked: menuOpen
+        }]"
       >
         <div />
       </button>
     </div>
-  </header>
+  </div>
 </template>
 
 <script>
@@ -65,24 +56,6 @@ export default {
 
 <style>
 #app-header {
-  @apply py-3 transform origin-top transition-all duration-500 ease-in-out;
-  /* transition: all 0.4s ease-in-out; */
-}
-
-#app-header.shrink {
-  @apply py-3;
-}
-
-@screen lg {
-  #app-header {
-    @apply py-8
-  }
-  #app-header.shrink {
-    @apply py-3;
-  }
-}
-
-#app-header {
   background-image: linear-gradient(
       180deg,
       rgba(0, 0, 0, 0.8) 10%,
@@ -90,11 +63,15 @@ export default {
     ),
     url(/v3-assets/dashboard/images/header_bg.jpg);
 }
-
-.hamburger {
-  min-width: 2rem;
+/* transition: all 0.4s ease-in-out; */
+#app-header { @apply py-3 transform origin-top transition-all duration-500 ease-in-out }
+#app-header.shrink { @apply py-3 }
+@screen lg {
+  #app-header { @apply py-8 }
+  #app-header.shrink { @apply py-3 }
 }
 
+.hamburger { min-width: 2rem }
 .hamburger:after,
 .hamburger:before,
 .hamburger div {
@@ -106,16 +83,7 @@ export default {
   margin: 7px 0;
   transition: all .2s ease-in-out;
 }
-
-.hamburger.checked:before {
-  transform: translateY(10px) rotate(135deg);
-}
-
-.hamburger.checked:after {
-  transform: translateY(-10px) rotate(-135deg);
-}
-
-.hamburger.checked div {
-  transform: scale(0);
-}
+.hamburger.checked:before { transform: translateY(10px) rotate(135deg) }
+.hamburger.checked:after { transform: translateY(-10px) rotate(-135deg) }
+.hamburger.checked div { transform: scale(0) }
 </style>

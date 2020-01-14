@@ -6,17 +6,24 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     authenticated: false,
-    schoolName: 'Elementary School',
+    schoolName: 'Page Header',
     unitType: 'Reading Challenge',
-    participants: [
-      {
-        firstName: 'First',
-        lastName: 'Participant',
-      },
-    ],
+    user: {},
     videoSource: 'https://www.youtube-nocookie.com/embed/9Yrd4aZkse8?autoplay=0',
   },
-  mutations: {},
-  actions: {},
+  mutations: {
+    SET_USER (state, user) {
+      state.User = user
+    },
+  },
+  actions: {
+    login: ({ commit }, payload) => {
+      return new Promise((resolve, reject) => {
+        commit('LOGIN_REQUEST')
+        this.$http.post('/token', payload)
+          .then(response => {})
+      })
+    },
+  },
   modules: {},
 })
