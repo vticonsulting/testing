@@ -15,11 +15,6 @@ const instance = axios.create({
 instance.defaults.headers.common['auth'] = 'specialToken'
 
 instance.interceptors.request.use((request) => {
-  console.log('-----------------------------')
-  console.log('instance.interceptors.request')
-  console.log('-----------------------------')
-  console.dir(request)
-
   if (request.loading && typeof (request.loading) === 'function') {
     // Callback for the request
   } else {
@@ -30,10 +25,6 @@ instance.interceptors.request.use((request) => {
 })
 
 instance.interceptors.response.use((response) => {
-  console.log('------------------------------')
-  console.log('instance.interceptors.response')
-  console.log('------------------------------')
-  console.dir(response)
   hideDefaultLoading()
   return response
 }, (error) => {

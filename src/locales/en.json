@@ -1,3 +1,17 @@
 {
-  "message": "hello i18n !!"
+  "content_info": "This fundraising experience is powered by Booster. The mission of Booster is to strengthen schools.",
+  "need_help": "Need Help?",
+  "spanish": "Español?",
+  "view_rewards": "View Rewards",
+  "program": {
+    "overview": {
+      "title": "Program Overview",
+      "subtitle": "About the Program"
+    }
+  },
+  "school": {
+    "goals_and_stats": {
+      "title": "School Goals and Stats"
+    }
+  }
 }

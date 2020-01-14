@@ -43,14 +43,14 @@ export default {
       .get('users')
       .then(res => {
         this.$store.state.user = res.data[0]
-        console.log('---------------------------')
-        console.log('App.created users retrieved')
-        console.log('---------------------------')
-        console.dir(res.data)
       })
+  },
+  beforeMount () {
+    console.log(`[${this.$appName}] App.beforeMount`)
   },
   mounted () {
     console.log(`[${this.$appName}] App.mounted`)
+
     // const link = document.createElement("link");
     // link.setAttribute("rel", "stylesheet");
     // link.setAttribute(
@@ -59,6 +59,15 @@ export default {
     // );
     // link.dataset.saviHead = "true";
     // document.head.appendChild(link);
+  },
+  beforeUpdate () {
+    console.log(`[${this.$appName}] App.beforeUpdate`)
+  },
+  updated () {
+    console.log(`[${this.$appName}] App.updated`)
+  },
+  beforeDestroy () {
+    console.log(`[${this.$appName}] App.beforeDestroy`)
   },
   destroyed () {
     console.log(`[${this.$appName}] App.destroyed`)

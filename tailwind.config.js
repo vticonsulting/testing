@@ -4,6 +4,9 @@ module.exports = {
       spacing: {
         '28': '7rem',
         '44': '11rem',
+        '72': '18rem',
+        '80': '20rem',
+        '96': '24rem',
       },
     },
     fontFamily: {

@@ -5,6 +5,11 @@
     class="z-30 elevation-8 fixed bottom-0 w-full p-5 bg-white border-t text-center"
   >
     <slot>
+      <select v-model="$i18n.locale">
+        <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">
+          {{ lang }}
+        </option>
+      </select>
       <PledgeButton class="w-full py-3">
         Enter Pledge
       </PledgeButton>
@@ -28,6 +33,14 @@ export default {
   name: 'AppFooter',
   directives: {
     Scroll,
+  },
+  data () {
+    return {
+      langs: [
+        'en',
+        'es',
+      ],
+    }
   },
   methods: {
     handleScroll (evt, el) {
