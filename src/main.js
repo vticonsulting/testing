@@ -17,6 +17,7 @@ import PledgeButton from '@/components/PledgeButton'
 import ProgramHeader from '@/components/ProgramHeader'
 import ProgressCard from '@/components/ProgressCard'
 import HelloWorld from '@/components/HelloWorld'
+import i18n from './i18n'
 
 Vue.component('default-layout', Default)
 Vue.component('no-sidebar-layout', NoSidebar)
@@ -43,5 +44,6 @@ Vue.config.productionTip = false
 new Vue({
   router,
   store,
+  i18n,
   render: h => h(App),
 }).$mount('#app')
