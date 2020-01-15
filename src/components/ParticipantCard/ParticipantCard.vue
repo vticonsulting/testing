@@ -34,9 +34,7 @@
         </div>
       </div>
       <div class="button-container text-center">
-        <BaseButton is-secondary class="px-6">
-          {{ $t('view_rewards') }}
-        </BaseButton>
+        <ViewRewardsButton />
       </div>
     </section>
   </div>

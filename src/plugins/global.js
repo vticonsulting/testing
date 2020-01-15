@@ -17,6 +17,7 @@ import SchoolGoalsAndStats from '../components/SchoolGoalsAndStats'
 import ThePledges from '../components/ThePledges'
 import BusinessLeaderboard from '../components/BusinessLeaderboard'
 import StudentStarVideo from '../components/StudentStarVideo'
+import ViewRewardsButton from '../components/ViewRewardsButton'
 
 Vue.component('BaseAvatar', BaseAvatar)
 Vue.component('BaseButton', BaseButton)
@@ -34,3 +35,4 @@ Vue.component('SchoolGoalsAndStats', SchoolGoalsAndStats)
 Vue.component('ThePledges', ThePledges)
 Vue.component('BusinessLeaderboard', BusinessLeaderboard)
 Vue.component('StudentStarVideo', StudentStarVideo)
+Vue.component('ViewRewardsButton', ViewRewardsButton)

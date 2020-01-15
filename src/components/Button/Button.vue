@@ -2,6 +2,7 @@
   <button
     v-on="$listeners"
     v-bind="$attrs"
+    :name="label"
     class="
       block
       leading-none
@@ -100,7 +101,7 @@ export default {
        * @type {Event}
        */
       this.$emit('click', $event)
-      this.$buefy.toast.open(`BaseButton.click: ${$event}`)
+      this.$buefy.toast.open(`BaseButton.click: ${$event.currentTarget.name}`)
     },
     onDoubleClick ($event) {
       /**

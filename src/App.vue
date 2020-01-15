@@ -34,8 +34,27 @@ export default {
 
 <style lang="scss">
 @import "~bulma/sass/utilities/_all";
+$toast-border-radius: 0;
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
+// Fix conflicts
+.box:not(:last-child),
+.content:not(:last-child),
+.notification:not(:last-child),
+.progress:not(:last-child),
+.table:not(:last-child),
+.table-container:not(:last-child),
+.title:not(:last-child),
+.subtitle:not(:last-child),
+.block:not(:last-child),
+.highlight:not(:last-child),
+.breadcrumb:not(:last-child),
+.level:not(:last-child),
+.list:not(:last-child),
+.message:not(:last-child),
+.tabs:not(:last-child) {
+    margin-bottom: 0 !important;
+}
 </style>
 
 <style>

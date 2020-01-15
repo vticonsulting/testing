@@ -1,5 +1,8 @@
 <template>
-  <BaseButton class="w-full" is-primary>
+  <BaseButton
+    label="pledge-button"
+    class="w-full" is-primary
+  >
     Enter Pledge
   </BaseButton>
 </template>
