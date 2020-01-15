@@ -13,6 +13,7 @@ import ProgramHeader from '../components/ProgramHeader'
 import ProgramOverview from '../components/ProgramOverview'
 import ProgressBar from '../components/ProgressBar'
 import ParticipantCard from '../components/ParticipantCard'
+import ParticipantCards from '../components/ParticipantCards'
 import SchoolGoalsAndStats from '../components/SchoolGoalsAndStats'
 import ThePledges from '../components/ThePledges'
 import BusinessLeaderboard from '../components/BusinessLeaderboard'
@@ -31,6 +32,7 @@ Vue.component('ProgramHeader', ProgramHeader)
 Vue.component('ProgramOverview', ProgramOverview)
 Vue.component('ProgressBar', ProgressBar)
 Vue.component('ParticipantCard', ParticipantCard)
+Vue.component('ParticipantCards', ParticipantCards)
 Vue.component('SchoolGoalsAndStats', SchoolGoalsAndStats)
 Vue.component('ThePledges', ThePledges)
 Vue.component('BusinessLeaderboard', BusinessLeaderboard)
