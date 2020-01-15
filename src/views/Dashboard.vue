@@ -16,9 +16,6 @@
 <script>
 export default {
   name: 'Dashboard',
-  mounted () {
-    this.$buefy.toast.open('Dashboard.mounted')
-  },
   methods: {
     push () {
       dataLayer.push({

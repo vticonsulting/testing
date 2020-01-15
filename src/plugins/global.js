@@ -7,7 +7,6 @@ import BaseVideo from '../components/Video'
 import ChevronIcon from '../components/ChevronIcon'
 import HelloWorld from '../components/HelloWorld'
 import HowToGetPledges from '../components/HowToGetPledges'
-import MenuToggle from '../components/MenuToggle'
 import PledgeButton from '../components/PledgeButton'
 import ProgramHeader from '../components/ProgramHeader'
 import ProgramOverview from '../components/ProgramOverview'
@@ -26,7 +25,6 @@ Vue.component('BaseVideo', BaseVideo)
 Vue.component('ChevronIcon', ChevronIcon)
 Vue.component('HelloWorld', HelloWorld)
 Vue.component('HowToGetPledges', HowToGetPledges)
-Vue.component('MenuToggle', MenuToggle)
 Vue.component('PledgeButton', PledgeButton)
 Vue.component('ProgramHeader', ProgramHeader)
 Vue.component('ProgramOverview', ProgramOverview)

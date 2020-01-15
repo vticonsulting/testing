@@ -5,22 +5,25 @@
     <slot>
       <div class="flex items-center justify-between w-full h-full max-w-6xl mx-auto">
         <ProgramHeader title="Titan Next" />
-        <MenuToggle @toggle="toggleMenu" />
+        <AppMenuToggle :user-id="userId" @toggle="toggleMenu" />
       </div>
     </slot>
+    <PortalTarget name="menus" />
   </div>
 </template>
 
 <script>
 import AppHelloBar from '../../components/AppHelloBar'
+import AppMenuToggle from '../../components/AppMenuToggle'
 import Scroll from '../../directives/scroll'
 
 export default {
   name: 'AppHeader',
-  components: { AppHelloBar },
+  components: { AppHelloBar, AppMenuToggle },
   directives: { Scroll },
   data: () => ({
     showMenu: false,
+    userId: 1,
   }),
   methods: {
     handleScroll (evt, el) {
@@ -33,7 +36,7 @@ export default {
     toggleMenu (payload) {
       this.showMenu = payload
       this.$emit('menu-open', this.showMenu)
-      this.$buefy.toast.open(`AppHeader.menu-open: ${this.showMenu}`)
+      // this.$buefy.toast.open(`AppHeader.menu-open: ${this.showMenu}`)
     },
   },
 }
@@ -48,7 +51,7 @@ export default {
     ),
     url(/v3-assets/dashboard/images/header_bg.jpg);
 }
-.app-header { @apply z-40 elevation-8 fixed w-full py-3 text-white bg-cover bg-center bg-gray-700 }
+.app-header { @apply z-50 elevation-8 fixed w-full py-3 text-white bg-cover bg-center bg-gray-700 }
 .app-header { @apply transform origin-top transition-all duration-500 ease-in-out }
 .app-header.shrink { @apply py-3 }
 

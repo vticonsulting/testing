@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="bg-white">
+  <div id="app" class="static bg-white">
     <component :is="layout">
       <router-view :users="users" />
     </component>
@@ -21,8 +21,6 @@ export default {
     },
   },
   created () {
-    this.$buefy.toast.open('App.created')
-
     this.$http
       .get('users')
       .then(res => {

@@ -1,12 +1,11 @@
 <template>
   <CookieConsent>
     <template slot="message">
-      This website uses cookies
-      <a class="btn btn-link" href="#">Read more</a>
+      <span>This website uses cookies. <a class="inline-block text-blue-600 border-b border-blue-600" href="#">Read more</a></span>
     </template>
     <template slot="button">
-      <button class="btn btn-info">
-        Accept
+      <button class="p-1 text-2xl hover:font-bold">
+        &times;
       </button>
     </template>
   </CookieConsent>
@@ -30,7 +29,8 @@ $cookieconstent-compliance-padding: .5rem 2rem;
 $cookieconstent-compliance-color: #fff;
 $cookieconstent-compliance-background: #237afc;
 $cookieconstent-compliance-border: 2px solid currentColor;
-@import "./node_modules/vue-cookieconsent-component/src/scss/cookie-consent";
-@import "./node_modules/vue-cookieconsent-component/src/scss/cookie-consent-bottom";
-@import "./node_modules/vue-cookieconsent-component/src/scss/cookie-consent-transition";
+@import "~vue-cookieconsent-component/src/scss/cookie-consent";
+@import "~vue-cookieconsent-component/src/scss/cookie-consent-bottom";
+@import "~vue-cookieconsent-component/src/scss/cookie-consent-transition";
+.cookie-consent { @apply justify-between }
 </style>
