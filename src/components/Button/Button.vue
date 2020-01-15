@@ -100,7 +100,7 @@ export default {
        * @type {Event}
        */
       this.$emit('click', $event)
-      this.$buefy.toast.open('button click')
+      this.$buefy.toast.open(`BaseButton.click: ${$event}`)
     },
     onDoubleClick ($event) {
       /**

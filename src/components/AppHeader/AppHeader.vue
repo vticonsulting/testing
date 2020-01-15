@@ -33,7 +33,7 @@ export default {
     toggleMenu (payload) {
       this.showMenu = payload
       this.$emit('menu-open', this.showMenu)
-      this.$buefy.toast.open(`menu-open: ${this.showMenu}`)
+      this.$buefy.toast.open(`AppHeader.menu-open: ${this.showMenu}`)
     },
   },
 }

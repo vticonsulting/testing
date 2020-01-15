@@ -20,7 +20,7 @@ export default {
     toggle (e) {
       this.on = !this.on
       this.$emit('toggle', this.on)
-      console.log('toggle', this.on)
+      this.$buefy.toast.open(`Menu.toggle: ${this.on}`)
     },
   },
 }
