@@ -21,6 +21,8 @@ export default {
     },
   },
   created () {
+    this.$buefy.toast.open('App.created')
+
     this.$http
       .get('users')
       .then(res => {
@@ -29,6 +31,12 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+@import "~bulma/sass/utilities/_all";
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+</style>
 
 <style>
 .element { animation: var(--animationName, pulse) var(--duration, 2000ms) ease-in-out infinite }

@@ -1,6 +1,8 @@
 <template>
   <div class="default_layout">
-    <AppHeader />
+    <AppHelloBar />
+
+    <AppHeader @menu-open="showMenu" />
 
     <main class="main-content">
       <slot />
@@ -9,7 +11,9 @@
 
       <!-- <div class="modal-overlay" />
       <div class="modal" />
-      <div class="menu" /> -->
+       -->
+      <div v-show="menuOpen" class="menu" />
+
     </main>
 
     <AppFooter />
@@ -19,13 +23,22 @@
 
 <script>
 import AppCookieConsent from '../components/AppCookieConsent'
+import AppHelloBar from '../components/AppHelloBar'
 import AppHeader from '../components/AppHeader'
 import AppInfo from '../components/AppInfo'
 import AppFooter from '../components/AppFooter'
 
 export default {
   name: 'DefaultLayout',
-  components: { AppHeader, AppInfo, AppFooter, AppCookieConsent },
+  components: { AppHelloBar, AppHeader, AppInfo, AppFooter, AppCookieConsent },
+  data: () => ({
+    menuOpen: false,
+  }),
+  methods: {
+    showMenu (payload) {
+      this.menuOpen = payload
+    },
+  },
 }
 </script>
 
@@ -37,6 +50,6 @@ export default {
 
 .modal-overlay { @apply z-10 absolute inset-0 bg-black opacity-50 }
 .modal { @apply z-50 absolute inset-0 bg-white transform scale-50 shadow-xl rounded-lg border }
-.menu { @apply z-30 absolute inset-y-0 right-0 w-72 elevation-21 bg-white }
+.menu { @apply z-30 absolute inset-0 elevation-21 bg-white }
 /* main { filter: blur(4px) } */
 </style>

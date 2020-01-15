@@ -20,6 +20,7 @@
 export default {
   name: 'Dashboard',
   mounted () {
+    this.$buefy.toast.open('Dashboard Mounted')
   },
   methods: {
     push () {

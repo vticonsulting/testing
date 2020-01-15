@@ -9,9 +9,12 @@
       <ChevronIcon />
     </button>
     <div class="mx-3 mb-8 px-7">
-      <p class="mb-8 text-gray-700">
-        If you own a local business, you can be highlighted here if you make a pledge. You can promote your business by linking to your website and leaving a note for the entire Salesforce Test-2016-2-Fall community to see. Want to promote your business? Click "<b>Enter Pledge</b>" now!
-      </p>
+      <p
+        class="mb-8 text-gray-700"
+        v-html="$t('business_leaderboard.text', {
+          programName: $store.state.program.name
+        })"
+      />
       <table class="table w-full mb-8">
         <tbody>
           <tr>

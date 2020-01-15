@@ -1,23 +1,27 @@
 <template>
-  <div class="app-header" v-scroll="handleScroll">
+  <div class="app-header mt-0" v-scroll="handleScroll">
+    <AppHelloBar />
     <!-- @slot Default  -->
     <slot>
       <div class="flex items-center justify-between w-full h-full max-w-6xl mx-auto">
         <ProgramHeader title="Titan Next" />
-        <MenuToggle />
+        <MenuToggle @toggle="toggleMenu" />
       </div>
     </slot>
   </div>
 </template>
 
 <script>
+import AppHelloBar from '../../components/AppHelloBar'
 import Scroll from '../../directives/scroll'
 
 export default {
   name: 'AppHeader',
-  directives: {
-    Scroll,
-  },
+  components: { AppHelloBar },
+  directives: { Scroll },
+  data: () => ({
+    showMenu: false,
+  }),
   methods: {
     handleScroll (evt, el) {
       if (window.scrollY > 10) {
@@ -25,6 +29,11 @@ export default {
       } else {
         el.classList.remove('shrink')
       }
+    },
+    toggleMenu (payload) {
+      this.showMenu = payload
+      this.$emit('menu-open', this.showMenu)
+      this.$buefy.toast.open(`menu-open: ${this.showMenu}`)
     },
   },
 }

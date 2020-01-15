@@ -7,8 +7,11 @@ export default new Vuex.Store({
   state: {
     authenticated: false,
     schoolName: 'Page Header',
-    unitType: 'Reading Challenge',
+    unitType: 'Unit Type',
     user: {},
+    program: {
+      name: 'Program Name',
+    },
     videoSource: 'https://www.youtube-nocookie.com/embed/9Yrd4aZkse8?autoplay=0',
   },
   mutations: {

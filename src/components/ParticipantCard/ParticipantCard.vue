@@ -25,7 +25,7 @@
               <circle cx="8" cy="8" r="8" />
             </svg>
             <span>
-              Total Pledged ${{ participant.pledged }} of ${{ participant.goal }}
+              {{ $t('pledges.total_pledged') }} ${{ participant.pledged }} of ${{ participant.goal }}
             </span>
           </h3>
           <h4 class="text-sm text-gray-700 capitalize">
@@ -53,6 +53,7 @@ export default {
         lastName: 'Nathan',
         pledged: 5,
         goal: 10,
+
       }),
     },
   },

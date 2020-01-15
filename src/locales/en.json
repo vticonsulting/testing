@@ -5,10 +5,12 @@
   "lang": "¿Español?",
   "view_rewards": "View Rewards",
   "how_to_get_pledges": "How to Get Pledges",
+  "enter_pledge": "Enter Pledge",
   "program": {
     "overview": {
       "title": "Program Overview",
-      "subtitle": "About the Program"
+      "subtitle": "About the Program",
+      "text": "<b>{schoolName}</b> is hosting a two-week fundraiser powered by the Booster team! Instead of selling items, families will gather pledges to help their school, while students experience a world-class character program and participate in the <b>{schoolName} {unitType}</b>"
     }
   },
   "school": {
@@ -23,6 +25,10 @@
     "title": "Pledges"
   },
   "business_leaderboard": {
-    "title": "Our Business Leaderboard"
+    "title": "Our Business Leaderboard",
+    "text": "If you own a local business, you can be highlighted here if you make a pledge. You can promote your business by linking to your website and leaving a note for the entire <b>{programName}</b> community to see. Want to promote your business? Click <b>Enter Pledge</b> now!"
+  },
+  "pledges": {
+    "total_pledged": "Total Pledged"
   }
 }

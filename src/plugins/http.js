@@ -1,8 +1,13 @@
 import axios from 'axios'
+import {
+  ToastProgrammatic as Toast,
+  // LoadingProgrammatic as Loading,
+} from 'buefy'
 
 const token = document.head.querySelector('meta[name="csrf-token"]')
 
 const baseURL = 'https://jsonplaceholder.typicode.com/'
+// const loadingComponent = Loading
 
 const instance = axios.create({
   baseURL: baseURL,
@@ -18,29 +23,29 @@ instance.interceptors.request.use((request) => {
   if (request.loading && typeof (request.loading) === 'function') {
     // Callback for the request
   } else {
-    // Do default loading here
-    document.body.classList.add('loading')
+    // loadingComponent.open()
   }
   return request
 })
 
 instance.interceptors.response.use((response) => {
-  hideDefaultLoading()
+  // loadingComponent.close()
+  console.dir(response)
   return response
 }, (error) => {
   if (error.config.error && typeof (error.config.error) === 'function') {
-    hideDefaultLoading()
+    // loadingComponent.close()
     error.config.error(error)
   } else {
-    hideDefaultLoading()
+    // loadingComponent.close()
+    Toast.open({
+      message: error,
+      type: 'is-danger',
+    })
   }
 
   // Reject promise and throw an error
   return Promise.reject(error)
 })
-
-function hideDefaultLoading () {
-  document.body.classList.remove('loading')
-}
 
 export default instance

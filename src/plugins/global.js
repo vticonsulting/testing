@@ -1,10 +1,10 @@
 import Vue from 'vue'
 
-import Avatar from '../components/Avatar'
+import BaseAvatar from '../components/Avatar'
 import BaseButton from '../components/Button'
 import BaseVideo from '../components/Video'
+
 import ChevronIcon from '../components/ChevronIcon'
-import HelloBar from '../components/HelloBar'
 import HelloWorld from '../components/HelloWorld'
 import HowToGetPledges from '../components/HowToGetPledges'
 import MenuToggle from '../components/MenuToggle'
@@ -18,11 +18,10 @@ import ThePledges from '../components/ThePledges'
 import BusinessLeaderboard from '../components/BusinessLeaderboard'
 import StudentStarVideo from '../components/StudentStarVideo'
 
-Vue.component('Avatar', Avatar)
+Vue.component('BaseAvatar', BaseAvatar)
 Vue.component('BaseButton', BaseButton)
 Vue.component('BaseVideo', BaseVideo)
 Vue.component('ChevronIcon', ChevronIcon)
-Vue.component('HelloBar', HelloBar)
 Vue.component('HelloWorld', HelloWorld)
 Vue.component('HowToGetPledges', HowToGetPledges)
 Vue.component('MenuToggle', MenuToggle)

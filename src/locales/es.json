@@ -1,27 +1,35 @@
 {
+  "edit": "Editar",
   "content_info": "Esta experiencia de recaudación de fondos está impulsada por Booster. La misión de Booster es fortalecer las escuelas.",
-  "need_help": "¿Necesitas ayuda?",
+  "need_help": "¿Necesitas Ayuda?",
   "lang": "English?",
-  "view_rewards": "Ver recompensas",
-  "how_to_get_pledges":"Cómo obtener promesas",
+  "view_rewards": "Ver Recompensas",
+  "how_to_get_pledges":"Cómo Obtener Promesas",
+  "enter_pledge": "Entrar en prenda",
   "program": {
     "overview": {
-      "title": "Reseña del programa",
-      "subtitle": "Sobre el programa"
+      "title": "Reseña del Programa",
+      "subtitle": "Sobre el Programa",
+      "text":" ¡<b>{schoolName}</b> está organizando una recaudación de fondos de dos semanas impulsada por el equipo Booster! En lugar de vender artículos, las familias se comprometerán a ayudar a su escuela, mientras los estudiantes experimentan un programa de personajes de clase mundial y participan en el <b>{schoolName} {unitType}</b>"
     }
   },
+
   "school": {
     "goals_and_stats": {
-      "title": "Metas y estadísticas de la escuela"
+      "title": "Metas y Estadísticas de la Escuela"
     }
   },
   "student_star_video": {
-    "title": "Video estrella del estudiante"
+    "title": "Video Estrella del Estudiante"
   },
   "the_pledges": {
     "title": "Promesas"
   },
   "business_leaderboard": {
-    "title": "Nuestro marcador de negocios"
+    "title": "Nuestro Marcador de Negocios",
+    "text": "Si posee un negocio local, puede resaltarlo aquí si hace una promesa. Puede promocionar su negocio al vincular a su sitio web y dejar una nota para que vea toda la comunidad de <b>{ programName }</b>. ¿Quieres promover tu negocio? Haga clic en ”Entrar en prenda“ ahora!"
+  },
+  "pledges": {
+    "total_pledged": "Total Comprometido"
   }
 }

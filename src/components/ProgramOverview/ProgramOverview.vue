@@ -28,9 +28,12 @@
         <h2 class="mb-2 text-gray-900 font-bold">
           {{ $t('program.overview.subtitle') }}
         </h2>
-        <p class="text-gray-600">
-          <span class="font-semibold text-gray-800">{{ $store.state.schoolName }}</span> is hosting a two-week fundraiser powered by the Booster team! Instead of selling items, families will gather pledges to help their school, while students experience a world-class character program and participate in the <span class="font-semibold text-gray-800">{{ $store.state.schoolName }} {{ $store.state.unitType }}</span>.
-        </p>
+        <p
+          v-html="$t('program.overview.text', {
+            schoolName: school.name,
+            unitType: $store.state.unitType
+          })"
+        />
       </div>
     </div>
 
@@ -48,7 +51,14 @@
 
 <script>
 export default {
-
+  props: {
+    school: {
+      type: Object,
+      default: () => ({
+        name: 'School Name',
+      }),
+    },
+  },
 }
 </script>
 

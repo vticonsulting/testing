@@ -1,12 +1,11 @@
 <template>
   <button
-    @click.self="menuOpen = !menuOpen"
-    class="menu-toggle"
-    :class="[{
-      checked: menuOpen
-    }]"
+    @click="toggle"
+    :class="[ 'menu-toggle', { open: on } ]"
   >
-    <div />
+    <slot>
+      <div />
+    </slot>
   </button>
 </template>
 
@@ -14,14 +13,14 @@
 
 export default {
   name: 'MenuToggle',
-  data () {
-    return {
-      menuOpen: false,
-    }
-  },
+  data: () => ({
+    on: false,
+  }),
   methods: {
     toggle (e) {
-      this.$emit('toggle', e.currentTarget.name)
+      this.on = !this.on
+      this.$emit('toggle', this.on)
+      console.log('toggle', this.on)
     },
   },
 }
@@ -40,7 +39,7 @@ export default {
   margin: 7px 0;
   transition: all .2s ease-in-out;
 }
-.menu-toggle.checked:before { transform: translateY(10px) rotate(135deg) }
-.menu-toggle.checked:after { transform: translateY(-10px) rotate(-135deg) }
-.menu-toggle.checked div { transform: scale(0) }
+.menu-toggle.open:before { transform: translateY(10px) rotate(135deg) }
+.menu-toggle.open:after { transform: translateY(-10px) rotate(-135deg) }
+.menu-toggle.open div { transform: scale(0) }
 </style>
