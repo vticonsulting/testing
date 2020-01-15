@@ -3,7 +3,12 @@
     <p>{{ $t('content_info') }}</p>
     <p>
       <a class="text-blue-700" href="#">{{ $t('need_help') }}</a> |
-      <a class="text-blue-700" href="#">{{ $t('lang') }}</a>
+      <span v-if="$i18n.locale == 'es'">
+        <a class="text-blue-700" @click="$i18n.locale = 'en'">{{ $t('lang') }}</a>
+      </span>
+      <span v-if="$i18n.locale == 'en'">
+        <a class="text-blue-700" @click="$i18n.locale = 'es'">{{ $t('lang') }}</a>
+      </span>
     </p>
   </div>
 </template>

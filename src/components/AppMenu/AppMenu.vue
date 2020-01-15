@@ -9,11 +9,28 @@
     appear
   >
     <div v-show="show" class="z-10 absolute inset-0 max-w-6xl mx-auto p-8 w-full h-72 rounded-b-lg border bg-white shadow-lg" style="top: 100%">
-      <div class="text-center">
-        <BaseButton @click="cancel" type="button" is-primary>
-          UserId: {{ userId }}
-        </BaseButton>
-      </div>
+      <button @click="cancel" type="button" class="p-1 text-black text-2xl rounded-full bg-gray-200  hover:bg-gray-300 hover:scale-110 flex items-center justify-center transform duration-300 ease-in-out">
+        <svg
+          class="h-4 w-4 stroke-current stroke-1 transform transition-all rotate-0 hover:scale-110 hover:rotate-180 duration-300 ease-in-out"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line
+            x1="18"
+            y1="6"
+            x2="6"
+            y2="18"
+          />
+          <line
+            x1="6"
+            y1="6"
+            x2="18"
+            y2="18"
+          />
+        </svg>
+      </button>
     </div>
   </Transition>
 </template>
@@ -37,7 +54,6 @@ export default {
     })
 
     this.$once('hook:beforeDestroy', () => {
-      console.log('removing listener')
       document.removeEventListener('keydown', listener)
     })
   },
