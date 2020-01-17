@@ -175,5 +175,18 @@
         d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
       />
     </svg>
+    <!-- Help Circle -->
+    <svg
+      class="h-8 w-8 text-blue-500 stroke-current stroke-2 transform duration-500 ease-in-out"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01" />
+    </svg>
   </div>
 </template>

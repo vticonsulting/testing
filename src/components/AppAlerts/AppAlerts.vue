@@ -8,14 +8,17 @@
     leave-to-class="opacity-0"
     appear
   >
-    <div v-show="show" class="absolute inset-0 w-full max-w-6xl h-screen mx-auto" style="top: 100%">
-      <div class="elevation-10 flex flex-col rounded p-0 bg-white text-black shadow-xl">
-        <header class="flex items-center justify-between border-t-4 border-red-700">
-          <h1 class="text-xl py-1 px-4">
-            Alerts
-          </h1>
+    <div v-show="show" class="absolute inset-y-0 right-0 w-full max-w-xl h-screen mx-auto" style="top: 100%">
+
+      <div class="elevation-10 flex flex-col rounded h-64 p-0 bg-yellow-300 text-black shadow-xl">
+        <header class="flex items-center justify-between">
+          <slot name="header">
+            <h1 class="text-xl py-1 px-4">
+              Alerts
+            </h1>
+          </slot>
           <!-- Close Button -->
-          <button @click="cancel" type="button" class="p-4 text-2xl rounded-full opacity-75 hover:opacity-100 hover:scale-150 flex items-center justify-center transform duration-300 ease-in-out">
+          <button @click="cancel" type="button" class="p-4 text-2xl rounded-full opacity-75 hover:opacity-100 flex items-center justify-center transform duration-300 ease-in-out">
             <svg
               class="h-4 w-4 stroke-current fill-current stroke-2 transform transition-all rotate-0 hover:scale-110 hover:rotate-0 duration-300 ease-in-out"
               viewBox="0 0 24 24"
@@ -38,8 +41,10 @@
             </svg>
           </button>
         </header>
-        <div class="flex-1 border-t border-gray-400" />
-        <footer class="flex justify-center p-4" />
+        <div class="flex-1 border-gray-400" />
+        <footer class="flex justify-center p-4">
+          <slot name="footer" />
+        </footer>
       </div>
     </div>
   </Transition>

@@ -8,14 +8,14 @@
     leave-to-class="opacity-0"
     appear
   >
-    <div v-show="show" class="z-30 fixed absolute inset-0 flex items-center justify-center min-h-screen bg-gray-300">
-      <div class="z-40 elevation-10 absolute inset-0 lg:max-w-6xl mx-auto mt-16 md:mt-44 md:p-8 rounded-lg bg-white text-black">
+    <div v-show="show" class="z-30 fixed absolute inset-0 flex items-center justify-center min-h-screen bg-gray-300" style="top: 100%">
+      <div class="z-40 elevation-10 absolute inset-0 lg:max-w-5xl mx-auto md:p-8 rounded-lg bg-white text-black">
         <header class="flex justify-between items-center">
           <h1 class="mx-2 font-semibold text-xl md:text-3xl text-gray-700">
             Participant Rewards
           </h1>
           <!-- Close Button -->
-          <button @click="cancel" type="button" class="flex items-center justify-center p-1 rounded-full opacity-75 hover:opacity-100 text-2xl hover:bg-blue-700 hover:scale-110 transform duration-300 ease-in-out">
+          <button @click="cancel" type="button" class="flex items-center justify-center p-1 rounded-full opacity-75 hover:opacity-100 text-2xl bg-gray-300 hover:bg-gray-400 hover:scale-110 transform duration-300 ease-in-out">
             <svg
               class="h-4 w-4 stroke-current stroke-2 fill-current rotate-0 hover:rotate-0 hover:scale-110 transform transition-all duration-300 ease-in-out"
               viewBox="0 0 24 24"

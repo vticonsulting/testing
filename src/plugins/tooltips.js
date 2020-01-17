@@ -57,7 +57,7 @@ Vue.use(VTooltip, {
     defaultOpenClass: 'open',
     defaultDelay: 0,
     defaultTrigger: 'click',
-    defaultOffset: 0,
+    defaultOffset: 5,
     defaultContainer: 'body',
     defaultBoundariesElement: undefined,
     defaultPopperOptions: {},

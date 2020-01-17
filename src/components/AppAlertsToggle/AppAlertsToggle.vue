@@ -1,11 +1,11 @@
 <template>
   <button
     @click="toggle"
-    :class="{ 'alerts-open': alertsOpen }"
+    :class="['self-center focus:outline-none focus:shadow-outline', { 'alerts-open': alertsOpen }]"
   >
     <slot>
       <svg
-        class="mx-4 h-6 w-6 stroke-current fill-current stroke-2 text-red-700 transform duration-500 ease-in-out"
+        class="h-6 w-6 stroke-current  fill-current stroke-2 text-white transform duration-500 ease-in-out"
         viewBox="0 0 24 24"
         fill="none"
         stroke-linecap="round"

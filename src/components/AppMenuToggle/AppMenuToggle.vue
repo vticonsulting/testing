@@ -1,7 +1,7 @@
 <template>
   <button
     @click="toggle"
-    :class="[ 'app-menu-toggle', { 'menu-open': menuOpen } ]"
+    :class="[ 'app-menu-toggle self-center focus:outline-none focus:shadow-outline', { 'menu-open': menuOpen } ]"
   >
     <slot>
       <div class="shape" />

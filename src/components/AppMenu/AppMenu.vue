@@ -8,13 +8,12 @@
     leave-to-class="opacity-0"
     appear
   >
-    <div v-show="show" class="absolute inset-0 w-full max-w-6xl h-screen mx-auto" style="top: 100%">
+    <div v-show="show" class="z-50 absolute inset-y-0 right-0 w-72 max-w-5xl h-screen mx-auto" style="top: 100%">
       <div class="elevation-10 flex flex-col rounded p-0 bg-white text-black shadow-xl">
-        <header class="flex items-center justify-between border-t-4 border-red-900 bg-gray-200">
+        <!-- <header class="flex items-center justify-between border-t-4 border-red-900 bg-gray-200">
           <h1 class="text-xl py-1 px-4">
             Program Header
           </h1>
-          <!-- Close Button -->
           <button @click="cancel" type="button" class="p-4 text-2xl rounded-full opacity-75 hover:opacity-100 hover:scale-150 flex items-center justify-center transform duration-300 ease-in-out">
             <svg
               class="h-4 w-4 stroke-current fill-current stroke-2 transform transition-all rotate-0 hover:scale-110 hover:rotate-0 duration-300 ease-in-out"
@@ -37,21 +36,13 @@
               />
             </svg>
           </button>
-        </header>
+        </header> -->
         <div class="flex-1 border-t border-gray-400">
-          <a class="block p-3 bg-gray-100 hover:bg-red-900 hover:text-white border-b transform duration-300 ease-in-out" href="#">Dashboard</a>
-          <a class="block p-3 bg-gray-100 hover:bg-red-900 hover:text-white border-b transform duration-300 ease-in-out" href="#">Easy Emailer</a>
-          <a class="block p-3 bg-gray-100 hover:bg-red-900 hover:text-white border-b transform duration-300 ease-in-out" href="#">Alerts</a>
-          <a class="block p-3 bg-gray-100 hover:bg-red-900 hover:text-white border-b transform duration-300 ease-in-out" href="#">Finish Line</a>
+          <a class="block p-3 bg-gray-100 hover:bg-red-900 hover:text-white border-b transform duration-300 ease-in-out" href="#">Layouts</a>
+          <a class="block p-3 bg-gray-100 hover:bg-red-900 hover:text-white border-b transform duration-300 ease-in-out" href="#">Base Elements</a>
+          <a class="block p-3 bg-gray-100 hover:bg-red-900 hover:text-white border-b transform duration-300 ease-in-out" href="#">Application Patterns</a>
+          <a class="block p-3 bg-gray-100 hover:bg-red-900 hover:text-white border-b transform duration-300 ease-in-out" href="#">Pages &amp; Templates</a>
         </div>
-        <footer class="flex justify-center p-4">
-          <BaseButton class="mx-2" is-small>
-            Save
-          </BaseButton>
-          <button @click="cancel" class="mx-2" is-small is-disabled>
-            Cancel
-          </button>
-        </footer>
       </div>
     </div>
   </Transition>

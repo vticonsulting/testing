@@ -1,5 +1,5 @@
 <template>
-  <div class="default_layout">
+  <div class="flex flex-col min-h-screen">
     <AppHelloBar />
 
     <AppHeader
@@ -7,7 +7,7 @@
       @alerts-open="showAlerts"
     />
 
-    <main class="main-content">
+    <main class="flex-1 overflow-auto w-full max-w-5xl mx-auto pt-28 lg:pt-44 pb-32">
       <slot />
 
       <AppInfo />
@@ -15,7 +15,6 @@
 
     <AppFooter />
     <AppCookieConsent />
-    <PortalTarget name="modal-outlet" />
   </div>
 </template>
 
@@ -62,9 +61,3 @@ export default {
   },
 }
 </script>
-
-<style>
-.default-layout { @apply flex flex-col min-h-screen }
-.main-content { @apply flex-1 overflow-auto w-full max-w-6xl mx-auto pt-28 pb-32 }
-@screen lg { .main-content { @apply pt-44 } }
-</style>

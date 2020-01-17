@@ -15,7 +15,7 @@
       </svg>
     </button>
 
-    <div class="md:flex md:items-start p-3">
+    <div class="hidden md:hidden md:items-start p-3">
       <div class="md:w-1/2">
         <BaseVideo />
       </div>

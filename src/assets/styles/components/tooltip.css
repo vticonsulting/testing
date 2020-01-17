@@ -1,16 +1,10 @@
-.tooltip {
-  display: block !important;
-  z-index: 10000;
-}
-
-.tooltip .tooltip-inner {
-  background: black;
-  color: white;
-  border-radius: 16px;
-  padding: 5px 10px 4px;
-}
+.tooltip { display: block !important; z-index: 10000 }
+.tooltip .tooltip-inner { @apply bg-black text-white rounded-xl pt-1 px-2 }
+.tooltip.popover .popover-inner { @apply p-6 rounded-lg bg-gray-100 text-black shadow-xl elevation-5 }
+.tooltip.popover .popover-arrow { @apply border-gray-100 }
 
 .tooltip .tooltip-arrow {
+  display: none;
   width: 0;
   height: 0;
   border-style: solid;
@@ -18,6 +12,18 @@
   margin: 5px;
   border-color: black;
   z-index: 1;
+}
+
+.tooltip[aria-hidden='true'] {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .15s, visibility .15s;
+}
+
+.tooltip[aria-hidden='false'] {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .15s;
 }
 
 .tooltip[x-placement^="top"] {
@@ -78,28 +84,4 @@
   top: calc(50% - 5px);
   margin-left: 0;
   margin-right: 0;
-}
-
-.tooltip.popover .popover-inner {
-  background: #f9f9f9;
-  color: black;
-  padding: 24px;
-  border-radius: 5px;
-  box-shadow: 0 5px 30px rgba(black, .1);
-}
-
-.tooltip.popover .popover-arrow {
-  border-color: #f9f9f9;
-}
-
-.tooltip[aria-hidden='true'] {
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity .15s, visibility .15s;
-}
-
-.tooltip[aria-hidden='false'] {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity .15s;
 }

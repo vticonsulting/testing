@@ -75,7 +75,7 @@ export default {
     toggleRewards () {
       this.rewardsOpen = !this.rewardsOpen
       this.$emit('rewards-open', this.rewardsOpen)
-      this.$buefy.toast.open(`ParticipantCard.toggle-rewards: ${this.rewardsOpen}`)
+      // this.$buefy.toast.open(`ParticipantCard.toggle-rewards: ${this.rewardsOpen}`)
     },
   },
 }

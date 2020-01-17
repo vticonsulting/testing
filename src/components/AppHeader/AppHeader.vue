@@ -2,10 +2,15 @@
   <div class="app-header mt-0" v-scroll="handleScroll">
     <AppHelloBar />
     <slot>
-      <div class="flex items-center justify-between w-full max-w-6xl h-full mx-auto">
+      <div class="py-5 relative flex items-stretch justify-between w-full max-w-5xl h-full mx-auto">
+        <PortalTarget name="menu-outlet" />
+        <PortalTarget name="modal-outlet" />
+        <PortalTarget name="alerts-outlet" />
         <ProgramHeader class="flex-1">
           <template #program-logo>
-            <AppLogo />
+            <RouterLink tag="button" to="/" class="focus:outline-none focus:shadow-outline">
+              <AppLogo />
+            </RouterLink>
           </template>
           <template #program-name>
             <ProgramName />
@@ -15,8 +20,6 @@
         <AppMenuToggle :user-id="userId" @toggle="toggleMenu" />
       </div>
     </slot>
-    <PortalTarget name="alerts-outlet" />
-    <PortalTarget name="menu-outlet" />
   </div>
 </template>
 
@@ -68,12 +71,11 @@ export default {
     ),
     url(/v3-assets/dashboard/images/header_bg.jpg);
 }
-.app-header { @apply z-50 elevation-8 fixed w-full py-3 text-white bg-cover bg-center bg-gray-700 }
-.app-header { @apply transform origin-top transition-all duration-500 ease-in-out }
-.app-header.shrink { @apply py-3 }
-
-@screen lg {
+.app-header { @apply z-50 elevation-8 fixed w-full text-white bg-cover bg-center bg-gray-700 }
+/* .app-header { @apply transform origin-top transition-all duration-500 ease-in-out } */
+/* .app-header.shrink { @apply py-3 } */
+/* @screen lg {
   .app-header { @apply py-8 }
   .app-header.shrink { @apply py-3 }
-}
+} */
 </style>

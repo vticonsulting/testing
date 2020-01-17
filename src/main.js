@@ -10,8 +10,12 @@ import './registerServiceWorker'
 import './assets/styles/index.css'
 
 Vue.config.productionTip = false
-Vue.prototype.$appName = 'Thomas Jefferson Elementary School'
-Vue.prototype.$appTagline = 'Event Date: Feburary 14, 2020'
+Vue.prototype.$appEyebrow = '@victortolbert/frontier'
+// Vue.prototype.$appName = 'UI Templates, Toolkit and Utilities'
+// Vue.prototype.$appName = 'UI Design System'
+// Vue.prototype.$appName = 'UI Design Toolkit'
+Vue.prototype.$appName = 'UI Developer Toolkit'
+Vue.prototype.$appTagline = 'cypress, jest, json-server, storybook, tailwindcss, vue'
 
 new Vue({
   router,
