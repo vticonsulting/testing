@@ -17,6 +17,7 @@ import ProgramHeader from '../components/ProgramHeader'
 import ProgramName from '../components/ProgramName'
 import ProgramOverview from '../components/ProgramOverview'
 import ProgressBar from '../components/ProgressBar'
+import Rewards from '../components/Rewards'
 import SchoolGoalsAndStats from '../components/SchoolGoalsAndStats'
 import StudentStarVideo from '../components/StudentStarVideo'
 import ThePledges from '../components/ThePledges'
@@ -43,6 +44,7 @@ Vue.component('ProgramHeader', ProgramHeader)
 Vue.component('ProgramName', ProgramName)
 Vue.component('ProgramOverview', ProgramOverview)
 Vue.component('ProgressBar', ProgressBar)
+Vue.component('Rewards', Rewards)
 Vue.component('SchoolGoalsAndStats', SchoolGoalsAndStats)
 Vue.component('StudentStarVideo', StudentStarVideo)
 Vue.component('ThePledges', ThePledges)

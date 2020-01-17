@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="relative elevation-2 w-full mb-6 aspect-ratio-16/9 bg-gray-600" />
+    <div class="relative elevation-2 w-full mb-6 aspect-ratio-16/9 bg-gray-600 scrim-b" />
     <!-- <figure class="relative elevation-2 w-full mb-6 aspect-ratio-16/9">
             <iframe
               :src="$store.state.videoSource"

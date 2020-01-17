@@ -19,15 +19,15 @@
 </template>
 
 <script>
+
 import AppHelloBar from '../../components/AppHelloBar'
 import AppMenuToggle from '../../components/AppMenuToggle'
-import ViewRewardsButton from '../../components/ViewRewardsButton'
 import AppLogo from '../../components/AppLogo'
 import Scroll from '../../directives/scroll'
 
 export default {
   name: 'AppHeader',
-  components: { AppHelloBar, AppMenuToggle, AppLogo, ViewRewardsButton },
+  components: { AppHelloBar, AppMenuToggle, AppLogo },
   directives: { Scroll },
   data: () => ({
     showMenu: false,
@@ -45,11 +45,6 @@ export default {
     toggleMenu (payload) {
       this.showMenu = payload
       this.$emit('menu-open', this.showMenu)
-      // this.$buefy.toast.open(`AppHeader.menu-open: ${this.showMenu}`)
-    },
-    toggleRewards (payload) {
-      this.showRewards = payload
-      this.$emit('rewards-open', this.showRewards)
       // this.$buefy.toast.open(`AppHeader.menu-open: ${this.showMenu}`)
     },
   },

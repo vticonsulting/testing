@@ -55,5 +55,25 @@ module.exports = {
     require('tailwindcss-aspect-ratio')(),
     require('tailwindcss-elevation')(['responsive']),
     require('@tailwindcss/custom-forms'),
+    // TODO: Fork `brettgullan/tailwindcss-scrims` and fix for tailwindcss@next
+    require('tailwindcss-scrims')({
+      directions: {
+        't': 'to bottom',
+        'b': 'to top',
+        'r': 'to left',
+        'l': 'to right',
+      },
+      distances: {
+        '1/4': '25%',
+        '1/3': '33.33333%',
+        '1/2': '50%',
+        '2/3': '66.66666%',
+        '3/4': '75%',
+      },
+      colors: {
+        default: ['rgba(0, 0, 0, 0.4)', 'rgba(0, 0, 0, 0)'],
+      },
+      variants: ['responsive', 'hover'],
+    }),
   ],
 }

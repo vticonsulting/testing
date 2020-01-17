@@ -48,22 +48,6 @@ export default {
         }
       },
     },
-    rewardsOpen: {
-      immediate: true,
-      handler (rewardsOpen) {
-        if (rewardsOpen) {
-          document.body.style.setProperty('position', 'fixed')
-          document.body.style.setProperty('overflow-y', 'scroll')
-          // document.documentElement.style.setProperty('overflow', 'hidden')
-          document.body.style.setProperty('overflow', 'hidden')
-        } else {
-          document.body.style.setProperty('position', 'static')
-          document.body.style.setProperty('overflow-y', 'auto')
-          // document.documentElement.style.removeProperty('overflow', 'hidden')
-          document.body.style.removeProperty('overflow')
-        }
-      },
-    },
   },
   methods: {
     showMenu (payload) {

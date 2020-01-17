@@ -7,6 +7,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     loading: false,
+    showRewards: false,
     user: {},
   },
   getters: {
@@ -20,6 +21,9 @@ export default new Vuex.Store({
     },
     SET_LOADING (state, payload) {
       state.loading = payload
+    },
+    SET_SHOW_REWARDS (state, payload) {
+      state.showRewards = payload
     },
   },
   actions: {
@@ -71,7 +75,7 @@ export default new Vuex.Store({
         commit('SET_USER', user)
         commit('SET_LOADING', false)
       } catch (e) {
-        console.error(e)
+        // console.error(e)
       }
     },
 

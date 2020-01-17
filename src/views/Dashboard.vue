@@ -5,13 +5,6 @@
       <ProgramOverview />
       <SchoolGoalsAndStats />
       <HowToGetPledges />
-      <Portal to="modal-outlet">
-        <div class="fixed absolute inset-0 bg-black opacity-50 flex items-center justify-center min-h-screen">
-          <div class="z-50 bg-white text-black text-2xl absolute inset-0 m-32">
-            rewards
-          </div>
-        </div>
-      </Portal>
       <StudentStarVideo />
       <ThePledges />
       <BusinessLeaderboard />
@@ -20,10 +13,14 @@
 </template>
 
 <script>
+import Rewards from '../components/Rewards'
+
 export default {
   name: 'Dashboard',
+  components: { Rewards },
   data: () => ({
     rewardsOpen: false,
+    show: false,
   }),
   watch: {
     rewardsOpen: {

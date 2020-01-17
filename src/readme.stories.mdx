@@ -1,0 +1,28 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+
+<Meta title="Documentation" />
+
+Entry point `main.js`
+
+## Standards
+
+### No scoped styles
+
+Instead, give the component's base element a class and use that instead.
+
+```html
+<!-- bad -->
+<style scoped>
+.component {}
+</style>
+
+<!-- // good -->
+<template>
+  <div class="component">
+  </div>
+</template>
+
+<style>
+.component {}
+</style>
+```

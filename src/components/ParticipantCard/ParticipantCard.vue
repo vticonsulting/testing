@@ -34,7 +34,10 @@
         </div>
       </div>
       <div class="button-container text-center">
-        Button
+        <ViewRewardsButton
+          label="view-rewards-button"
+          @click="toggleRewards"
+        />
       </div>
     </section>
   </div>
@@ -55,8 +58,8 @@ export default {
     },
   },
   data: () => ({
-    showRewards: false,
     userId: 1,
+    rewardsOpen: false,
   }),
   computed: {
     avatar () {
@@ -69,10 +72,28 @@ export default {
     },
   },
   methods: {
-    toggleRewards (payload) {
-      this.showRewards = payload
-      this.$emit('rewards-open', this.showRewards)
-      // this.$buefy.toast.open(`AppHeader.menu-open: ${this.showRewards}`)
+    toggleRewards () {
+      this.rewardsOpen = !this.rewardsOpen
+      this.$emit('rewards-open', this.rewardsOpen)
+      this.$buefy.toast.open(`ParticipantCard.toggle-rewards: ${this.rewardsOpen}`)
+    },
+    watch: {
+      rewardsOpen: {
+        immediate: true,
+        handler (rewardsOpen) {
+          if (rewardsOpen) {
+            document.body.style.setProperty('position', 'fixed')
+            document.body.style.setProperty('overflow-y', 'scroll')
+            // document.documentElement.style.setProperty('overflow', 'hidden')
+            document.body.style.setProperty('overflow', 'hidden')
+          } else {
+            document.body.style.setProperty('position', 'static')
+            document.body.style.setProperty('overflow-y', 'auto')
+            // document.documentElement.style.removeProperty('overflow', 'hidden')
+            document.body.style.removeProperty('overflow')
+          }
+        },
+      },
     },
   },
 }

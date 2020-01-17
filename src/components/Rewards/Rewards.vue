@@ -1,7 +1,23 @@
 <template>
-  <div v-show="show" class="absolute inset-0 w-full h-screen mt-2 p-3" style="top: 100%">
-    <div class="flex flex-col rounded-xl p-4 h-96 bg-blue-600 text-white shadow-xl elevation-10">
-      Rewards
+  <div v-show="show" class="z-30 fixed absolute inset-0 bg-gray-300 flex items-center justify-center min-h-screen">
+    <div class="z-40 bg-white text-black absolute inset-0 lg:max-w-6xl mx-auto mt-20 md:mt-44 rounded-lg elevation-10 pt-8 px-3 md:p-16">
+      <h1 class="m-2 text-xl md:text-3xl font-semibold text-gray-700">
+        Participant Rewards
+      </h1>
+      <div class="flex flex-wrap">
+        <figure class="w-1/2 p-2">
+          <div class="aspect-ratio-16/9 w-full bg-black" />
+        </figure>
+        <figure class="w-1/2 p-2">
+          <div class="aspect-ratio-16/9 w-full bg-black" />
+        </figure>
+        <figure class="w-1/2 p-2">
+          <div class="aspect-ratio-16/9 w-full bg-black" />
+        </figure>
+        <figure class="w-1/2 p-2">
+          <div class="aspect-ratio-16/9 w-full bg-black" />
+        </figure>
+      </div>
     </div>
   </div>
 </template>

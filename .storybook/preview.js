@@ -20,6 +20,8 @@ addDecorator(withA11y);
 
 Vue.component('BaseButton', BaseButton)
 Vue.component('PledgeButton', PledgeButton)
+Vue.prototype.$appName = 'Rapid Prototyping Toolkit'
+Vue.prototype.$appTagline = 'Rapid prototyping challenge'
 
 Vue.use(Vuex)
 Vue.use(i18n)

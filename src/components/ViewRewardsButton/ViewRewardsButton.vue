@@ -1,13 +1,14 @@
 <template>
-  <BaseButton
+  <button
     @click="toggle"
     label="view-rewards-button"
-    is-rounded
-    is-secondary
     class="px-6"
   >
     {{ $t('view_rewards') }}
-  </BaseButton>
+    <Portal to="modal-outlet" v-show="rewardsOpen">
+      <Rewards :show="rewardsOpen" @close="rewardsOpen = false" />
+    </Portal>
+  </button>
 </template>
 
 <script>
@@ -17,6 +18,15 @@ export default {
   props: {
     userId: {
       type: Number,
+    },
+  },
+  data: () => ({
+    rewardsOpen: false,
+  }),
+  methods: {
+    toggle (e) {
+      this.rewardsOpen = !this.rewardsOpen
+      this.$emit('toggle', this.rewardsOpen)
     },
   },
 }
