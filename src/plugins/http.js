@@ -33,7 +33,7 @@ instance.interceptors.request.use((request) => {
 
 instance.interceptors.response.use((response) => {
   // loadingComponent.close()
-  console.dir(response)
+  // console.dir(response)
   return response
 }, (error) => {
   if (error.config.error && typeof (error.config.error) === 'function') {
