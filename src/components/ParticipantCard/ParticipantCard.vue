@@ -35,6 +35,7 @@
       </div>
       <div class="text-center">
         <ViewRewardsButton
+          class="py-1 border rounded-full bg-blue-700 text-white focus:outline-none focus:shadow-outline"
           label="view-rewards-button"
           @click="toggleRewards"
         />
@@ -50,8 +51,8 @@ export default {
     participant: {
       type: Object,
       default: () => ({
-        firstName: 'Booster',
-        lastName: 'Nathan',
+        firstName: 'Goal Progress & Rewards',
+        lastName: '',
         pledged: 5,
         goal: 10,
       }),

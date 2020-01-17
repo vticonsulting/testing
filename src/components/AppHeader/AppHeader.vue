@@ -16,8 +16,10 @@
             <ProgramName />
           </template>
         </ProgramHeader>
-        <AppAlertsToggle @toggle="toggleAlerts" />
-        <AppMenuToggle :user-id="userId" @toggle="toggleMenu" />
+        <div class="flex items-center">
+          <AppAlertsToggle class="mr-1" @toggle="toggleAlerts" />
+          <AppMenuToggle :user-id="userId" @toggle="toggleMenu" />
+        </div>
       </div>
     </slot>
   </div>

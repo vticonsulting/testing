@@ -15,7 +15,7 @@
             Participant Rewards
           </h1>
           <!-- Close Button -->
-          <button @click="cancel" type="button" class="flex items-center justify-center p-1 rounded-full opacity-75 hover:opacity-100 text-2xl bg-gray-300 hover:bg-gray-400 hover:scale-110 transform duration-300 ease-in-out">
+          <button @click="cancel" type="button" class="flex items-center justify-center p-1 rounded-full opacity-75 hover:opacity-100 text-2xl bg-gray-300 hover:bg-gray-400 hover:scale-110 focus:outline-none focus:shadow-outline transform duration-300 ease-in-out">
             <svg
               class="h-4 w-4 stroke-current stroke-2 fill-current rotate-0 hover:rotate-0 hover:scale-110 transform transition-all duration-300 ease-in-out"
               viewBox="0 0 24 24"

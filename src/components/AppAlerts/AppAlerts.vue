@@ -18,7 +18,7 @@
             </h1>
           </slot>
           <!-- Close Button -->
-          <button @click="cancel" type="button" class="p-4 text-2xl rounded-full opacity-75 hover:opacity-100 flex items-center justify-center transform duration-300 ease-in-out">
+          <button @click="cancel" type="button" class="inline-block h-4 w-4 m-4 text-2xl rounded-full opacity-75 hover:opacity-100 flex items-center justify-center focus:outline-none focus:shadow-outline transform duration-300 ease-in-out">
             <svg
               class="h-4 w-4 stroke-current fill-current stroke-2 transform transition-all rotate-0 hover:scale-110 hover:rotate-0 duration-300 ease-in-out"
               viewBox="0 0 24 24"
