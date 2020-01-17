@@ -1,28 +1,37 @@
 <template>
   <div class="app-header mt-0" v-scroll="handleScroll">
     <AppHelloBar />
-    <!-- @slot Default  -->
     <slot>
       <div class="flex items-center justify-between w-full h-full max-w-6xl mx-auto">
-        <ProgramHeader title="Titan Next" />
+        <ProgramHeader>
+          <template #program-logo>
+            <AppLogo />
+          </template>
+          <template #program-name>
+            <ProgramName />
+          </template>
+        </ProgramHeader>
         <AppMenuToggle :user-id="userId" @toggle="toggleMenu" />
       </div>
     </slot>
-    <PortalTarget name="menus" />
+    <PortalTarget name="menu-outlet" />
   </div>
 </template>
 
 <script>
 import AppHelloBar from '../../components/AppHelloBar'
 import AppMenuToggle from '../../components/AppMenuToggle'
+import ViewRewardsButton from '../../components/ViewRewardsButton'
+import AppLogo from '../../components/AppLogo'
 import Scroll from '../../directives/scroll'
 
 export default {
   name: 'AppHeader',
-  components: { AppHelloBar, AppMenuToggle },
+  components: { AppHelloBar, AppMenuToggle, AppLogo, ViewRewardsButton },
   directives: { Scroll },
   data: () => ({
     showMenu: false,
+    showRewards: false,
     userId: 1,
   }),
   methods: {
@@ -36,6 +45,11 @@ export default {
     toggleMenu (payload) {
       this.showMenu = payload
       this.$emit('menu-open', this.showMenu)
+      // this.$buefy.toast.open(`AppHeader.menu-open: ${this.showMenu}`)
+    },
+    toggleRewards (payload) {
+      this.showRewards = payload
+      this.$emit('rewards-open', this.showRewards)
       // this.$buefy.toast.open(`AppHeader.menu-open: ${this.showMenu}`)
     },
   },

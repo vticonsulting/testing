@@ -1,4 +1,5 @@
-// import "@/plugins/fontawesome";
+// import "./fontawesome";
 import './buefy'
 import './global'
-import './portal-vue'
+import './http'
+import './portal'

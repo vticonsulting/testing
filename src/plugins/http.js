@@ -1,4 +1,7 @@
+import Vue from 'vue'
+
 import axios from 'axios'
+
 import {
   ToastProgrammatic as Toast,
   // LoadingProgrammatic as Loading,
@@ -46,6 +49,12 @@ instance.interceptors.response.use((response) => {
 
   // Reject promise and throw an error
   return Promise.reject(error)
+})
+
+Vue.use({
+  install (Vue) {
+    Vue.prototype.$http = instance
+  },
 })
 
 export default instance

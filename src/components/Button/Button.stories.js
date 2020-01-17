@@ -50,11 +50,6 @@ export const Destructive = () => ({
   template: '<BaseButton is-destructive>Destructive</BaseButton>',
 })
 
-export const Animated = () => ({
-  components: { BaseButton },
-  template: '<BaseButton is-animated is-primary>Animated</BaseButton>',
-})
-
 // export const foo = () => ({
 //   components: { BaseButton },
 //   template: "<BaseButton>foo</BaseButton>"

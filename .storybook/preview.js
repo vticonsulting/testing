@@ -6,6 +6,7 @@ import '../public/css/tailwind.css'
 
 import Vue from 'vue'
 import Vuex from 'vuex';
+import i18n from '../src/i18n'
 import { withA11y } from '@storybook/addon-a11y';
 
 import BaseButton from '../src/components/Button'
@@ -21,6 +22,7 @@ Vue.component('BaseButton', BaseButton)
 Vue.component('PledgeButton', PledgeButton)
 
 Vue.use(Vuex)
+Vue.use(i18n)
 
 addParameters({
   options: {

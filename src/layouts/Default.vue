@@ -12,7 +12,7 @@
 
     <AppFooter />
     <AppCookieConsent />
-    <PortalTarget name="modals" />
+    <PortalTarget name="modal-outlet" />
   </div>
 </template>
 
@@ -29,12 +29,29 @@ export default {
   components: { AppHelloBar, AppHeader, AppInfo, AppFooter, AppCookieConsent },
   data: () => ({
     menuOpen: false,
+    rewardsOpen: false,
   }),
   watch: {
     menuOpen: {
       immediate: true,
       handler (menuOpen) {
         if (menuOpen) {
+          document.body.style.setProperty('position', 'fixed')
+          document.body.style.setProperty('overflow-y', 'scroll')
+          // document.documentElement.style.setProperty('overflow', 'hidden')
+          document.body.style.setProperty('overflow', 'hidden')
+        } else {
+          document.body.style.setProperty('position', 'static')
+          document.body.style.setProperty('overflow-y', 'auto')
+          // document.documentElement.style.removeProperty('overflow', 'hidden')
+          document.body.style.removeProperty('overflow')
+        }
+      },
+    },
+    rewardsOpen: {
+      immediate: true,
+      handler (rewardsOpen) {
+        if (rewardsOpen) {
           document.body.style.setProperty('position', 'fixed')
           document.body.style.setProperty('overflow-y', 'scroll')
           // document.documentElement.style.setProperty('overflow', 'hidden')

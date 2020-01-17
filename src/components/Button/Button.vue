@@ -4,26 +4,11 @@
     v-bind="$attrs"
     :name="label"
     class="
-      block
-      leading-none
-      inline-block
-      mx-auto
-      py-2
-      px-4
-      bg-white
-      rounded-md
-      border-2
-      font-semibold
-      shadow-md
-      hover:shadow
       focus:outline-none
       focus:shadow-outline
-      lg:max-w-xs
 
       transform
       origin-center
-      opacity-75
-      hover:opacity-100
       hover:translate-y-px
       duration-200
       ease-in-out
@@ -33,6 +18,7 @@
     @click="onClick"
     @dblclick="onDoubleClick"
   >
+    <span class="visually-hidden">Some text to announce</span>
     <!-- @slot Default to label prop -->
     <slot>{{ label }}</slot>
   </button>
@@ -47,14 +33,17 @@ export default {
   inheritAttrs: false,
   props: {
     label: String,
-    isAnimated: Boolean,
+    isBordered: {
+      type: Boolean,
+      default: false,
+    },
     isDisabled: {
       type: Boolean,
       default: false,
     },
     isRounded: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     isPrimary: {
       type: Boolean,
@@ -83,14 +72,17 @@ export default {
   },
   computed: {
     classObject () {
-      return {
-        'text-sm': this.isSmall,
-        'rounded-full': this.isRounded,
-        'transform duration-200 hover:translate-y-1': this.isAnimated,
-        'bg-green-700 hover:bg-green-800 text-white': this.isPrimary,
-        'bg-blue-700 hover:bg-blue-800 text-white': this.isSecondary,
-        'bg-gray-900 hover:bg-black text-white': this.isDestructive,
-      }
+      return [
+        this.isSmall ? 'text-sm' : '',
+        {
+          'rounded-full': this.isRounded,
+          'border-2': this.isBordered,
+          'bg-green-700 hover:bg-green-800 text-white': this.isPrimary,
+          'bg-blue-700 hover:bg-blue-800 text-white': this.isSecondary,
+          'bg-red-600 hover:bg-red-700 text-white': this.isDestructive,
+          'bg-gray-300 text-gray-700': this.isDisabled,
+        },
+      ]
     },
   },
   methods: {
@@ -101,7 +93,7 @@ export default {
        * @type {Event}
        */
       this.$emit('click', $event)
-      this.$buefy.toast.open(`BaseButton.click: ${$event.currentTarget.name}`)
+      // this.$buefy.toast.open(`BaseButton.click: ${$event.currentTarget.name}`)
     },
     onDoubleClick ($event) {
       /**
@@ -114,3 +106,17 @@ export default {
   },
 }
 </script>
+
+<style>
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+</style>

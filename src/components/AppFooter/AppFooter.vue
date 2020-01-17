@@ -1,7 +1,7 @@
 <template>
   <footer
     v-scroll="handleScroll"
-    class="app-footer z-30 elevation-8 fixed bottom-0 w-full p-5 bg-white border-t text-center"
+    class="app-footer z-50 elevation-8 fixed bottom-0 w-full p-5 bg-white border-t text-center lg:hidden"
   >
     <slot>
       <PledgeButton class="w-full py-3">

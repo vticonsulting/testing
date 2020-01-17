@@ -1,10 +1,11 @@
 import Vue from 'vue'
-import { Toast, Table, Input } from 'buefy'
+
+import { Toast, Table } from 'buefy'
+
 Vue.use(Toast, {
   defaultToastPosition: 'is-bottom-right',
 })
 Vue.use(Table)
-Vue.use(Input)
 
 // import Buefy from 'buefy'
 // import 'buefy/dist/buefy.css'

@@ -12,7 +12,7 @@
       <p
         class="mb-8 text-gray-700"
         v-html="$t('business_leaderboard.text', {
-          programName: $store.state.program.name
+          programName: 'Program Name'
         })"
       />
       <table class="table w-full mb-8">
