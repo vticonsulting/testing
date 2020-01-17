@@ -2,7 +2,10 @@
   <div class="default_layout">
     <AppHelloBar />
 
-    <AppHeader @menu-open="showMenu" />
+    <AppHeader
+      @menu-open="showMenu"
+      @alerts-open="showAlerts"
+    />
 
     <main class="main-content">
       <slot />
@@ -50,6 +53,9 @@ export default {
     },
   },
   methods: {
+    showAlerts (payload) {
+      this.alertsOpen = payload
+    },
     showMenu (payload) {
       this.menuOpen = payload
     },

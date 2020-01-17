@@ -1,6 +1,8 @@
 <template>
   <div id="dashboard">
-    <ParticipantCard @rewards-open="showRewards" />
+    <div class="flex justify-center">
+      <ParticipantCard @rewards-open="showRewards" />
+    </div>
     <div class="dashboard-accordion">
       <ProgramOverview />
       <SchoolGoalsAndStats />
@@ -13,11 +15,8 @@
 </template>
 
 <script>
-import Rewards from '../components/Rewards'
-
 export default {
   name: 'Dashboard',
-  components: { Rewards },
   data: () => ({
     rewardsOpen: false,
     show: false,

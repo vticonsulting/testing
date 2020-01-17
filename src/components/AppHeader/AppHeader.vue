@@ -2,8 +2,8 @@
   <div class="app-header mt-0" v-scroll="handleScroll">
     <AppHelloBar />
     <slot>
-      <div class="flex items-center justify-between w-full h-full max-w-6xl mx-auto">
-        <ProgramHeader>
+      <div class="flex items-center justify-between w-full max-w-6xl h-full mx-auto">
+        <ProgramHeader class="flex-1">
           <template #program-logo>
             <AppLogo />
           </template>
@@ -11,9 +11,11 @@
             <ProgramName />
           </template>
         </ProgramHeader>
+        <AppAlertsToggle @toggle="toggleAlerts" />
         <AppMenuToggle :user-id="userId" @toggle="toggleMenu" />
       </div>
     </slot>
+    <PortalTarget name="alerts-outlet" />
     <PortalTarget name="menu-outlet" />
   </div>
 </template>
@@ -22,12 +24,13 @@
 
 import AppHelloBar from '../../components/AppHelloBar'
 import AppMenuToggle from '../../components/AppMenuToggle'
+import AppAlertsToggle from '../../components/AppAlertsToggle'
 import AppLogo from '../../components/AppLogo'
 import Scroll from '../../directives/scroll'
 
 export default {
   name: 'AppHeader',
-  components: { AppHelloBar, AppMenuToggle, AppLogo },
+  components: { AppHelloBar, AppAlertsToggle, AppMenuToggle, AppLogo },
   directives: { Scroll },
   data: () => ({
     showMenu: false,
@@ -41,6 +44,11 @@ export default {
       } else {
         el.classList.remove('shrink')
       }
+    },
+    toggleAlerts (payload) {
+      this.showAlerts = payload
+      this.$emit('alerts-open', this.showAlerts)
+      // this.$buefy.toast.open(`AppHeader.menu-open: ${this.showAlerts}`)
     },
     toggleMenu (payload) {
       this.showMenu = payload

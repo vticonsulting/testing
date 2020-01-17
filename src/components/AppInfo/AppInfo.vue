@@ -1,5 +1,5 @@
 <template>
-  <div class="text-sm text-center p-3 bg-gray-100">
+  <div class="p-3 text-sm text-center bg-gray-100">
     <p>{{ $t('content_info') }}</p>
     <p>
       <a class="text-blue-700" href="#">{{ $t('need_help') }}</a> |

@@ -10,8 +10,8 @@ import './registerServiceWorker'
 import './assets/styles/index.css'
 
 Vue.config.productionTip = false
-Vue.prototype.$appName = 'Rapid Prototyping Toolkit'
-Vue.prototype.$appTagline = 'Rapid prototyping challenge'
+Vue.prototype.$appName = 'Thomas Jefferson Elementary School'
+Vue.prototype.$appTagline = 'Event Date: Feburary 14, 2020'
 
 new Vue({
   router,

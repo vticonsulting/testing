@@ -6,7 +6,7 @@
   >
     {{ $t('view_rewards') }}
     <Portal to="modal-outlet" v-show="rewardsOpen">
-      <Rewards :show="rewardsOpen" @close="rewardsOpen = false" />
+      <ParticipantRewards :show="rewardsOpen" @close="rewardsOpen = false" />
     </Portal>
   </button>
 </template>

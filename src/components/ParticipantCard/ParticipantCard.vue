@@ -1,39 +1,39 @@
 <template>
-  <div class="participant-card">
-    <header>
-      <div class="media-left mr-4">
+  <div class="elevation-1 max-w-2xl w-full lg:mx-0 lg:mb-6 p-4 border-2 rounded-lg border-gray-300 bg-white">
+    <header class="relative flex w-full mb-3">
+      <div class="mr-4">
         <button class="rounded-full focus:outline-none focus:shadow-outline" v-html="avatar" />
       </div>
-      <div class="self-center flex-1">
+      <div class="flex-1 self-center ">
         <h2 class="text-gray-700 text-xl">
           {{ participant.firstName }} {{ participant.lastName }}
         </h2>
       </div>
       <div class="self-start text-right">
-        <button class="px-2 text-xs font-bold tracking-wide uppercase text-gray-600 rounded-full transform duration-300 ease-in-out hover:text-gray-600 focus:outline-none focus:shadow-outline">
+        <button class="px-2 tracking-wide uppercase  rounded-full font-bold text-xs text-gray-500 hover:text-gray-700 focus:outline-none focus:shadow-outline transform duration-300 ease-in-out">
           {{ $t('edit') }}
         </button>
       </div>
     </header>
 
-    <section class="lg:px-3">
+    <section>
       <div class="mb-4">
         <ProgressBar />
         <div class="mt-2">
-          <h3 class="font-bold flex items-center">
-            <svg viewBox="0 0 16 16" class="fill-current text-green-700 h-4 w-4 mr-1">
+          <h3 class="items-center font-bold flex">
+            <svg viewBox="0 0 16 16" class="w-4 h-4 mr-1 text-green-700 fill-current ">
               <circle cx="8" cy="8" r="8" />
             </svg>
             <span class="text-green-900">
               {{ $t('pledges.total_pledged') }} ${{ participant.pledged }} of ${{ participant.goal }}
             </span>
           </h3>
-          <h4 class="text-xs pl-5 font-medium text-gray-700 tracking-wider uppercase">
+          <h4 class="pl-5 font-medium uppercase text-xs tracking-wider text-gray-700 ">
             per {{ $store.state.unitType }}
           </h4>
         </div>
       </div>
-      <div class="button-container text-center">
+      <div class="text-center">
         <ViewRewardsButton
           label="view-rewards-button"
           @click="toggleRewards"
@@ -77,34 +77,6 @@ export default {
       this.$emit('rewards-open', this.rewardsOpen)
       this.$buefy.toast.open(`ParticipantCard.toggle-rewards: ${this.rewardsOpen}`)
     },
-    watch: {
-      rewardsOpen: {
-        immediate: true,
-        handler (rewardsOpen) {
-          if (rewardsOpen) {
-            document.body.style.setProperty('position', 'fixed')
-            document.body.style.setProperty('overflow-y', 'scroll')
-            // document.documentElement.style.setProperty('overflow', 'hidden')
-            document.body.style.setProperty('overflow', 'hidden')
-          } else {
-            document.body.style.setProperty('position', 'static')
-            document.body.style.setProperty('overflow-y', 'auto')
-            // document.documentElement.style.removeProperty('overflow', 'hidden')
-            document.body.style.removeProperty('overflow')
-          }
-        },
-      },
-    },
   },
 }
 </script>
-
-<style>
-.participant-card { @apply elevation-1 w-full mb-3 p-4 border-2 rounded-lg border-gray-300 bg-white }
-.participant-card header {  @apply flex w-full mb-3 relative }
-
-@screen lg {
-  .participant-card { @apply mb-0 mx-2 }
-  .participant-card header {  @apply px-3 }
-}
-</style>
