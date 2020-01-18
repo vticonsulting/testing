@@ -15,7 +15,8 @@ Vue.prototype.$appEyebrow = '@victortolbert/frontier'
 // Vue.prototype.$appName = 'UI Design System'
 // Vue.prototype.$appName = 'UI Design Toolkit'
 Vue.prototype.$appName = 'UI Developer Toolkit'
-Vue.prototype.$appTagline = 'cypress, jest, json-server, storybook, tailwindcss, vue'
+// Vue.prototype.$appTagline = 'cypress, jest, json-server, storybook, tailwindcss, vue'
+Vue.prototype.$appTagline = 'cypress, jest, storybook, tailwindcss, vue'
 
 new Vue({
   router,
