@@ -7,7 +7,9 @@
     </div>
     <div class="absolute inset-0 flex items-center justify-center">
       <!-- <div class="w-5 h-5 bg-red-700 rounded-full" /> -->
-      <LaravelLogo class="h-16" />
+      <slot>
+        <VTLogo class="h-16" />
+      </slot>
     </div>
   </div>
 </template>

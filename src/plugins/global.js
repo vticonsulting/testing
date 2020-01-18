@@ -23,6 +23,7 @@ import StudentStarVideo from '../components/StudentStarVideo'
 import ThePledges from '../components/ThePledges'
 import ViewRewardsButton from '../components/ViewRewardsButton'
 import VueLogo from '../components/VueLogo'
+import VTLogo from '../components/VTLogo'
 import HelpButton from '../components/HelpButton'
 
 import Default from '../layouts/Default.vue'
@@ -51,6 +52,7 @@ Vue.component('StudentStarVideo', StudentStarVideo)
 Vue.component('ThePledges', ThePledges)
 Vue.component('ViewRewardsButton', ViewRewardsButton)
 Vue.component('VueLogo', VueLogo)
+Vue.component('VTLogo', VTLogo)
 Vue.component('HelpButton', HelpButton)
 
 Vue.component('default-layout', Default)

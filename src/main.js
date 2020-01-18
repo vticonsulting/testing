@@ -14,9 +14,11 @@ Vue.prototype.$appEyebrow = '@victortolbert/frontier'
 // Vue.prototype.$appName = 'UI Templates, Toolkit and Utilities'
 // Vue.prototype.$appName = 'UI Design System'
 // Vue.prototype.$appName = 'UI Design Toolkit'
-Vue.prototype.$appName = 'UI Developer Toolkit'
+// Vue.prototype.$appName = 'UI Developer Toolkit'
+Vue.prototype.$appName = 'Frontend Developer Toolkit'
 // Vue.prototype.$appTagline = 'cypress, jest, json-server, storybook, tailwindcss, vue'
-Vue.prototype.$appTagline = 'cypress, jest, storybook, tailwindcss, vue'
+// Vue.prototype.$appTagline = 'cypress, jest, storybook, tailwindcss, vue'
+Vue.prototype.$appTagline = 'Bulletproof UI Component Templates for Angular, React and Vue'
 
 new Vue({
   router,
