@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: 'VTlogo'
+  name: 'VTlogo',
 }
 </script>
