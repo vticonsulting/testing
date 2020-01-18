@@ -7,8 +7,8 @@
     <h1 class="leading-tight font-light text-xl md:text-2xl lg:text-3xl shadow">
       {{ $appName }}
     </h1>
-    <h2 class="hidden md:block md:text-xl lg:text-sm text-gray-400 font-light">
-      {{ $appTagline }}...
+    <h2 class="hidden md:block md:text-xs tracking-wide uppercase text-gray-100 font-medium">
+      {{ $appTagline }}
     </h2>
   </div>
 </template>

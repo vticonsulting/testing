@@ -9,11 +9,29 @@
           {{ participant.firstName }} {{ participant.lastName }}
         </h2>
       </div>
-      <div class="self-start text-right">
-        <button class="px-2 tracking-wide uppercase  rounded-full font-bold text-xs text-gray-500 hover:text-gray-700 focus:outline-none focus:shadow-outline transform duration-300 ease-in-out">
+      <!-- EditParticipantButton -->
+      <v-popover placement="auto" popover-class="w-full max-w-sm focus:outline-none focus:shadow-outline">
+        <!-- This will be the popover target (for the events and position) -->
+        <button class="px-2 tracking-wide uppercase rounded-full font-bold text-xs text-gray-500 hover:text-gray-700 focus:outline-none focus:shadow-outline transform duration-300 ease-in-out">
           {{ $t('edit') }}
         </button>
-      </div>
+        <!-- This will be the content of the popover -->
+        <template slot="popover">
+          <div class="flex justify-between w-full">
+            <form class="w-full" action="">
+              <label class="block mb-3">
+                <span>Name</span>
+                <input class="block mt-1 form-input w-full p-2 border-2 rounded text-xs">
+              </label>
+              <label class="block mb-3">
+                <span>Email</span>
+                <input class="block mt-1 form-input w-full p-2 border-2 rounded text-xs">
+              </label>
+            </form>
+            <!-- <a v-close-popover class="text-2xl">&times;</a> -->
+          </div>
+        </template>
+      </v-popover>
     </header>
 
     <section>
@@ -28,7 +46,7 @@
               {{ $t('pledges.total_pledged') }} ${{ participant.pledged }} of ${{ participant.goal }}
             </span>
           </h3>
-          <h4 class="pl-5 font-medium uppercase text-xs tracking-wider text-gray-700 ">
+          <h4 class="pl-5 leading-none font-medium capitalize text-sm text-gray-700 ">
             per {{ $store.state.unitType }}
           </h4>
         </div>
