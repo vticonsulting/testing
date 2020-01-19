@@ -1,5 +1,8 @@
 <template>
-  <div class="app-header mt-0" v-scroll="handleScroll">
+  <div
+    class="app-header mt-0"
+    v-scroll="handleScroll"
+  >
     <AppHelloBar />
     <slot>
       <div class="py-5 relative flex items-stretch justify-between w-full max-w-5xl h-full mx-auto">
@@ -8,17 +11,21 @@
         <PortalTarget name="alerts-outlet" />
         <ProgramHeader class="flex-1">
           <template #program-logo>
-            <RouterLink tag="button" to="/" class="focus:outline-none focus:shadow-outline">
-              <AppLogo />
-            </RouterLink>
+            <AppLogo />
           </template>
           <template #program-name>
             <ProgramName />
           </template>
         </ProgramHeader>
         <div class="flex items-center">
-          <AppAlertsToggle class="mr-1" @toggle="toggleAlerts" />
-          <AppMenuToggle :user-id="userId" @toggle="toggleMenu" />
+          <AppAlertsToggle
+            class="mr-1 mt-2"
+            @toggle="toggleAlerts"
+          />
+          <AppMenuToggle
+            :user-id="userId"
+            @toggle="toggleMenu"
+          />
         </div>
       </div>
     </slot>

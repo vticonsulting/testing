@@ -1,7 +1,5 @@
 import Vue from 'vue'
-
 import { library, dom } from '@fortawesome/fontawesome-svg-core'
-
 // Brands (fab)
 import {
   faFacebook,
@@ -9,7 +7,6 @@ import {
   faFacebookSquare,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons'
-
 // Regular (far)
 import {
   faAddressCard,
@@ -27,10 +24,8 @@ import {
   faTimes as farTimes,
   faUserEdit as farUserEdit,
 } from '@fortawesome/pro-regular-svg-icons'
-
 // Light (fal)
 import { faBars, faTimes, faUserEdit } from '@fortawesome/pro-light-svg-icons'
-
 // Solid Style Icons (fas)
 import {
   faBars as fasBars,
@@ -75,7 +70,6 @@ import {
   faUser,
   faUserPlus,
 } from '@fortawesome/free-solid-svg-icons'
-
 import {
   FontAwesomeIcon,
   FontAwesomeLayers,

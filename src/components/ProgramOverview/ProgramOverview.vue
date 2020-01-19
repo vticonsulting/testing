@@ -2,7 +2,7 @@
   <div>
     <button class="flex items-center justify-between w-full p-3 border-t-2 border-gray-300 text-gray-800 focus:outline-none">
       <h1 class="text-lg lg:text-xl text-left font-semibold">
-        {{ $t('program.overview.title') }}
+        {{ $t('program_overview') }}
       </h1>
       <svg
         class="h-8 w-8 stroke-current stroke-1 transform"

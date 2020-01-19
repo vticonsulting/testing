@@ -1,6 +1,6 @@
 <template>
   <main
-    class="flex items-center justify-center min-h-screen"
+    class="w-full min-h-screen"
     style="min-height: -webkit-fill-available"
   >
     <slot />

@@ -1,0 +1,77 @@
+props:
+  color_primary:
+    value: "{!primary_color}"
+    comment: 'Use the primary color on call-to-action buttons. e.g. "Save", "Log In"…'
+  color_secondary:
+    value: "{!secondary_color}"
+    comment: '...'
+  color_tertiary:
+    value: "{!tertiary_color}"
+    comment: '...'
+  color_danger:
+    value: "{!danger_color}"
+    comment: '...'
+  color_warning:
+    value: "{!warning_color}"
+    comment: '...'
+  color_success:
+    value: "{!success_color}"
+    comment: '...'
+  color_info:
+    value: "{!info_color}"
+    comment: '...'
+  # input_background_color:
+  # input_icon_color
+  # input_radius:
+  # speed-slow:
+  # speed-slower:
+  # table_row_active_background_color:
+  # table_row_active_color:
+  # table-background-color: $scheme-main
+  # table-body-background-color: transparent
+  # table-cell-border-width: 0 0 1px
+  # table-cell-border: 1px solid $border
+  # table-cell-heading-color: $text-strong
+  # table-cell-padding: 0.5em 0.75em
+  # table-color: $text-strong
+  # table-foot-background-color: transparent
+  # table-foot-cell-border-width: 2px 0 0
+  # table-foot-cell-color: $text-strong
+  # table-head-background-color: transparent
+  # table-head-cell-border-width: 0 0 2px
+  # table-head-cell-color: $text-strong
+  # table-row-active-background-color: $primary
+  # table-row-active-color: $primary-invert
+  # table-row-hover-background-color: $scheme-main-bis
+  # table-striped-row-even-background-color: $scheme-main-bis
+  # table-striped-row-even-hover-background-color: $scheme-main-ter
+  # tabs-border-bottom-color: $border
+  # tabs-border-bottom-style: solid
+  # tabs-border-bottom-width: 1px
+  # tabs-boxed-link-active-background-color: $scheme-main
+  # tabs-boxed-link-active-border-bottom-color: transparent
+  # tabs-boxed-link-active-border-color: $border
+  # tabs-boxed-link-hover-background-color: $background
+  # tabs-boxed-link-hover-border-bottom-color: $border
+  # tabs-boxed-link-radius: $radius
+  # tabs-link-active-border-bottom-color: $link
+  # tabs-link-active-color: $link
+  # tabs-link-color: $text
+  # tabs-link-hover-border-bottom-color: $text-strong
+  # tabs-link-hover-color: $text-strong
+  # tabs-link-padding: 0.5em 1em
+  # tabs-toggle-link-active-background-color: $link
+  # tabs-toggle-link-active-border-color: $link
+  # tabs-toggle-link-active-color: $link-invert
+  # tabs-toggle-link-border-color: $border
+  # tabs-toggle-link-border-style: solid
+  # tabs-toggle-link-border-width: 1px
+  # tabs-toggle-link-hover-background-color: $background
+  # tabs-toggle-link-hover-border-color: $border-hover
+  # tabs-toggle-link-radius: $radius
+  # toast_border_radius:
+imports:
+  - ./aliases.yml
+global:
+  type: color
+  category: buttons

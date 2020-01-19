@@ -2,7 +2,10 @@
   <div class="elevation-1 max-w-2xl w-full lg:mx-0 lg:mb-6 p-4 border-2 rounded-lg border-gray-300 bg-white">
     <header class="relative flex w-full mb-3">
       <div class="mr-4">
-        <button class="rounded-full focus:outline-none focus:shadow-outline" v-html="avatar" />
+        <button
+          class="rounded-full focus:outline-none focus:shadow-outline"
+          v-html="avatar"
+        />
       </div>
       <div class="flex-1 self-center ">
         <h2 class="text-gray-700 text-xl">
@@ -10,7 +13,10 @@
         </h2>
       </div>
       <!-- EditParticipantButton -->
-      <v-popover placement="auto" popover-class="w-full max-w-sm focus:outline-none focus:shadow-outline">
+      <v-popover
+        placement="auto"
+        popover-class="w-full max-w-sm focus:outline-none focus:shadow-outline"
+      >
         <!-- This will be the popover target (for the events and position) -->
         <button class="px-2 tracking-wide uppercase rounded-full font-bold text-xs text-gray-500 hover:text-gray-700 focus:outline-none focus:shadow-outline transform duration-300 ease-in-out">
           {{ $t('edit') }}
@@ -18,7 +24,10 @@
         <!-- This will be the content of the popover -->
         <template slot="popover">
           <div class="flex justify-between w-full">
-            <form class="w-full" action="">
+            <form
+              class="w-full"
+              action=""
+            >
               <label class="block mb-3">
                 <span>Name</span>
                 <input class="block mt-1 form-input w-full p-2 border-2 rounded text-xs">
@@ -39,21 +48,33 @@
         <ProgressBar />
         <div class="mt-2">
           <h3 class="items-center font-bold flex">
-            <svg viewBox="0 0 16 16" class="w-4 h-4 mr-1 text-green-700 fill-current ">
-              <circle cx="8" cy="8" r="8" />
+            <svg
+              viewBox="0 0 16 16"
+              class="w-4 h-4 mr-1 text-green-700 fill-current "
+            >
+              <circle
+                cx="8"
+                cy="8"
+                r="8"
+              />
             </svg>
             <span class="text-green-900">
-              {{ $t('pledges.total_pledged') }} ${{ participant.pledged }} of ${{ participant.goal }}
+              {{
+                $t('total_pledged', {
+                  pledged: participant.pledged,
+                  goal: participant.goal,
+                })
+              }}
             </span>
           </h3>
           <h4 class="pl-5 leading-none font-medium capitalize text-sm text-gray-700 ">
-            per {{ $store.state.unitType }}
+            {{ $t('per_reading_challenge') }}
           </h4>
         </div>
       </div>
       <div class="text-center">
         <ViewRewardsButton
-          class="py-1 border rounded-full bg-blue-700 text-white focus:outline-none focus:shadow-outline"
+          class="py-2 border rounded-full shadow-lg font-medium text-lg bg-blue-700 text-white hover:opacity-100 hover:scale-95 hover:translate-y-px focus:outline-none focus:shadow-outline transform duration-200 ease-in-out"
           label="view-rewards-button"
           @click="toggleRewards"
         />
@@ -69,8 +90,8 @@ export default {
     participant: {
       type: Object,
       default: () => ({
-        firstName: 'Goal Progress & Rewards',
-        lastName: '',
+        firstName: 'Mike',
+        lastName: 'Jones',
         pledged: 5,
         goal: 10,
       }),

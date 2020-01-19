@@ -6,7 +6,10 @@
     <slot>
       <div class="shape" />
     </slot>
-    <Portal to="menu-outlet" v-show="menuOpen">
+    <Portal
+      to="menu-outlet"
+      v-show="menuOpen"
+    >
       <AppMenu
         :show="menuOpen"
         @close="menuOpen = false"

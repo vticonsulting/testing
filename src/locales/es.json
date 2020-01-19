@@ -1,35 +1,23 @@
 {
-  "edit": "Editar",
+  "about_the_program": "Sobre el Programa",
+  "business_leaderboard_description": "Si posee un negocio local, puede resaltarlo aquí si hace una promesa. Puede promocionar su negocio al vincular a su sitio web y dejar una nota para que vea toda la comunidad de <b>{ programName }</b>. ¿Quieres promover tu negocio? Haga clic en ”Entrar en prenda“ ahora!",
+  "business_leaderboard": "Nuestro Marcador de Negocios",
   "content_info": "Esta experiencia de recaudación de fondos está impulsada por Booster. La misión de Booster es fortalecer las escuelas.",
-  "need_help": "¿Necesitas Ayuda?",
-  "lang": "English?",
-  "view_rewards": "Ver Recompensas",
-  "how_to_get_pledges":"Cómo Obtener Promesas",
+  "create_student_star_video": "Video Estrella del Estudiante",
+  "edit": "Editar",
   "enter_pledge": "Entrar en prenda",
-  "program": {
-    "overview": {
-      "title": "Reseña del Programa",
-      "subtitle": "Sobre el Programa",
-      "text":" ¡<b>{schoolName}</b> está organizando una recaudación de fondos de dos semanas impulsada por el equipo Booster! En lugar de vender artículos, las familias se comprometerán a ayudar a su escuela, mientras los estudiantes experimentan un programa de personajes de clase mundial y participan en el <b>{schoolName} {unitType}</b>"
-    }
-  },
-
-  "school": {
-    "goals_and_stats": {
-      "title": "Metas y Estadísticas de la Escuela"
-    }
-  },
-  "student_star_video": {
-    "title": "Video Estrella del Estudiante"
-  },
-  "the_pledges": {
-    "title": "Promesas"
-  },
-  "business_leaderboard": {
-    "title": "Nuestro Marcador de Negocios",
-    "text": "Si posee un negocio local, puede resaltarlo aquí si hace una promesa. Puede promocionar su negocio al vincular a su sitio web y dejar una nota para que vea toda la comunidad de <b>{ programName }</b>. ¿Quieres promover tu negocio? Haga clic en ”Entrar en prenda“ ahora!"
-  },
-  "pledges": {
-    "total_pledged": "Total Comprometido"
-  }
+  "how_to_get_pledges":"Cómo Obtener Promesas",
+  "lang": "English?",
+  "need_help": "¿Necesitas Ayuda?",
+  "participant_goal_progess_and_rewards": "Progreso de objetivos y recompensas",
+  "per_reading_challenge": "Progreso de objetivos y recompensas",
+  "program_description": "¡<b>{schoolName}</b> está organizando una recaudación de fondos de dos semanas impulsada por el equipo Booster! En lugar de vender artículos, las familias se comprometerán a ayudar a su escuela, mientras los estudiantes experimentan un programa de personajes de clase mundial y participan en el <b>{schoolName} {unitType}</b>",
+  "program_overview": "Reseña del Programa",
+  "release_notes": "Progreso de objetivos y recompensas",
+  "school_goals_and_stats": "Metas y Estadísticas de la Escuela",
+  "share_student_star_video": "Video Estrella del Estudiante",
+  "show_more": "Mostrar más",
+  "the_pledges": "Promesas",
+  "total_pledged": "Total Prometido ${pledged} de ${goal}",
+  "view_rewards": "Ver Recompensas"
 }

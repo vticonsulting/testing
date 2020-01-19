@@ -8,7 +8,11 @@
     leave-to-class="opacity-0"
     appear
   >
-    <div v-show="show" class="absolute inset-y-0 right-0 w-full max-w-xl h-screen mx-auto" style="top: 100%">
+    <div
+      v-show="show"
+      class="absolute inset-y-0 right-0 w-full max-w-xl h-screen mx-auto"
+      style="top: 100%"
+    >
 
       <div class="elevation-10 flex flex-col rounded h-64 p-0 bg-yellow-300 text-black shadow-xl">
         <header class="flex items-center justify-between">
@@ -18,7 +22,11 @@
             </h1>
           </slot>
           <!-- Close Button -->
-          <button @click="cancel" type="button" class="inline-block h-4 w-4 m-4 text-2xl rounded-full opacity-75 hover:opacity-100 flex items-center justify-center focus:outline-none focus:shadow-outline transform duration-300 ease-in-out">
+          <button
+            @click="cancel"
+            type="button"
+            class="inline-block h-4 w-4 m-4 text-2xl rounded-full opacity-75 hover:opacity-100 flex items-center justify-center focus:outline-none focus:shadow-outline transform duration-300 ease-in-out"
+          >
             <svg
               class="h-4 w-4 stroke-current fill-current stroke-2 transform transition-all rotate-0 hover:scale-110 hover:rotate-0 duration-300 ease-in-out"
               viewBox="0 0 24 24"

@@ -1,7 +1,10 @@
 <template>
   <CookieConsent>
     <template slot="message">
-      <span>This website uses cookies. <a class="inline-block text-blue-600 border-b border-blue-600" href="#">Read more</a></span>
+      <span>This website uses cookies. <a
+        class="inline-block text-blue-600 border-b border-blue-600"
+        href="#"
+      >Read more</a></span>
     </template>
     <template slot="button">
       <button class="p-1 text-2xl hover:font-bold">

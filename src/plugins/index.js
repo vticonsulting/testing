@@ -1,6 +1,11 @@
 // import "./fontawesome";
+import './bars'
 import './buefy'
+import './date-fns'
+import './frappe-charts'
 import './global'
 import './http'
 import './portal'
+import './tippy'
 import './tooltips'
+import './trend'

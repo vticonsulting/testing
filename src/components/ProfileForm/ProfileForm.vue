@@ -43,7 +43,11 @@
       </label>
       <label class="block mb-6">
         <span class="text-gray-700">Textarea</span>
-        <textarea class="form-textarea mt-1 block w-full" rows="3" placeholder="Enter some long form content." />
+        <textarea
+          class="form-textarea mt-1 block w-full"
+          rows="3"
+          placeholder="Enter some long form content."
+        />
       </label>
       <label class="block mb-6">
         <span class="text-gray-700">Select</span>
@@ -57,19 +61,29 @@
         <div class="mt-2">
           <div>
             <label class="inline-flex items-center">
-              <input type="checkbox" class="form-checkbox" checked>
+              <input
+                type="checkbox"
+                class="form-checkbox"
+                checked
+              >
               <span class="ml-2">Option 1</span>
             </label>
           </div>
           <div>
             <label class="inline-flex items-center">
-              <input type="checkbox" class="form-checkbox">
+              <input
+                type="checkbox"
+                class="form-checkbox"
+              >
               <span class="ml-2">Option 2</span>
             </label>
           </div>
           <div>
             <label class="inline-flex items-center">
-              <input type="checkbox" class="form-checkbox">
+              <input
+                type="checkbox"
+                class="form-checkbox"
+              >
               <span class="ml-2">Option 3</span>
             </label>
           </div>
@@ -80,26 +94,46 @@
         <div class="mt-2">
           <div>
             <label class="inline-flex items-center">
-              <input type="radio" class="form-radio" name="radio" value="1" checked>
+              <input
+                type="radio"
+                class="form-radio"
+                name="radio"
+                value="1"
+                checked
+              >
               <span class="ml-2">Option 1</span>
             </label>
           </div>
           <div>
             <label class="inline-flex items-center">
-              <input type="radio" class="form-radio" name="radio" value="2">
+              <input
+                type="radio"
+                class="form-radio"
+                name="radio"
+                value="2"
+              >
               <span class="ml-2">Option 2</span>
             </label>
           </div>
           <div>
             <label class="inline-flex items-center">
-              <input type="radio" class="form-radio" name="radio" value="3">
+              <input
+                type="radio"
+                class="form-radio"
+                name="radio"
+                value="3"
+              >
               <span class="ml-2">Option 3</span>
             </label>
           </div>
         </div>
       </div>
 
-      <BaseButton is-small label="dashboard-form" @click.prevent="submit">
+      <BaseButton
+        is-small
+        label="dashboard-form"
+        @click.prevent="submit"
+      >
         Button
       </BaseButton>
     </fieldset>

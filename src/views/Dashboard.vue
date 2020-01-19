@@ -9,6 +9,9 @@
       <HowToGetPledges />
       <StudentStarVideo />
       <ThePledges />
+      <button class="p-3 px-8 m-4 border rounded-xl shadow-xl uppercase font-bold bg-white hover:bg-gray-200 text-red-800 hover:text-red-900 hover:scale-95 transform duration-200 ease-in-out">
+        Documentation
+      </button>
       <BusinessLeaderboard />
     </div>
   </div>
@@ -21,6 +24,9 @@ export default {
     rewardsOpen: false,
     show: false,
   }),
+  created () {
+    this.$store.dispatch('getUser')
+  },
   watch: {
     rewardsOpen: {
       immediate: true,
@@ -46,6 +52,22 @@ export default {
     showRewards (payload) {
       this.rewardsOpen = payload
     },
+  },
+  metaInfo: {
+    // title will be injected into parent titleTemplate
+    title: 'Dashboard',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        property: 'og:title',
+        content: 'Test title',
+        // following template options are identical
+        // template: '%s - My page',
+        template: chunk => `${chunk} - Demo App`,
+        vmid: 'og:title',
+      },
+    ],
   },
 }
 </script>

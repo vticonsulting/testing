@@ -1,17 +1,15 @@
 <template>
-  <div class="business-leaderboard
-  "
-  >
+  <div class="business-leaderboard">
     <button class="block w-full flex items-center justify-between p-3 border-t-2 border-gray-300 focus:outline-none">
       <h1 class="text-lg lg:text-xl text-left font-semibold">
-        {{ $t('business_leaderboard.title') }}
+        {{ $t('business_leaderboard') }}
       </h1>
       <ChevronIcon />
     </button>
     <div class="mx-3 mb-8 px-7">
       <p
         class="mb-8 text-gray-700"
-        v-html="$t('business_leaderboard.text', {
+        v-html="$t('business_leaderboard_description', {
           programName: 'Program Name'
         })"
       />
@@ -20,7 +18,10 @@
           <tr>
             <td>
               <h3 class="">
-                1. <a href="http://fritsch.com/molestias-rem-voluptates-qui-ut-numquam" target="_blank">
+                1. <a
+                  href="http://fritsch.com/molestias-rem-voluptates-qui-ut-numquam"
+                  target="_blank"
+                >
                   Little and Sons</a>
               </h3>
               <h4 class="text-gray-700">
@@ -47,7 +48,3 @@ export default {
 
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

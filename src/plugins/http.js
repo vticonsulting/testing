@@ -1,17 +1,11 @@
 import Vue from 'vue'
-
 import axios from 'axios'
-
-import {
-  ToastProgrammatic as Toast,
-  // LoadingProgrammatic as Loading,
-} from 'buefy'
+import { ToastProgrammatic as Toast } from 'buefy'
+// LoadingProgrammatic as Loading,
 
 const token = document.head.querySelector('meta[name="csrf-token"]')
-
 const baseURL = 'https://jsonplaceholder.typicode.com/'
 // const loadingComponent = Loading
-
 const instance = axios.create({
   baseURL: baseURL,
   headers: {
@@ -21,7 +15,6 @@ const instance = axios.create({
 })
 
 instance.defaults.headers.common['auth'] = 'specialToken'
-
 instance.interceptors.request.use((request) => {
   if (request.loading && typeof (request.loading) === 'function') {
     // Callback for the request
@@ -30,7 +23,6 @@ instance.interceptors.request.use((request) => {
   }
   return request
 })
-
 instance.interceptors.response.use((response) => {
   // loadingComponent.close()
   // console.dir(response)
@@ -46,7 +38,6 @@ instance.interceptors.response.use((response) => {
       type: 'is-danger',
     })
   }
-
   // Reject promise and throw an error
   return Promise.reject(error)
 })

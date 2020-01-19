@@ -1,6 +1,5 @@
 <template>
   <div id="app" class="static bg-white">
-    <div v-if="!loading" />
     <component :is="layout">
       <router-view />
     </component>
@@ -8,78 +7,48 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import locale from 'date-fns/locale/sk'
 
 const default_layout = 'default'
 
 export default {
   name: 'App',
+  data: () => ({}),
   computed: {
-    ...mapState(['user', 'loading']),
     layout () {
       return (this.$route.meta.layout || default_layout) + '-layout'
     },
+    now () {
+      return this.$date(new Date(), 'DD MMMM YYYY', { locale })
+    },
   },
-  created () {
-    this.$store.dispatch('getUser')
+  metaInfo: {
+    // if no subcomponents specify a metaInfo.title, this title will be used
+    title: 'Demo App',
+    // all titles will be injected into this template
+    titleTemplate: (titleChunk) => {
+      // If undefined or blank then we don't need the hyphen
+      return titleChunk ? `${titleChunk} - Demo App` : 'Demo App'
+    },
+    link: [
+      { rel: 'stylesheet', href: '/css/index.css' },
+      { rel: 'favicon', href: 'favicon.ico' },
+    ],
+    style: [
+      { cssText: '.foo { color: red }', type: 'text/css' },
+    ],
+    script: [
+      { src: 'https://cdn.jsdelivr.net/npm/vue/dist/vue.js', async: true, defer: true },
+    ],
+    htmlAttrs: {
+      lang: 'en',
+      amp: true,
+    },
+    bodyAttrs: {
+      class: ['dark-mode', 'mobile'],
+    },
+    base: { target: '_blank', href: '/' },
+
   },
 }
 </script>
-
-<style lang="scss">
-$toast-border-radius: 0;
-$input-radius: 0;
-$input-background-color: red;
-
-$dropdown-item-hover-background-color: red;
-$dropdown-item-hover-color: red;
-$dropdown-content-background-color: red;
-$dropdown-content-radius: 0;
-$dropdown-content-shadow: none;
-
-$table-row-active-color: red;
-$table-row-active-background-color: red;
-
-@import "~bulma/sass/utilities/_all";
-@import "~bulma/sass/utilities/_all.sass";
-@import "~bulma/sass/base/_all.sass";
-
-@import "~buefy/src/scss/utils/_all";
-@import "~buefy/src/scss/components/_dialog";
-@import "~buefy/src/scss/components/_loading";
-@import "~buefy/src/scss/components/_menu";
-@import "~buefy/src/scss/components/_pagination";
-@import "~buefy/src/scss/components/_table";
-
-// Fix conflicts
-.box:not(:last-child),
-.content:not(:last-child),
-.notification:not(:last-child),
-.progress:not(:last-child),
-.table:not(:last-child),
-.table-container:not(:last-child),
-.title:not(:last-child),
-.subtitle:not(:last-child),
-// .block:not(:last-child),
-.highlight:not(:last-child),
-.breadcrumb:not(:last-child),
-.level:not(:last-child),
-.list:not(:last-child),
-.message:not(:last-child),
-.tabs:not(:last-child) {
-  margin-bottom: 0 !important;
-}
-</style>
-
-<style>
-.element {
-  animation: var(--animationName, pulse) var(--duration, 2000ms) ease-in-out
-    infinite;
-}
-.element.faster {
-  --duration: 500ms;
-}
-.element.shaking {
-  --animationName: shake;
-}
-</style>

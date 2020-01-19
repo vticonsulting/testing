@@ -1,0 +1,15 @@
+aliases:
+  primary_color:
+    value: "#2db564"
+  secondary_color:
+    value: "#2e86de"
+  tertiary_color:
+    value: "#faa638"
+  danger_color:
+    value: "#d0021b"
+  warning_color:
+    value: "#faa638"
+  success_color:
+    value: "#2db564"
+  info_color:
+    value: "#57b6d3"

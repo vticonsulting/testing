@@ -1,5 +1,9 @@
 <template>
-  <b-loading :is-full-page="isFullPage" :active.sync="isLoading" :can-cancel="true">
+  <b-loading
+    :is-full-page="isFullPage"
+    :active.sync="isLoading"
+    :can-cancel="true"
+  >
     Loading...
   </b-loading>
 </template>

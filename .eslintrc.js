@@ -2,11 +2,12 @@ module.exports = {
   root: true,
   env: {
     node: true,
+    jest: true,
   },
   globals: {
     dataLayer: true,
   },
-  extends: ['plugin:vue/recommended', '@vue/standard'],
+  extends: ['plugin:vue/strongly-recommended', '@vue/standard'],
   rules: {
     camelcase: 'off',
     curly: 'off',
@@ -21,7 +22,7 @@ module.exports = {
     //   endTag: `never`,
     //   selfClosingTag: `never`,
     // }],
-    'vue/attributes-order': 'off',
+    // 'vue/attributes-order': 'off',
     // 'vue/component-name-in-template-casing': [`error`, `PascalCase`],
     'vue/component-name-in-template-casing': ['error', 'PascalCase', {
       'registeredComponentsOnly': true,
@@ -37,6 +38,13 @@ module.exports = {
       'shouldMatchCase': false,
     }],
     'vue/max-attributes-per-line': 'off',
+    // 'vue/max-attributes-per-line': ['error', {
+    //   'singleline': 1,
+    //   'multiline': {
+    //     'max': 1,
+    //     'allowFirstLine': false,
+    //   },
+    // }],
     'vue/multiline-html-element-content-newline': 'off',
     'vue/no-template-shadow': 'off',
     'vue/no-unused-components': 'off',

@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import imageFile from '../../../public/avatar.svg'
+import imageFile from '../../assets/svg/avatar.svg'
 
 const image = {
   src: imageFile,

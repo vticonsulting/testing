@@ -4,7 +4,7 @@ import { text, boolean } from '@storybook/addon-knobs'
 import BaseButton from './Button.vue'
 
 export default {
-  title: 'Base/Button',
+  title: 'Button',
   component: BaseButton,
   parameters: {
     componentSubtitle: 'The Button component is used add click actions',
@@ -30,6 +30,14 @@ export const Default = () => ({
       :is-disabled="isDisabled"
     >{{text}}</BaseButton>
   `,
+})
+
+export const JSX = () => ({
+  render () {
+    return (
+      <BaseButton>JSX</BaseButton>
+    )
+  },
 })
 
 export const Primary = () => ({

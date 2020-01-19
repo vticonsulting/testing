@@ -8,7 +8,10 @@ export default new Vuex.Store({
   state: {
     loading: false,
     showRewards: false,
-    unitType: 'Reading Challenge',
+    program: {
+      unitType: null,
+      unitModifier: 'per',
+    },
     user: {},
   },
   getters: {
