@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <LocaleChanger />
+    <h2>{{ $t('hello') }}</h2>
   </div>
 </template>
 

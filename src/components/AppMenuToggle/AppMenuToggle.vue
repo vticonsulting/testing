@@ -1,7 +1,7 @@
 <template>
   <button
     @click="toggle"
-    :class="[ 'app-menu-toggle self-center focus:outline-none focus:shadow-outline', { 'menu-open': menuOpen } ]"
+    :class="[ 'app-menu-toggle self-center hover:text-white focus:outline-none focus:shadow-outline', { 'menu-open': menuOpen } ]"
   >
     <slot>
       <div class="shape" />
@@ -44,11 +44,11 @@ export default {
 }
 </script>
 <style>
-.app-menu-toggle { @apply mx-3 text-base; min-width: 2rem }
+.app-menu-toggle { @apply mx-3 text-base; min-width: 2rem  }
 .app-menu-toggle:after,
 .app-menu-toggle:before,
 .app-menu-toggle div.shape {
-  background-color: #fff;
+  background-color: currentColor;
   border-radius: 3px;
   content: '';
   display: block;

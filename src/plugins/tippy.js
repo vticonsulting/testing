@@ -1,11 +1,11 @@
 import Vue from 'vue'
+import VueTippy, { TippyComponent } from 'vue-tippy'
 
-import Tippy from 'v-tippy'
-// Don't forget to include CSS somewhere!
-// Basically it's a copy of `tippy.js/dist/tippy.css`
-import 'v-tippy/dist/tippy.css'
-Vue.use(Tippy, {
-  position: 'left',
-  // onShown: () => console.log('lol'),
-  // ... other options you wanna change globally
-})
+// Add additional themes.
+// import 'tippy.js/themes/light.css'
+// import 'tippy.js/themes/light-border.css'
+// import 'tippy.js/themes/google.css'
+// import 'tippy.js/themes/translucent.css'
+
+Vue.use(VueTippy)
+Vue.component('tippy', TippyComponent)

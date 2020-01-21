@@ -14,13 +14,13 @@
     </main>
 
     <AppFooter />
-    <AppCookieConsent />
+    <CookieConsent />
   </div>
 </template>
 
 <script>
 
-import AppCookieConsent from '../components/AppCookieConsent'
+import CookieConsent from '../components/CookieConsent'
 import AppHelloBar from '../components/AppHelloBar'
 import AppHeader from '../components/AppHeader'
 import AppInfo from '../components/AppInfo'
@@ -28,7 +28,7 @@ import AppFooter from '../components/AppFooter'
 
 export default {
   name: 'DefaultLayout',
-  components: { AppHelloBar, AppHeader, AppInfo, AppFooter, AppCookieConsent },
+  components: { AppHelloBar, AppHeader, AppInfo, AppFooter, CookieConsent },
   data: () => ({
     menuOpen: false,
     rewardsOpen: false,

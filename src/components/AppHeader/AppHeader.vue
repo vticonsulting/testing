@@ -18,11 +18,12 @@
           </template>
         </ProgramHeader>
         <div class="flex items-center">
-          <AppAlertsToggle
-            class="mr-1 mt-2"
+          <AppAlertsMenuToggle
+            class="mr-1 mt-2 text-gray-500"
             @toggle="toggleAlerts"
           />
           <AppMenuToggle
+            class="text-gray-500"
             :user-id="userId"
             @toggle="toggleMenu"
           />
@@ -36,13 +37,13 @@
 
 import AppHelloBar from '../../components/AppHelloBar'
 import AppMenuToggle from '../../components/AppMenuToggle'
-import AppAlertsToggle from '../../components/AppAlertsToggle'
+import AppAlertsMenuToggle from '../../components/AppAlertsMenuToggle'
 import AppLogo from '../../components/AppLogo'
 import Scroll from '../../directives/scroll'
 
 export default {
   name: 'AppHeader',
-  components: { AppHelloBar, AppAlertsToggle, AppMenuToggle, AppLogo },
+  components: { AppHelloBar, AppAlertsMenuToggle, AppMenuToggle, AppLogo },
   directives: { Scroll },
   data: () => ({
     showMenu: false,

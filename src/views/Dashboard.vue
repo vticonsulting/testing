@@ -1,20 +1,17 @@
 <template>
-  <div id="dashboard">
-    <div class="flex justify-center">
+  <article id="dashboard">
+    <header class="flex justify-center">
       <ParticipantCard @rewards-open="showRewards" />
-    </div>
-    <div class="dashboard-accordion">
+    </header>
+    <section class="dashboard-accordion">
       <ProgramOverview />
       <SchoolGoalsAndStats />
       <HowToGetPledges />
       <StudentStarVideo />
       <ThePledges />
-      <button class="p-3 px-8 m-4 border rounded-xl shadow-xl uppercase font-bold bg-white hover:bg-gray-200 text-red-800 hover:text-red-900 hover:scale-95 transform duration-200 ease-in-out">
-        Documentation
-      </button>
       <BusinessLeaderboard />
-    </div>
-  </div>
+    </section>
+  </article>
 </template>
 
 <script>
@@ -46,9 +43,6 @@ export default {
     },
   },
   methods: {
-    submit () {
-      // this.$buefy.toast('submit')
-    },
     showRewards (payload) {
       this.rewardsOpen = payload
     },
@@ -73,6 +67,9 @@ export default {
 </script>
 
 <style>
+section.reveal {
+  height: 100vh;
+}
 form {
   opacity: 0;
   transform: translateY(12px);

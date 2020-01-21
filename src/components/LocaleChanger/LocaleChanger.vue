@@ -1,6 +1,6 @@
 <template>
-  <div class="locale-changer">
-    <select v-model="$i18n.locale">
+  <label class="locale-changer">
+    <select class="form-select block w-full m-1" v-model="$i18n.locale">
       <option
         v-for="(lang, i) in langs"
         :key="`Lang${i}`"
@@ -9,14 +9,14 @@
         {{ lang }}
       </option>
     </select>
-  </div>
+  </label>
 </template>
 
 <script>
 export default {
   name: 'LocaleChanger',
   data () {
-    return { langs: ['ja', 'en'] }
+    return { langs: ['de', 'en', 'es'] }
   },
 }
 </script>

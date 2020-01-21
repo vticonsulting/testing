@@ -1,45 +1,40 @@
 <template>
-  <div id="app" class="static bg-white">
-    <component :is="layout">
-      <router-view />
-    </component>
+  <div id="app" class="h-screen">
+    <Component :is="layout">
+      <RouterView />
+    </Component>
   </div>
 </template>
 
 <script>
 import locale from 'date-fns/locale/sk'
-
-const default_layout = 'default'
+const defaultLayout = 'Default'
+const options = {
+  url: 'https://frontier.victortolbert.com',
+  title: 'Frontier',
+  description: 'Site Description',
+  img: '/social.png',
+  locale: 'en_US',
+  twitter: '@VictorTolbert',
+  themeColor: 'rebeccapurple',
+}
 
 export default {
   name: 'App',
   data: () => ({}),
   computed: {
     layout () {
-      return (this.$route.meta.layout || default_layout) + '-layout'
+      return (this.$route.meta.layout || defaultLayout) + 'Layout'
     },
     now () {
       return this.$date(new Date(), 'DD MMMM YYYY', { locale })
     },
   },
   metaInfo: {
-    // if no subcomponents specify a metaInfo.title, this title will be used
     title: 'Demo App',
-    // all titles will be injected into this template
     titleTemplate: (titleChunk) => {
-      // If undefined or blank then we don't need the hyphen
-      return titleChunk ? `${titleChunk} - Demo App` : 'Demo App'
+      return titleChunk ? `${titleChunk} - Demo App ` : 'Demo App'
     },
-    link: [
-      { rel: 'stylesheet', href: '/css/index.css' },
-      { rel: 'favicon', href: 'favicon.ico' },
-    ],
-    style: [
-      { cssText: '.foo { color: red }', type: 'text/css' },
-    ],
-    script: [
-      { src: 'https://cdn.jsdelivr.net/npm/vue/dist/vue.js', async: true, defer: true },
-    ],
     htmlAttrs: {
       lang: 'en',
       amp: true,
@@ -48,7 +43,26 @@ export default {
       class: ['dark-mode', 'mobile'],
     },
     base: { target: '_blank', href: '/' },
-
+    meta: [
+      { hid: 'author', name: 'author', content: options.url },
+      { name: 'publisher', content: options.url },
+      { name: 'apple-mobile-web-app-title', content: options.title },
+      { name: 'theme-color', content: options.themeColor },
+      // Fb
+      { name: 'og:title', content: options.title },
+      { name: 'og:description', content: options.description },
+      { name: 'og:type', content: 'website' },
+      { name: 'og:url', content: options.url },
+      { name: 'og:image', content: options.img },
+      { name: 'og:locale', content: options.locale },
+      // Twitter
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:site', content: options.twitter },
+      { name: 'twitter:creator', content: options.twitter },
+      { name: 'twitter:title', content: options.title },
+      { name: 'twitter:description', content: options.description },
+      { name: 'twitter:image', content: options.img },
+    ],
   },
 }
 </script>

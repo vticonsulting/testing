@@ -3,10 +3,10 @@ import { text, boolean } from '@storybook/addon-knobs'
 import FacebookIcon from './FacebookIcon.vue'
 
 export default {
-  title: 'Icons/Facebook',
+  title: 'Base/Icons/Facebook',
   component: FacebookIcon,
   parameters: {
-    componentSubtitle: 'Facebook Icon',
+    componentSubtitle: '<FacebookIcon />',
   },
 }
 

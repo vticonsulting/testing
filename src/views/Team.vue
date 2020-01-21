@@ -10,7 +10,6 @@
 export default {
   name: 'Team',
   metaInfo: {
-    // title will be injected into parent titleTemplate
     title: 'Team',
     meta: [
       { charset: 'utf-8' },

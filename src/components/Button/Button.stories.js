@@ -4,7 +4,7 @@ import { text, boolean } from '@storybook/addon-knobs'
 import BaseButton from './Button.vue'
 
 export default {
-  title: 'Button',
+  title: 'Base/Button',
   component: BaseButton,
   parameters: {
     componentSubtitle: 'The Button component is used add click actions',

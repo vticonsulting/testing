@@ -1,14 +1,18 @@
 <template>
   <div id="app">
-    <github
+    <Github
       v-tippy="{title: 'Star me on GitHub', trigger: 'mouseenter '}"
       fill="white"
-      slug="egoist/vue-feather-icons">
-    </github>
+      slug="egoist/vue-feather-icons"
+    />
     <header class="header">
       <div class="container">
-        <h1 class="hero-heading">vue-feather-icons</h1>
-        <h2 class="desc">Simply beautiful open source icons as Vue functional components.</h2>
+        <h1 class="hero-heading">
+          vue-feather-icons
+        </h1>
+        <h2 class="desc">
+          Simply beautiful open source icons as Vue functional components.
+        </h2>
       </div>
     </header>
     <div class="container">
@@ -17,7 +21,8 @@
           type="text"
           class="search-input"
           v-model="keyword"
-          :placeholder="`Search in ${icons.length} icons...`">
+          :placeholder="`Search in ${icons.length} icons...`"
+        >
       </div>
       <div class="icons">
         <div
@@ -26,8 +31,9 @@
           :title="example"
           v-for="icon in filteredIcons"
           @click="handleClickIcon(icon)"
-          :key="icon">
-          <component :is="icon" class="icon-svg"></component>
+          :key="icon"
+        >
+          <component :is="icon" class="icon-svg" />
           <span>{{ icon }}</span>
         </div>
       </div>
@@ -40,12 +46,13 @@
             v-tippy="{interactive: true}"
             @click="handleClickSize(size)"
             :key="size"
-            :title="sizeExample(size)">
+            :title="sizeExample(size)"
+          >
             <div class="size-label">
               {{ size }}{{ size === '1x' ? ' (default)' : '' }}
             </div>
             <div class="size-icon">
-              <archive-icon :size="size"></archive-icon>
+              <archive-icon :size="size" />
             </div>
           </div>
         </div>
@@ -66,18 +73,18 @@ import * as icons from '../src'
 import example from './example.md'
 
 export default {
-  data() {
+  data () {
     return {
       icons: Object.keys(icons),
       keyword: '',
       hoverIcon: '',
       hoverSize: '',
       year: new Date().getFullYear(),
-      exampleSizes: ['24', '1x', '1.5x', '2x', '3x', '4x']
+      exampleSizes: ['24', '1x', '1.5x', '2x', '3x', '4x'],
     }
   },
   computed: {
-    filteredIcons() {
+    filteredIcons () {
       const keyword = this.keyword.trim().toLowerCase()
       if (!keyword) return this.icons
 
@@ -85,30 +92,30 @@ export default {
         return name.toLowerCase().indexOf(keyword) > -1
       })
     },
-    example() {
+    example () {
       return example
         .replace(/ICON/g, this.hoverIcon)
         .replace(/kebab-icon/g, kebab(this.hoverIcon))
     },
   },
   methods: {
-    handleClickIcon(icon) {
+    handleClickIcon (icon) {
       this.hoverIcon = icon
     },
-    handleClickSize(size) {
+    handleClickSize (size) {
       this.hoverSize = size
     },
-    sizeExample(size) {
+    sizeExample (size) {
       return example
         .replace('1.5x', size)
         .replace(/ICON/g, 'ArchiveIcon')
         .replace(/kebab-icon/g, 'archive-icon')
-    }
+    },
   },
   components: {
     ...icons,
-    Github
-  }
+    Github,
+  },
 }
 </script>
 

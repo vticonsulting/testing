@@ -3,20 +3,14 @@ import Router from 'vue-router'
 import Meta from 'vue-meta'
 
 Vue.use(Router)
-Vue.use(Meta, {
-  keyName: 'metaInfo',
-  attribute: 'data-vue-meta',
-  ssrAttribute: 'data-vue-meta-server-rendered',
-  tagIDKeyName: 'vmid',
-  refreshOnceOnNavigation: true,
-})
+Vue.use(Meta)
 
 const routes = [
   {
     path: '/',
     name: 'home',
     component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue'),
-    meta: { layout: 'no-sidebar' },
+    meta: { layout: 'FullScreen' },
   },
   {
     path: '/dashboard',

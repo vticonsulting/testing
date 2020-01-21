@@ -10,6 +10,7 @@
           🔥 <button class="text-sm border-b border-gray-600 transform hover:border-gray-200 duration-300 ease-in-out focus:outline-none focus:border-blue-500">
             <span class="font-black">UX</span><span>LAB &rarr; </span></button>
         </span>
+        <SearchForm />
         <button class="text-sm border-b border-gray-600 transform hover:border-gray-200 duration-300 ease-in-out focus:outline-none focus:border-blue-500">
           Release Notes
         </button>
