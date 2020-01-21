@@ -1,8 +1,10 @@
 import mockAxios from 'axios'
 import unsplash from '../unsplash'
 
+require('dotenv').config()
+
 it('calls axios and returns images', async () => {
-  // setup
+  // setup (arrange)
   mockAxios.get.mockImplementationOnce(() =>
     Promise.resolve({
       data: {
@@ -11,17 +13,17 @@ it('calls axios and returns images', async () => {
     })
   )
 
-  // work
+  // work (act)
   const images = await unsplash('kittens')
 
-  // assertions / expects
+  // assertions / expectations (assert)
   expect(images).toEqual(['cute.jpg'])
   expect(mockAxios.get).toHaveBeenCalledTimes(1)
   expect(mockAxios.get).toHaveBeenCalledWith(
     'https://api.unsplash.com/search/photos',
     {
       params: {
-        client_id: process.env.REACT_APP_UNSPLASH_TOKEN,
+        client_id: process.env.APP_UNSPLASH_TOKEN,
         query: 'kittens',
       },
     }

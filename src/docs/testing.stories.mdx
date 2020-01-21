@@ -1,0 +1,28 @@
+
+## Mocking Axios in Jest + Testing Async Functions
+
+How to test asynchronous functions with Jest and it's built-in mocking capabilities 
+
+```js
+// ./src/services/Unsplash
+``
+
+```js
+// ./src/__mocks__/axios.js
+export default {
+  get: jest.fn(() => Promise.resolve({
+    data: {},
+  })),
+}
+```
+
+<!-- https://www.youtube.com/watch?v=9Yrd4aZkse8 -->
+<!-- https://www.leighhalliday.com/mocking-axios-in-jest-testing-async-functions -->
+
+This video demonstrates how to  you at a function that makes an HTTP request using 
+the [axios][] library to the [Unsplash API][1] and figure out 
+using a fake/mock version of axios to avoid performing real HTTP requests. 
+
+[axios]: https://unsplash.com/developers
+[jest]: https://unsplash.com/developers
+[unsplash]: https://unsplash.com/developers

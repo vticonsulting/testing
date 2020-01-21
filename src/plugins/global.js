@@ -29,7 +29,8 @@ import InstagramIcon from '../components/InstagramIcon'
 // import TitanLogoMark from '../components/TitanLogoMark'
 // import VTLogo from '../components/VTLogo'
 
-import LaravelLogoMark from '../components/LaravelLogoMark'
+import AngularLogo from '../components/AngularLogo'
+import LaravelLogo from '../components/LaravelLogo'
 
 import BusinessLeaderboard from '../components/BusinessLeaderboard'
 import ChevronIcon from '../components/ChevronIcon'
@@ -92,7 +93,8 @@ Vue.component('InstagramIcon', InstagramIcon)
 Vue.component('InfoIcon', InfoIcon)
 Vue.component('ItalicIcon', ItalicIcon)
 Vue.component('LabLogo', LabLogo)
-Vue.component('LaravelLogoMark', LaravelLogoMark)
+Vue.component('AngularLogo', AngularLogo)
+Vue.component('LaravelLogo', LaravelLogo)
 Vue.component('LocaleChanger', LocaleChanger)
 Vue.component('ParticipantCard', ParticipantCard)
 Vue.component('ParticipantCards', ParticipantCards)

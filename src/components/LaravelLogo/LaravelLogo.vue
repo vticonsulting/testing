@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'LaravelLogoMark',
+  name: 'LaravelLogo',
   props: {
     color: {
       type: String,

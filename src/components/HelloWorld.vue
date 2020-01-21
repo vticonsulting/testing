@@ -1,7 +1,6 @@
 <template>
   <div class="hello">
-    <LocaleChanger />
-    <h2>{{ $t('hello') }}</h2>
+    {{ msg }}
   </div>
 </template>
 
@@ -10,8 +9,6 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String,
-  },
-  methods: {
   },
 }
 </script>
