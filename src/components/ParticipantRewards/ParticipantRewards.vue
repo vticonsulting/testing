@@ -13,7 +13,7 @@
       class="z-30 fixed absolute inset-0 flex items-center justify-center min-h-screen bg-gray-300"
       style="top: 100%"
     >
-      <div class="z-40 elevation-10 absolute inset-0 lg:max-w-5xl mx-auto md:p-8 rounded-lg bg-white text-black">
+      <div class="z-40 elevation-10 absolute inset-0 lg:max-w-5xl mx-auto p-6 md:p-8 rounded-lg bg-white text-black">
         <header class="flex justify-between items-center">
           <h1 class="mx-2 font-semibold text-xl md:text-3xl text-gray-700">
             Participant Rewards

@@ -1,5 +1,17 @@
 <template>
-  <div class="elevation-1 max-w-2xl w-full lg:mx-0 lg:mb-6 p-4 border-2 rounded-lg border-gray-300 bg-white">
+  <div class="
+    bg-white
+    border-gray-300
+    lg:border-2
+    lg:elevation-1
+    lg:mb-6
+    lg:mx-0
+    max-w-2xl
+    p-4
+    rounded-lg
+    w-full
+  "
+  >
     <header class="relative flex w-full mb-3">
       <div class="mr-4">
         <button
@@ -14,7 +26,7 @@
       </div>
       <!-- EditParticipantButton -->
       <v-popover
-        placement="auto"
+        placement="bottom-end"
         popover-class="w-full max-w-sm focus:outline-none focus:shadow-outline"
       >
         <!-- This will be the popover target (for the events and position) -->

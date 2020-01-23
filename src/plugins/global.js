@@ -37,6 +37,7 @@ import ChevronIcon from '../components/ChevronIcon'
 import DemoAutocomplete from '../components/DemoAutocomplete'
 import DemoChart from '../components/DemoChart'
 import DemoTable from '../components/DemoTable'
+import DemoVideo from '../components/DemoVideo'
 import FontWeights from '../components/FontWeights'
 import HelloWorld from '../components/HelloWorld'
 import HelpButton from '../components/HelpButton'
@@ -51,6 +52,7 @@ import ProfileForm from '../components/ProfileForm'
 import ProgramHeader from '../components/ProgramHeader'
 import ProgramName from '../components/ProgramName'
 import ProgramOverview from '../components/ProgramOverview'
+import ProgramVideo from '../components/ProgramVideo'
 import ProgressBar from '../components/ProgressBar'
 import PulsingDot from '../components/PulsingDot'
 import SearchForm from '../components/SearchForm'
@@ -81,6 +83,7 @@ Vue.component('ChevronIcon', ChevronIcon)
 Vue.component('DemoAutocomplete', DemoAutocomplete)
 Vue.component('DemoChart', DemoChart)
 Vue.component('DemoTable', DemoTable)
+Vue.component('DemoVideo', DemoVideo)
 Vue.component('FacebookBoxIcon', FacebookBoxIcon)
 Vue.component('FacebookFIcon', FacebookFIcon)
 Vue.component('FacebookIcon', FacebookIcon)
@@ -104,6 +107,7 @@ Vue.component('PledgeButton', PledgeButton)
 Vue.component('ProfileForm', ProfileForm)
 Vue.component('ProgramHeader', ProgramHeader)
 Vue.component('ProgramName', ProgramName)
+Vue.component('ProgramVideo', ProgramVideo)
 Vue.component('ProgramOverview', ProgramOverview)
 Vue.component('ProgressBar', ProgressBar)
 Vue.component('PulsingDot', PulsingDot)

@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="h-screen">
+  <div id="app" class="h-screen w-full">
     <Component :is="layout">
       <RouterView />
     </Component>
@@ -7,7 +7,11 @@
 </template>
 
 <script>
+// import unsplash from '@/services/unsplash'
 import locale from 'date-fns/locale/sk'
+
+import CrudComponent from './components/Crud.vue'
+
 const defaultLayout = 'Default'
 const options = {
   url: 'https://frontier.victortolbert.com',
@@ -18,10 +22,20 @@ const options = {
   twitter: '@VictorTolbert',
   themeColor: 'rebeccapurple',
 }
-
+function Crud ({ id, color, name }) {
+  this.id = id
+  this.color = color
+  this.name = name
+}
 export default {
   name: 'App',
-  data: () => ({}),
+  components: {
+    CrudComponent,
+  },
+  data: () => ({
+    cruds: [],
+    mute: false,
+  }),
   computed: {
     layout () {
       return (this.$route.meta.layout || defaultLayout) + 'Layout'
@@ -30,6 +44,35 @@ export default {
       return this.$date(new Date(), 'DD MMMM YYYY', { locale })
     },
   },
+  methods: {
+    async create () {
+      this.mute = true
+      const { data } = await window.axios.get('/api/cruds/create')
+      this.cruds.push(new Crud(data))
+      this.mute = false
+    },
+    async read () {
+      this.mute = true
+      const { data } = await window.axios.get('/api/cruds')
+      data.forEach(crud => this.cruds.push(new Crud(crud)))
+      this.mute = false
+    },
+    async update (id, color) {
+      this.mute = true
+      await window.axios.put(`/api/cruds/${id}`, { color })
+      this.cruds.find(crud => crud.id === id).color = color
+      this.mute = false
+    },
+  },
+  watch: {
+    mute (val) {
+      document.getElementById('mute').className = val ? 'on' : ''
+    },
+  },
+  async created () {
+    this.read()
+    // await console.log(unsplash('cats'))
+  },
   metaInfo: {
     title: 'Demo App',
     titleTemplate: (titleChunk) => {
@@ -37,10 +80,10 @@ export default {
     },
     htmlAttrs: {
       lang: 'en',
-      amp: true,
+      // amp: true,
     },
     bodyAttrs: {
-      class: ['dark-mode', 'mobile'],
+      // class: ['dark-mode', 'mobile'],
     },
     base: { target: '_blank', href: '/' },
     meta: [

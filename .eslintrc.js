@@ -50,6 +50,7 @@ module.exports = {
     'vue/no-unused-components': 'off',
     'vue/no-v-html': 'off',
     'vue/require-default-prop': 'off',
+    'vue/require-prop-types': 'off',
     'vue/require-valid-default-prop': 'off',
     'vue/return-in-computed-property': 'off',
     'vue/v-bind-style': ['error', 'shorthand'],

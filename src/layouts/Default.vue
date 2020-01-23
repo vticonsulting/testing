@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col min-h-screen">
+  <div class="flex flex-col min-h-screen relative">
     <AppHelloBar />
 
     <AppHeader
@@ -7,7 +7,7 @@
       @alerts-open="showAlerts"
     />
 
-    <main class="flex-1 overflow-auto w-full max-w-5xl mx-auto pt-28 lg:pt-44 pb-32">
+    <main class="flex-1 overflow-auto w-full mx-auto pt-28 lg:pt-44 pb-32">
       <slot />
 
       <AppInfo />
@@ -38,12 +38,12 @@ export default {
       immediate: true,
       handler (menuOpen) {
         if (menuOpen) {
-          document.body.style.setProperty('position', 'fixed')
+          // document.body.style.setProperty('position', 'fixed')
           document.body.style.setProperty('overflow-y', 'scroll')
           // document.documentElement.style.setProperty('overflow', 'hidden')
           document.body.style.setProperty('overflow', 'hidden')
         } else {
-          document.body.style.setProperty('position', 'static')
+          // document.body.style.setProperty('position', 'static')
           document.body.style.setProperty('overflow-y', 'auto')
           // document.documentElement.style.removeProperty('overflow', 'hidden')
           document.body.style.removeProperty('overflow')

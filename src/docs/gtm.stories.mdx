@@ -1,0 +1,194 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+
+<Meta title="Notes/Google Tag Manager" />
+
+# Google Tag Manager
+
+
+## VTi Consulting
+
+Tag Manager (4702530093)
+
+| Container Name    | Type | Container Id | GA Tracking Id |
+| ----------------- | ---- | ------------ | -------------- |
+| victortolbert.com | Web  | GTM-PWT3SQW  | UA-76464598-2  |
+| ga-sps.org        | Web  |              | UA-76464598-1  |
+| boosterthon.com   | Web  |              | UA-76464598-3  |
+
+GTM is a tag management system that decouples adding tags and
+code snippets from your source code.
+
+
+A tag management system is designed to help manage the lifecycle 
+of e-marketing tags (sometimes referred to as tracking pixels or 
+web beacons), which are used to integrate third-party software 
+into digital properties.
+
+
+```html
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PWT3SQW');</script>
+<!-- End Google Tag Manager -->
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWT3SQW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+```
+
+## 4.1. Google registration process tracking
+
+When a user starts the Google account creation path (clicks 
+on “Google Account") and sees this form: (see attachment 4_1)
+
+```js
+dataLayer.push({
+  event: 'vpv', 
+  vpvUrl: '/virtual/createAccount/googleSignUpForm', 
+  vpvTitle: 'Registration Form – Google Signup Form'
+});
+```
+
+When a user successfully submits the above form, execute the 
+following code:
+
+```js
+dataLayer.push({
+  event: 'vpv', 
+  vpvUrl: '/virtual/createAccount/googleSignUpComplete', 
+  vpvTitle: 'Registration Form – Google Signup Completed'  
+});
+```
+
+## 4.2. Standard registration process tracking
+
+When a user clicks the “Use My Email” button in the account creation process
+and sees this form: (see attachment 4_2)
+
+Execute the following JavaScript code:
+
+```js
+dataLayer.push({
+  event: 'vpv', 
+  vpvUrl: '/virtual/createAccount/emailSignUpForm', 
+  vpvTitle: 'Registration Form – Email Signup Form',
+})
+```
+
+The below codes should only execute the first time a field value is changed during a single pageload:
+
+When the first name field changes for the first time, execute:
+
+```js
+dataLayer.push({
+  event: 'vpv', 
+  vpvUrl: '/vfields/createAccount/firstNameField', 
+  vpvTitle: 'Registration Form – First Name Field'
+});
+```
+
+When the last name field changes for the first time, execute:
+
+```js
+dataLayer.push({
+  event: 'vpv', 
+  vpvUrl: '/vfields/createAccount/lastNameField', 
+  vpvTitle: 'Registration Form – Last Name Field'
+});
+```
+
+When the email field changes for the first time, execute:
+
+```js
+dataLayer.push({
+  event: 'vpv', 
+  vpvUrl: '/vfields/createAccount/emailField', 
+  vpvTitle: 'Registration Form – Email Field'
+});
+```
+
+When the password field changes for the first time, execute:
+
+```js
+dataLayer.push({
+  event: 'vpv', 
+  vpvUrl: '/vfields/createAccount/passwordField', 
+  vpvTitle: 'Registration Form – Password Field'
+});
+```
+
+When the phone field changes for the first time, execute:
+
+```js
+dataLayer.push({
+  event: 'vpv', 
+  vpvUrl: '/vfields/createAccount/phoneField', 
+  vpvTitle: 'Registration Form - Phone Field'
+});
+```
+
+For the month of birth field:
+
+```js
+dataLayer.push({
+  event: 'vpv', 
+  vpvUrl: '/vfields/createAccount/DoBmonth', 
+  vpvTitle: 'Registration Form - Date of Birth Month Field'
+});
+```
+
+For the day of birth field:
+
+```js
+dataLayer.push({
+  event: 'vpv', 
+  vpvUrl: '/vfields/createAccount/DoBday', 
+  vpvTitle: 'Registration Form - Date of Birth Day Field'
+});
+```
+
+For the year of birth field:
+
+```js
+dataLayer.push({
+  event: 'vpv', 
+  vpvUrl: '/vfields/createAccount/DoByear', 
+  vpvTitle: 'Registration Form - Date of Birth Year Field'
+});
+```
+
+When the form is successfully submitted, execute the following code:
+
+```js
+dataLayer.push({
+  event: 'vpv', 
+  vpvUrl: '/virtual/createAccount/emailSignUpComplete', 
+  vpvTitle: 'Registration Form – Email Signup Completed', 
+  accountType: '<accountType>'
+});
+```
+
+where &lt;accountType> is to be replaced with the type of account just 
+created: Teacher, Parent, or Sponsor.
+
+## 4.3. Form error tracking – account creation
+
+When a user experiences a validation error for one of the fields on the 
+Sign Up form for the Google Account account creation or the Email account 
+creation flow, execute the following code:
+
+```js
+dataLayer.push({
+  event: 'gaEvent', 
+  eventCategory: 'Account Creation Form Errors', 
+  eventAction: '<Field>', 
+  eventLabel: '<Error Message>'
+});
+```
+
+where &lt;Field> is replaced with the name of the field that triggered the error and &lt;Error Message> is replaced with the error message seen by the user. Ideally, we’d like to send the value of the field alongside this, but since many fields contain PII and it is forbidden by GA ToS to send PII data GA, we can’t do that.

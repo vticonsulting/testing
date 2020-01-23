@@ -1,0 +1,116 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+
+<Meta title="Booster Environent Overview" />
+
+Vagrant + Virtual Box
+
+We run our local dev environments on Ubuntu 14.04 and 16.04 within Virtual Machines. Vagrant provides a really nice way to manage this via one configuration file (Vagrantfile) per VM. The good news is that we have pre-built vagrant boxes for you to import once you come onboard. That will save you a lot of time.
+https://www.vagrantup.com/ 
+https://www.virtualbox.org/wiki/Downloads
+
+
+
+Codeigniter
+Our main “Legacy” application is written on the Codeigniter MVC framework and is what you’ll be spending a some of your time in. Get familiar with Database Migrations, Active Record, Helpers, and Libraries. It’s honestly pretty easy to pick up on if you haven’t used it already.
+https://www.codeigniter.com/user_guide/
+
+
+
+Laravel
+Our API and Student Star applications are currently written on the Laravel MVC framework, and is the framework of choice for future Booster applications. I know you’re familiar with Laravel, but wanted to make note of it.
+
+
+
+RabbitMQ
+We leverage rabbit to handle queuing up and sending all our app generated emails, as well as handling some payment related tasks. It’s actually a fairly important component in our current/legacy system.
+https://www.rabbitmq.com/
+
+
+
+Redis
+We leverage a Redis caching layer (via AWS Elasticache) to not only store our users session data, but also to cache data from our API server to limit the requests.
+https://redis.io/
+
+
+
+jQuery
+As with most modern applications, we leverage jQuery for our front-end development.
+
+
+
+Vue.js
+We have been leveraging Vue for our front-end development when we identify things that we could classify as a functional re-usable component in our rebuild.
+
+
+
+Bootstrap 3 and 4
+Our user interface is built atop Bootstrap. Version 3 on the legacy application and v4 moving forward. Pretty self-explanatory.
+
+
+
+AWS (Amazon Web Services)
+Our entire production and staging environments live within AWS. If you haven’t had a chance to work in the AWS ecosystem very much, you can create a free personal account and look around to get familiar with their interface. A lot of the services such as EC2 and RDS have free tiers, so you can also setup your own servers to mess around with at no cost to you. Specifically, the services Booster leverages in AWS are EC2, ELB, EBS, VPC, Route53, RDS, SES, SQS, Cloudfront, and Elasticache. A lot of acronyms, I know!!
+https://aws.amazon.com/
+
+
+
+MySQL (RDS in AWS)
+We use MySQL >= 5.5.x as our primary data storage engine. It’s all fairly standard, but I would become familiar with MySQL Views and Functions if you aren’t already, as we have a bit of that going on within the bowels of the legacy application.
+
+
+
+Apache 2.4
+Apache 2.4 is what we use for our Web servers in our legacy environment. Important to note that our app forces HTTPS, so it’d help to know how to setup SSL Certificates in Apache.
+
+
+
+Nginx
+Our Student Star application and future apps will utilize Nginx to handle the incoming HTTP(s) requests.
+
+
+Git and Github
+Git is what we use for our Version Control, and we host our Git repositories on Github.
+
+
+
+Fabric
+We use fabric as our primary deployment tool for our production and staging/dev environments.
+http://www.fabfile.org/
+
+
+
+Braintree
+We use this 3rd party service to handle all our credit card transactions via their API.
+https://developers.braintreepayments.com/
+
+
+
+JWPlayer
+We use their platform and player to host and deliver the Student Star videos we create for our participants.
+https://developer.jwplayer.com/jw-platform/
+
+
+
+CircleCI
+This is being used to automate the testing of our pull requests. It will check against our coding standard that we’ve defined in our PHPCS configuration. If the tests fail it will be noted on the pull request and need to be corrected before another developer will accept it. This is really nice as it keeps our code uniform and clean.
+ 
+Other Notable items, but nothing you need to be immediately concerned with.
+Blender
+We use this to render our student’s images into our “Student Star” videos, which are then shared with family and friends to help them get pledges.
+
+
+
+FFMpeg
+
+This is used to concatenate the individual png files created by blender and then compress the output file into a much smaller .mp4 file.
+# DevOps Environments
+
+| Environment | Url                          | Admin User | Parent User |
+|-------------|------------------------------|------------|-------------|
+| Local       | [local.boosterthon.com][2]   | dpitsko/test23 | parent@boosterthon.com/secret |
+| Staging     | [staging.boosterthon.com][1] | |
+| Production  | [funrun.boosterthon.com][0]  | |
+
+[0]: https://funrun.com
+[1]: https://staging.boosterthon.com
+[2]: https://local.boosterthon.com

@@ -1,0 +1,154 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+
+<Meta title="Notes/Security" />
+
+# Security
+
+## Security Scan
+
+```sh
+./arachni https://local.boosterthon.com/admin --scope-page-limit=1 --plugin=autologin:url=https://local.boosterthon.com/auth/login_email,parameters='identity=dpitsko@boosterthon.com&password=test23',check='My Profile|Log Out' --checks=csrf
+
+./arachni https://local.boosterthon.com/admin --scope-page-limit=1 --plugin=autologin:url=https://local.boosterthon.com/auth/login_email,parameters='identity=dpitsko@boosterthon.com&password=test23',check='My Profile|Log Out' --checks=path_traversal
+
+# \*,-common_directories,-ldap_injection,-no_sql_injection_differential,-no_sql_injection,-backup_files,-backup_directories,-common_admin_interfaces,-common_files,-cvs_svn_users,-path_traversal,-csrf
+```
+
+```
+ [+] Web Application Security Report - Arachni Framework
+
+ [~] Report generated on: 2020-01-11 07:54:18 -0500
+ [~] Report false positives at: http://github.com/Arachni/arachni/issues
+
+ [+] System settings:
+ [~] ---------------
+ [~] Version:           1.5.1
+ [~] Seed:              61fa6eb3ada09c8715d0743206c7183b
+ [~] Audit started on:  2020-01-11 04:16:09 -0500
+ [~] Audit finished on: 2020-01-11 07:54:18 -0500
+ [~] Runtime:           03:38:08
+
+ [~] URL:        https://local.boosterthon.com/admin
+ [~] User agent: Arachni/v1.5.1
+
+ [*] Audited elements:
+ [~] * Links
+ [~] * Forms
+ [~] * Cookies
+ [~] * XMLs
+ [~] * JSONs
+ [~] * UI inputs
+ [~] * UI forms
+
+ [*] Checks: path_traversal
+
+ [~] ===========================
+
+ [+] 0 issues were detected.
+
+
+ [+] Plugin data:
+ [~] ---------------
+
+
+ [*] Health map
+ [~] ~~~~~~~~~~~~~~
+ [~] Description: Generates a simple list of safe/unsafe URLs.
+
+ [~] Legend:
+ [+] No issues
+ [-] Has issues
+
+ [+] https://local.boosterthon.com/admin
+ [+] https://local.boosterthon.com/admin/online-transaction-fix
+ [+] https://local.boosterthon.com/admin/prizelist
+ [+] https://local.boosterthon.com/admin/prizes
+ [+] https://local.boosterthon.com/admin/programs
+ [+] https://local.boosterthon.com/admin/schools
+ [+] https://local.boosterthon.com/admin/schools/ajax_get_schools
+ [+] https://local.boosterthon.com/admin/schools/edit/1#merchant
+ [+] https://local.boosterthon.com/admin/schools/edit/1#org-admin
+ [+] https://local.boosterthon.com/admin/schools/edit/1#programs
+ [+] https://local.boosterthon.com/admin/schools/edit/16#merchant
+ [+] https://local.boosterthon.com/admin/schools/edit/16#org-admin
+ [+] https://local.boosterthon.com/admin/student_star
+ [+] https://local.boosterthon.com/admin/system-alert
+ [+] https://local.boosterthon.com/admin/system_alert
+ [+] https://local.boosterthon.com/admin/user/quick_create
+ [+] https://local.boosterthon.com/admin/user_group/quick_create
+ [+] https://local.boosterthon.com/admin/user_groups
+ [+] https://local.boosterthon.com/admin/user_groups/15
+ [+] https://local.boosterthon.com/admin/user_groups/30
+ [+] https://local.boosterthon.com/admin/user_groups/45
+ [+] https://local.boosterthon.com/admin/user_groups/60
+ [+] https://local.boosterthon.com/admin/user_groups/75
+ [+] https://local.boosterthon.com/admin/user_groups/edit/12
+ [+] https://local.boosterthon.com/admin/user_groups/edit/13
+ [+] https://local.boosterthon.com/admin/user_groups/edit/15
+ [+] https://local.boosterthon.com/admin/user_groups/edit/16
+ [+] https://local.boosterthon.com/admin/users
+ [+] https://local.boosterthon.com/admin/users/ajax_get_users
+ [+] https://local.boosterthon.com/admin/users/edit
+ [+] https://local.boosterthon.com/admin/users/edit/2
+ [+] https://local.boosterthon.com/admin_ads
+ [+] https://local.boosterthon.com/admin_ads/update_ad
+ [+] https://local.boosterthon.com/admin_stats
+ [+] https://local.boosterthon.com/admin_stats/add_unit_type
+ [+] https://local.boosterthon.com/assets/fontawesome/fonts/fontawesome-webfont.woff
+ [+] https://local.boosterthon.com/auth/login
+ [+] https://local.boosterthon.com/auth/login_email
+ [+] https://local.boosterthon.com/forgot-password/1
+ [+] https://local.boosterthon.com/online_transactions/fix
+ [+] https://local.boosterthon.com/online_transactions/generate
+ [+] https://local.boosterthon.com/programs/ajax_get_programs
+ [+] https://local.boosterthon.com/user_groups/delete/15
+ [+] https://local.boosterthon.com/user_groups/delete/16
+ [+] https://local.boosterthon.com/user_groups/edit
+ [+] https://local.boosterthon.com/user_groups/edit/16
+ [+] https://local.boosterthon.com/users/edit/2
+
+ [~] Total: 47
+ [+] Without issues: 47
+ [-] With issues: 0 ( 0% )
+
+ [*] AutoLogin
+ [~] ~~~~~~~~~~~~~~
+ [~] Description:
+It looks for the login form in the user provided URL, merges its input fields
+with the user supplied parameters and sets the cookies of the response and
+request as framework-wide cookies.
+
+**NOTICE**: If the login form is by default hidden and requires a sequence of DOM
+interactions in order to become visible, this plugin will not be able to submit it.
+
+
+ [+] Logged in successfully.
+ [~] Cookies set to:
+ [~]     * ci_session = c02b555d316517eda65e5832da57fac21b909a10
+ [~]     * hide_cookie_policy = hide
+ [~]     * _gat = 1
+ [~]     * _hjIncludedInSample = 1
+ [~]     * _hjid = b3e4c71d-ef10-4cb8-a8a4-b908c3449abf
+ [~]     * _gid = GA1.2.2085532068.1578734175
+ [~]     * _ga = GA1.2.473152759.1578734175
+
+ [~] Report saved at: /Users/vtolbert/arachni/bin/local.boosterthon.com 2020-01-11 07_54_18 -0500.afr [0.0MB]
+ [~] The scan has logged errors: /Users/vtolbert/arachni/bin/../system/logs/framework/error-15576.log
+
+ [~] Audited 127 page snapshots.
+
+ [~] Duration: 03:38:08
+ [~] Processed 85292/85292 HTTP requests.
+ [~] -- 7.447 requests/second.
+ [~] Processed 1506/1506 browser jobs.
+ [~] -- 10.884 second/job.
+
+ [~] Currently auditing          https://local.boosterthon.com/admin/user_groups
+ [~] Burst response time sum     12.205 seconds
+ [~] Burst response count        18
+ [~] Burst average response time 0.678 seconds
+ [~] Burst average               0.0 requests/second
+ [~] Timed-out requests          5414
+ [~] Original max concurrency    20
+ [~] Throttled max concurrency   20
+ ```

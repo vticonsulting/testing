@@ -1,7 +1,5 @@
 <template>
   <div class="flex">
-    <div class="pulse green" />
-    <div class="pulse yellow" />
     <div class="pulse red" />
   </div>
 </template>
@@ -14,7 +12,6 @@ export default {
 
 <style>
 .pulse {
-  margin: 30px;
   width: 10px;
   height: 10px;
   background-color: #749a02;

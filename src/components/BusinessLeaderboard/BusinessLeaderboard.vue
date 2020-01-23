@@ -6,38 +6,46 @@
       </h1>
       <ChevronIcon />
     </button>
-    <div class="mx-3 mb-8 px-7">
-      <p
-        class="mb-8 text-gray-700"
-        v-html="$t('business_leaderboard_description', {
-          programName: 'Program Name'
-        })"
-      />
-      <table class="table w-full mb-8">
-        <tbody>
-          <tr>
-            <td>
-              <h3 class="">
-                1. <a
-                  href="http://fritsch.com/molestias-rem-voluptates-qui-ut-numquam"
-                  target="_blank"
-                >
-                  Little and Sons</a>
-              </h3>
-              <h4 class="text-gray-700">
-                Sunt ipsa ut sint placeat commodi necessitatibus modi.
-              </h4>
+    <div class="flex w-full px-6">
+      <div class="flex w-2/3">
+        <p
+          class="mb-8 max-w-xl text-gray-700"
+          v-html="$t('business_leaderboard_description', {
+            programName: 'Program Name'
+          })"
+        />
+      </div>
+      <div class="w-full border">
+        <table class="table w-full mb-8">
+          <tbody>
+            <tr>
+              <td>
+                <h3 class="">
+                  1. <a
+                    href="http://fritsch.com/molestias-rem-voluptates-qui-ut-numquam"
+                    target="_blank"
+                  >
+                    Little and Sons</a>
+                </h3>
+                <h4 class="text-gray-700">
+                  Sunt ipsa ut sint placeat commodi necessitatibus modi.
+                </h4>
+              </td>
+              <td class="text-right whitespace-no-wrap">
+                $4
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <td colspan="2">
+              <div class="text-center">
+                <button class="px-2 text-gray-700 font-semibold focus:outline-none focus:shadow-outline rounded-full">
+                  Show More
+                </button>
+              </div>
             </td>
-            <td class="text-right whitespace-no-wrap">
-              $4
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="text-center">
-        <button class="px-2 text-gray-700 font-semibold focus:outline-none focus:shadow-outline rounded-full">
-          Show More
-        </button>
+          </tfoot>
+        </table>
       </div>
     </div>
   </div>

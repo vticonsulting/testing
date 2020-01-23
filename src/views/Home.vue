@@ -9,6 +9,15 @@
         Becoming a fundraising hero is now easier than ever.
       </p>
 
+      <figure class="w-full mx-auto">
+        <img
+          alt="Christy Kudlac"
+          src="https://cominex.net/assets/images/christy_kudlac.png"
+          class="block mx-auto h-20 h-20 rounded-full elevation-6 border-2 border-white"
+        >
+        <figcaption>Christy Kudlac</figcaption>
+      </figure>
+
       <RouterLink to="/dashboard" class="w-48 mb-6 py-2 inline-block font-bold rounded-full shadow border-2 border-blue-500 text-white bg-blue-500 hover:bg-blue-400 active:bg-blue-600 focus:outline-none focus:shadow-outline">
         Login
       </RouterLink>
@@ -29,7 +38,7 @@
           stroke-width="6"
           class="h-6 mb-6 stroke-3 stroke-current text-white"
         />
-        <!-- <div class="flex mb-6 bg-white rounded">
+        <div class="flex mb-6 bg-white rounded">
           <button class="holder">
             <FacebookFIcon style="color: #3b5998" />
           </button>
@@ -42,16 +51,7 @@
           <button class="holder">
             <PinterestIcon style="color: #405de6" />
           </button>
-        </div> -->
-        <div class="flex">
-          <Bars
-            :data="[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]"
-            :gradient="['#be0005', '#42b983']"
-          />
         </div>
-        <button class="p-3 px-8 m-4 border rounded-xl shadow-xl uppercase font-bold bg-white hover:bg-gray-200 text-red-800 hover:text-red-900 hover:scale-95 focus:outline-none focus:shadow-outline transform duration-200 ease-in-out">
-          Documentation
-        </button>
       </section>
     </div>
   </article>

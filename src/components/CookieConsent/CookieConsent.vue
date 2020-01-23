@@ -1,7 +1,7 @@
 <template>
   <CookieConsent>
     <template slot="message">
-      <div class="flex items-center">
+      <div class="flex items-center text-xs">
         <i18n path="cookie_consent_message">
           <v-popover
             class="inline"
@@ -10,7 +10,7 @@
             arrow
             popover-class="w-full max-w-xs focus:outline-none focus:shadow-outline"
           >
-            <button class="border-b border-dotted border-blue-500 focus:outline-none">
+            <button class="border-b font-bold border-dotted border-blue-500 focus:outline-none">
               {{ $t('cookie_policy') }}
             </button>
             <template slot="popover">
@@ -21,7 +21,7 @@
       </div>
     </template>
     <template slot="button">
-      <button class="p-1 px-6 rounded-full bg-blue-600 text-white">
+      <button class="px-6 rounded-full bg-blue-600 text-white text-xs">
         Got it
       </button>
     </template>

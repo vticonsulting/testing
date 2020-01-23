@@ -1,3 +1,53 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+
+<Meta title="Notes/Testing" />
+
+# Testing
+
+
+### Tuesday, January 21, 2020 – 08:43 AM -- Vue Testing Library Notes
+
+
+# intro
+
+Vue Testing Library builds on top of DOM Testing Library by 
+adding APIs for working with Vue components. It is built on 
+top of [@vue/test-utils][], the official testing library for Vue.
+
+- [Vue Testing Library on GitHub][]
+
+In short, Vue Testing Library does three things:
+
+1. Re-exports query utilities and helpers from `DOM Testing Library`.
+2. Hides `@vue/test-utils` methods that are in conflict with Testing Library [Guiding Principle][].
+3. Tweaks some methods from both sources.
+
+https://testing-library.com/docs/vue-testing-library/intro
+
+## Resilient
+
+> The more your tests resemble the way your software is used, 
+> the more confidence they can give you.
+
+1. label
+2. placeholder
+3. text contents
+4. alt text
+5. title
+6. display value
+7. role
+8. test ID
+
+If you wrote out instructions for a manual tester using these queries, it would look 
+something like this:
+
+1. Type a fake username in the input labeled `username`
+2. Type a fake password in the input labeled `password`
+3. Click on the button that has text `sign in`
+
+And that would help to ensure that you are testing your software as closely 
+to how it's used as possible. Giving you more value from your test.
+
 
 ## Mocking Axios in Jest + Testing Async Functions
 
@@ -26,3 +76,6 @@ using a fake/mock version of axios to avoid performing real HTTP requests.
 [axios]: https://unsplash.com/developers
 [jest]: https://unsplash.com/developers
 [unsplash]: https://unsplash.com/developers
+[0]: https://kentcdodds.com/blog/making-your-ui-tests-resilient-to-change
+[1]: https://testing-library.com (Simple and complete testing utilities that encourage good testing practices)
+https://github.com/testing-library/vue-testing-library

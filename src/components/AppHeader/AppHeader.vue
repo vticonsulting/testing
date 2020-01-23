@@ -5,8 +5,7 @@
   >
     <AppHelloBar />
     <slot>
-      <div class="py-5 relative flex items-stretch justify-between w-full max-w-5xl h-full mx-auto">
-        <PortalTarget name="menu-outlet" />
+      <div class="py-6 relative flex items-stretch justify-between w-full max-w-5xl h-full mx-auto">
         <PortalTarget name="modal-outlet" />
         <PortalTarget name="alerts-outlet" />
         <ProgramHeader class="flex-1">
@@ -28,6 +27,8 @@
             @toggle="toggleMenu"
           />
         </div>
+        <PortalTarget name="menu-outlet" />
+
       </div>
     </slot>
   </div>
