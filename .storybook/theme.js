@@ -9,5 +9,5 @@ export default create({
 
 
   brandTitle: 'Boosterthon',
-  brandImage: 'https://cominex.net/assets/images/storybook-logo.png',
+  brandImage: 'https://cominex.net/assets/images/booster_ui.png',
 });

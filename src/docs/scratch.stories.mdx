@@ -4,9 +4,61 @@ import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
 
 # Scratchpad
 
-Table of contents:
+## A set of organized tools, patterns & practices. 
+
+- The foundation for your application development. 
+- component based workflow
+- Automatic generation of living, user editable documentation.
+
+Table of contents
 
 
+## Themimg
+
+```css
+:root {
+  --color-primary: theme('colors.green.700');
+  --color-secondary: theme('colors.blue.700');
+  --color-tertiary: theme('colors.orange.700');
+  --color-danger: theme('colors.red.700');
+  --color-warning: theme('colors.yellow.700');
+  --color-success: theme('colors.green.700');
+  --color-info: theme('colors.blue.200');
+  --color-easyemailer: theme('colors.blue.700');
+  --color-message: theme('colors.blue.700');
+  --color-facebook: theme('colors.facebook');
+  --color-twitter: theme('colors.twitter');
+  --input-background-color: theme('colors.blue.100');
+  --toast-border-radius: 1rem;
+}
+```
+
+# tips
+
+- trash alias
+
+
+# checklist
+
+
+- do you need to white list with purge css
+
+`<Preview withSource='open' />`
+
+there is high value to having individual stories.
+
+stories serve as examples of how to use a component (more than just prop values, but also how components compose), give you visual regression tests for free, are reviewable by designers, etc. and they are one of the big reasons storybook is so popular
+
+
+`{ docs: { disable: true } }` story parameter hides from docs page
+
+```jsx
+<Meta title=""
+  decorators={[storyFn => {
+  <YOUR JAVASCRIPT HERE>
+  return storyFn();}]
+} />
+```
 
 # Rackspace 
 

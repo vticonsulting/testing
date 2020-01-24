@@ -10,7 +10,7 @@
     "lint": "vue-cli-service lint",
     "build-storybook": "build-storybook",
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'",
-    "storybook": "start-storybook -p 6006 -s public",
+    "storybook": "start-storybook --docs -p 6006 -s public",
     "json-server": "json-server ./public/api/data.json --watch --static ./public/api --routes ./public/api/routes.json",
     "theo": "theo tokens.yml --transform web --format scss,custom-properties.css --dest ./src/assets/styles",
     "mdx-deck": "mdx-deck deck.mdx",

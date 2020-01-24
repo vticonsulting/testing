@@ -1,7 +1,7 @@
 <template>
   <BaseButton
     label="pledge-button"
-    class="w-full"
+    class="py-2 px-12 font-bold"
     is-primary
     is-rounded
   >

@@ -3,14 +3,16 @@
     <div class="px-3 w-full max-w-5xl mx-auto">
       <div class="flex justify-between items-baseline">
         <span>
-          <button class="text-sm border-b border-gray-600 transform hover:border-gray-200 duration-300 ease-in-out focus:outline-none focus:border-blue-500">
-            Component Examples</button>
+          <a href="https://tender-wescoff-b96957.netlify.com" class="text-sm border-b border-transparent border-dotted transform hover:border-gray-200 hover:text-white duration-300 ease-in-out focus:outline-none focus:border-blue-500">
+            Component Examples
+            <!-- <img class="h-4 text-white" src="https://cominex.net/assets/images/storybook.png"> -->
+          </a>
         </span>
-        <span>
+        <!-- <span>
           🔥 <button class="text-sm border-b border-gray-600 transform hover:border-gray-200 duration-300 ease-in-out focus:outline-none focus:border-blue-500">
             <span class="font-black">UX</span><span>LAB &rarr; </span></button>
-        </span>
-        <!-- <SearchForm /> -->
+        </span> -->
+        <SearchForm />
         <!-- <button class="text-sm border-b border-gray-600 transform hover:border-gray-200 duration-300 ease-in-out focus:outline-none focus:border-blue-500">
           Release Notes
         </button> -->
@@ -35,4 +37,9 @@ export default {
   );
 }
 .app-hello-bar.darker { --l: 10% }
+.app-hello-bar.white {
+  --h: 0;
+  --s: 100%;
+  --l: 100%;
+}
 </style>

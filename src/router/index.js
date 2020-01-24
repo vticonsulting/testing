@@ -18,6 +18,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "dashboard" */ '../views/Dashboard.vue'),
   },
+  {
+    path: '/easy-emailer',
+    name: 'easy-emailer',
+    component: () =>
+      import(/* webpackChunkName: "easy-emailer" */ '../views/EasyEmailer.vue'),
+  },
 ]
 
 const router = new Router({

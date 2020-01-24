@@ -26,11 +26,20 @@
           outline can be understood without having to see it on screen.
         </p>
       </div>
-
     </details>
+
     <header class="flex justify-center">
       <ParticipantCard @rewards-open="showRewards" />
     </header>
+
+    <div class="flex justify-center mb-6 max-w-5xl mx-auto">
+      <PledgeButton class="max-w-small" />
+    </div>
+
+    <div class="flex justify-center mb-6 max-w-5xl mx-auto">
+      <ShareButtons />
+    </div>
+
     <section class="dashboard-accordion mx-auto max-w-5xl">
       <ProgramOverview />
       <SchoolGoalsAndStats />
@@ -93,22 +102,3 @@ export default {
   },
 }
 </script>
-
-<style>
-section.reveal {
-  height: 100vh;
-}
-form {
-  opacity: 0;
-  transform: translateY(12px);
-  animation: fadeVertical 1s 1s forwards linear;
-  will-change: transform, opacity;
-}
-
-@keyframes fadeVertical {
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-</style>

@@ -9,7 +9,7 @@
     <h1 class="leading-tight font-light text-xl md:text-2xl lg:text-3xl shadow">
       <!-- {{ $appName }} -->
       <!-- Frontend Code Demos and Examples -->
-
+      <!-- User Interface Engineering -->
       <!-- Book Swap -->
     </h1>
     <h2 class="hidden md:block md:text-xs tracking-wide uppercase text-gray-400 font-medium">
