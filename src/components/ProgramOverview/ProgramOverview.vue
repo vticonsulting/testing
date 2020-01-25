@@ -23,10 +23,10 @@
       <!-- About the Program -->
       <div class="w-full md:w-1/2 mx-2 mb-6 px-2">
         <h2 class="mb-2 text-gray-900 font-bold">
-          {{ $t('program.overview.subtitle') }}
+          {{ $t('program_overview') }}
         </h2>
         <p
-          v-html="$t('program.overview.text', {
+          v-html="$t('program_description', {
             schoolName: school.name,
             unitType: $store.state.unitType
           })"

@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import {
-  AlertTriangleLogo,
-  AlertCircleLogo,
+  AlertTriangleIcon,
+  AlertCircleIcon,
   AwardIcon,
   BellIcon,
   BellOffIcon,
   BoldIcon,
   FlagIcon,
+  GithubIcon,
   GlobeIcon,
   HeartIcon,
   InfoIcon,
@@ -49,6 +50,11 @@ import InstagramIcon from '../components/InstagramIcon'
 import LabLogo from '../components/LabLogo'
 import LaravelLogo from '../components/LaravelLogo'
 import LocaleChanger from '../components/LocaleChanger'
+import LocaleToggle from '../components/LocaleToggle'
+import OvalLoadingIndicator from '../components/OvalLoadingIndicator'
+import AudioLoadingIndicator from '../components/AudioLoadingIndicator'
+import BarsLoadingIndicator from '../components/BarsLoadingIndicator'
+import ThreeDotsLoadingIndicator from '../components/ThreeDotsLoadingIndicator'
 import ParticipantCard from '../components/ParticipantCard'
 import ParticipantCards from '../components/ParticipantCards'
 import ParticipantRewards from '../components/ParticipantRewards'
@@ -81,8 +87,8 @@ import VueLogo from '../components/VueLogo'
 // Vue.component('Icons', Icons)
 // Vue.component('PulsatingDot', PulsatingDot)
 Vue.component('AddContactsButtons', AddContactsButtons)
-Vue.component('AlertCircleLogo', AlertCircleLogo)
-Vue.component('AlertTriangleLogo', AlertTriangleLogo)
+Vue.component('AlertCircleIcon', AlertCircleIcon)
+Vue.component('AlertTriangleIcon', AlertTriangleIcon)
 Vue.component('AngularLogo', AngularLogo)
 Vue.component('AwardIcon', AwardIcon)
 Vue.component('BaseAvatar', BaseAvatar)
@@ -103,6 +109,7 @@ Vue.component('FacebookFIcon', FacebookFIcon)
 Vue.component('FacebookIcon', FacebookIcon)
 Vue.component('FlagIcon', FlagIcon)
 Vue.component('FontWeights', FontWeights)
+Vue.component('GithubIcon', GithubIcon)
 Vue.component('GlobeIcon', GlobeIcon)
 Vue.component('HeartIcon', HeartIcon)
 Vue.component('HelloWorld', HelloWorld)
@@ -114,7 +121,12 @@ Vue.component('InstagramIcon', InstagramIcon)
 Vue.component('ItalicIcon', ItalicIcon)
 Vue.component('LabLogo', LabLogo)
 Vue.component('LaravelLogo', LaravelLogo)
+Vue.component('OvalLoadingIndicator', OvalLoadingIndicator)
+Vue.component('AudioLoadingIndicator', AudioLoadingIndicator)
+Vue.component('BarsLoadingIndicator', BarsLoadingIndicator)
+Vue.component('ThreeDotsLoadingIndicator', ThreeDotsLoadingIndicator)
 Vue.component('LocaleChanger', LocaleChanger)
+Vue.component('LocaleToggle', LocaleToggle)
 Vue.component('MapPinIcon', MapPinIcon)
 Vue.component('ParticipantCard', ParticipantCard)
 Vue.component('ParticipantCards', ParticipantCards)

@@ -1,13 +1,19 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,700,700i");
+@import url("https://blokkfontcom-losgordos.netdna-ssl.com/v2/blokkfont.css");
 
 /* Base */
 @import "tailwindcss/base";
 @import "./base/tokens.custom-properties";
+@import "./base/typography";
 
 /* Components */
 @import "tailwindcss/components";
+@import "./components/nprogress";
 @import "./components/tooltips";
 
 /* Utilities */
 @import "tailwindcss/utilities";
 @import "./utilities/animation";
+@import "./utilities/keyframes";
 @import "./utilities/bulma.overrides";

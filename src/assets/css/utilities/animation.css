@@ -1,6 +1,14 @@
-@keyframes fadeVertical {
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.animation-spin {
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-duration: var(--animation-duration);
+  animation-iteration-count: infinite;
+  animation-iteration-count: var(--animation-iteration-count);
+}
+.animation-jump {
+  animation-name: jump;
+  animation-duration: 1s;
+  animation-duration: var(--animation-duration);
+  animation-iteration-count: infinite;
+  animation-iteration-count: var(--animation-iteration-count);
 }

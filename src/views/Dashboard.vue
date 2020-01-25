@@ -1,8 +1,8 @@
 <template>
-  <article id="dashboard" class="mx-auto w-full">
+  <article id="dashboard" class="mx-auto w-full" style="backdrop-filter: blur(20px)">
 
     <details class="mx-auto w-full max-w-2xl mb-6">
-      <summary class="bg-gray-200 p-3 cursor-pointer shadow">
+      <summary class="bg-gray-200 p-3 cursor-pointer shadow rounded-md focus:outline-none focus:shadow-outline">
         What is semantic HTML?
       </summary>
       <div class="content p-6">

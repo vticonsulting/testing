@@ -1,0 +1,30 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs/blocks'
+import LocaleToggle from './LocaleToggle.vue'
+
+<Meta 
+  title="Toggles/LocaleToggle"
+  component={ LocaleToggle }
+  parameters={{ 
+    notes: 'component notes' 
+  }}
+/>
+
+
+## Description
+
+<Description markdown="this is _markdown_" />
+
+<Description of={LocaleToggle} />
+
+<Source name="hello story" />
+
+<Preview withSource="none" withToolbar>
+  <Story name="Default">
+    {{
+      components: { LocaleToggle },
+      template: '<LocaleToggle />'
+    }}
+  </Story>
+</Preview>
+
+<Props of={LocaleToggle}/>

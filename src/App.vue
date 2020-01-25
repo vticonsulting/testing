@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="h-screen w-full">
+  <div id="app" class="h-screen w-full transition-all duration-300">
     <Component :is="layout">
       <RouterView />
     </Component>
@@ -29,6 +29,11 @@ function Crud ({ id, color, name }) {
 }
 export default {
   name: 'App',
+  // metaInfo: {
+  //   meta: {
+  //     keywords: [ 'design', 'front-end', 'design-systems', 'vue' ],
+  //   },
+  // },
   components: {
     CrudComponent,
   },
@@ -66,11 +71,11 @@ export default {
   },
   watch: {
     mute (val) {
-      document.getElementById('mute').className = val ? 'on' : ''
+      // document.getElementById('mute').className = val ? 'on' : ''
     },
   },
   async created () {
-    this.read()
+    // this.read()
     // await console.log(unsplash('cats'))
   },
   metaInfo: {

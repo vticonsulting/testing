@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Meta from 'vue-meta'
+import NProgress from 'nprogress'
+window.NProgress = NProgress
 
 Vue.use(Router)
 Vue.use(Meta)
@@ -31,5 +33,11 @@ const router = new Router({
   base: process.env.BASE_URL,
   routes,
 })
+
+router.beforeEach((to, from, next) => {
+  NProgress.start()
+  next()
+})
+router.afterEach(() => NProgress.done())
 
 export default router

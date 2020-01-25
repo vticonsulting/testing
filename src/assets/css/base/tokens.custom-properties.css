@@ -13,3 +13,13 @@
   --input-background-color: theme('colors.blue.100');
   --toast-border-radius: 1rem;
 }
+
+/* base styles for the default animation duration, timing function, delay, iteration count, direction, and fill mode (when they differ from the CSS defaults) */
+*, *::before, *::after {
+  --animation-duration: 1s;
+  --animation-iteration-count: infinite;
+  /* --animation-timing-function: [default-timing-function];
+  --animation-delay: [default-delay];
+  --animation-direction: [default-direction];
+  --animation-fill-mode: [default-fill-mode]; */
+}

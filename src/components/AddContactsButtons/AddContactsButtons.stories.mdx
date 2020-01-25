@@ -1,5 +1,38 @@
-import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+import {
+  Meta,
+  Preview,
+  Story,
+  Props,
+  Source,
+  Description,
+  ColorPalette,
+  ColorItem
+} from '@storybook/addon-docs/blocks'
+import { titleFunction } from '@storybook/addon-docs/dist/mdx/title-generators';
+import { withKnobs, text } from '@storybook/addon-knobs';
+import AddContactsButtons from './AddContactsButtons.vue'
 
-<Meta title="App/AlertsMenu" />
+<Meta 
+  title='Button Groups/Add Contacts Button'
+  component={ AddContactsButtons }
+  id="addons-docs-mdx-id"
+  parameters={{ 
+    notes: 'component notes' 
+  }}
+/>
 
-# <AddContactsButtons />
+# Add Contacts
+
+<Description of={AddContactsButtons} />
+
+<Preview withToolbar>
+  <Story name="Default">
+    {{
+      components: { AddContactsButtons },
+      template: '<AddContactsButtons />'
+    }}
+  </Story>
+</Preview>
+
+<Props of={AddContactsButtons}/>
+

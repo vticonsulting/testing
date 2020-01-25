@@ -47,17 +47,17 @@
           </button>
         </header>
 
-        <div class="flex flex-wrap">
-          <figure class="w-1/2 p-2">
+        <div class="sm:flex flex-wrap w-full">
+          <figure class="w-full sm:w-1/2 p-2">
             <div class="aspect-ratio-16/9 w-full bg-gray-200" />
           </figure>
-          <figure class="w-1/2 p-2">
+          <figure class="w-full sm:w-1/2 p-2">
             <div class="aspect-ratio-16/9 w-full bg-gray-200" />
           </figure>
-          <figure class="w-1/2 p-2">
+          <figure class="w-full sm:w-1/2 p-2">
             <div class="aspect-ratio-16/9 w-full bg-gray-200" />
           </figure>
-          <figure class="w-1/2 p-2">
+          <figure class="w-full sm:w-1/2 p-2">
             <div class="aspect-ratio-16/9 w-full bg-gray-200" />
           </figure>
         </div>

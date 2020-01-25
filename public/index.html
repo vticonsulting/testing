@@ -3,11 +3,36 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- 
+       FIX dynamically add `maximum-scale=1.0` for iOS
+       maximum-scale=1.0 fixes an annoying auto-zooming
+       of form fields.  Creates accessibility issue for
+       other OS's
+    -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>testing</title>
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css">
     <link href="https://rsms.me/inter/inter.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Droid Sans', 'Droid Serif'],
+          // text: 'abcdefghijklmnopqrstuvwxyz!',
+          // families: ['Open Sans Condensed:300,700:latin,greek']
+        },
+        loading: function() {
+          console.log('webfont loading')
+        },
+        active: function() {
+          console.log('webfont active')
+        },
+        inactive: function() {
+          console.log('webfont inactive')
+        },
+      });
+    </script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

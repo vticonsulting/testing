@@ -2,9 +2,12 @@
   <button
     @click="toggle"
     label="view-rewards-button"
-    class="px-6"
+    class="py-2 px-6 w-64"
   >
-    {{ $t('view_rewards') }}
+    <div class="flex items-center justify-center">
+      <span>{{ $t('view_rewards') }}</span>
+      <!-- <OvalLoadingIndicator class="h-6 text-white" /> -->
+    </div>
     <Portal
       to="modal-outlet"
       v-show="rewardsOpen"

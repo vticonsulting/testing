@@ -2,9 +2,13 @@
   <div class="app-hello-bar z-50 py-2 flex items-center justify-center w-full text-white">
     <div class="px-3 w-full max-w-5xl mx-auto">
       <div class="flex justify-between items-baseline">
-        <span>
-          <a href="https://tender-wescoff-b96957.netlify.com" class="text-sm border-b border-transparent border-dotted transform hover:border-gray-200 hover:text-white duration-300 ease-in-out focus:outline-none focus:border-blue-500">
+        <span class="flex text-white">
+          <a href="https://tender-wescoff-b96957.netlify.com" class="mx-3 text-gray-100 text-sm border-b border-transparent border-dashed transform hover:border-gray-200 hover:text-white duration-300 ease-in-out focus:outline-none focus:border-blue-500">
             Component Examples
+            <!-- <img class="h-4 text-white" src="https://cominex.net/assets/images/storybook.png"> -->
+          </a>
+          <a href="https://tender-wescoff-b96957.netlify.com" class="mx-3 text-gray-100 text-sm border-b border-transparent border-dotted transform hover:border-gray-200 hover:text-white duration-300 ease-in-out focus:outline-none focus:border-blue-500">
+            Ecosystem
             <!-- <img class="h-4 text-white" src="https://cominex.net/assets/images/storybook.png"> -->
           </a>
         </span>

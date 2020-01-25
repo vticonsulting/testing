@@ -12,5 +12,11 @@
 <script>
 export default {
   name: 'PledgeButton',
+  props: {
+    size: {
+      type: String,
+      default: 'small',
+    },
+  },
 }
 </script>

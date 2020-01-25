@@ -1,5 +1,17 @@
 import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+import AppInfo from '.'
 
 <Meta title="App/Info" />
 
-# <AppInfo />
+# App Info
+
+<Preview>
+  <Story name="Default">
+    {{
+      components: { AppInfo },
+      template: '<AppInfo />'
+    }}
+  </Story>
+</Preview>
+
+<Props of={AppInfo}/>

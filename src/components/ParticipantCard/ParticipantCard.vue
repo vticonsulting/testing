@@ -86,7 +86,7 @@
       </div>
       <div class="text-center">
         <ViewRewardsButton
-          class="py-2 border rounded-full shadow-lg font-medium text-lg bg-blue-700 text-white hover:opacity-100 hover:scale-95 hover:translate-y-px focus:outline-none focus:shadow-outline transform duration-200 ease-in-out"
+          class="py-1 px-12 border rounded-full shadow-lg font-medium text-lg bg-blue-700 text-white hover:opacity-100 hover:scale-95 hover:translate-y-px focus:outline-none focus:shadow-outline transform duration-200 ease-in-out"
           label="view-rewards-button"
           @click="toggleRewards"
         />

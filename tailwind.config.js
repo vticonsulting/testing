@@ -10,6 +10,8 @@ module.exports = {
         light: { raw: '(prefers-color-scheme: light)' },
       },
       colors: {
+        'booster-blue': '#003E7E', // hsla(210, 100%, 25%, 1)
+        'booster-red': '#B3282D', // hsla(358, 63%, 43%, 1)
         primary: 'var(--color-primary)',
         secondary: 'var(--color-secondary)',
         danger: 'var(--color-danger)',
@@ -18,6 +20,7 @@ module.exports = {
         info: 'var(--color-info)',
         easyemailer: 'var(--color-easyemailer)',
         message: 'var(--color-message)',
+        brand: '#1B2A60',
         facebook: '#3b5998',
         twitter: '#1da1f2',
         tailwind: {
@@ -97,7 +100,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ['Inter', ...defaultTheme.fontFamily.sans],
+      sans: ['blokk', 'Inter', ...defaultTheme.fontFamily.sans],
       mono: [
         'JetBrains Mono',
         'Menlo',
@@ -144,6 +147,7 @@ module.exports = {
     // space: ['responsive'],
   },
   plugins: [
+    // require('./theme.config.js'),
     require('tailwindcss-aspect-ratio')(),
     require('tailwindcss-elevation')(['responsive']),
     require('@tailwindcss/custom-forms'),

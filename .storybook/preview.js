@@ -11,6 +11,7 @@ import { withA11y } from '@storybook/addon-a11y';
 
 import BaseButton from '../src/components/Button'
 import PledgeButton from '../src/components/PledgeButton'
+import IconSprite from '../src/components/IconSprite'
 
 /* eslint-disable import/no-extraneous-dependencies */
 import '@fortawesome/fontawesome-pro/css/all.css'
@@ -20,12 +21,13 @@ addDecorator(withA11y);
 
 Vue.component('BaseButton', BaseButton)
 Vue.component('PledgeButton', PledgeButton)
+Vue.component('XIcon', IconSprite)
+
 Vue.prototype.$appName = 'Rapid Prototyping Toolkit'
 Vue.prototype.$appTagline = 'Rapid prototyping challenge'
 
 Vue.use(Vuex)
 Vue.use(i18n)
-
 addParameters({
   options: {
     theme: theme,

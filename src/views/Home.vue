@@ -4,13 +4,19 @@
       <h1 class="mb-2 text-4xl font-semibold leading-none">
         Welcome!
       </h1>
+      <div class="flex justify-center items-center w-full text-gray-400">
+        <span class="mx-2"><AudioLoadingIndicator class="h-6 " /></span>
+        <span class="mx-2"><BarsLoadingIndicator class="h-6" /></span>
+        <span class="mx-2"><OvalLoadingIndicator class="h-12" /></span>
+        <span class="mx-2"><ThreeDotsLoadingIndicator class="h-2 text-green-600" /></span>
+      </div>
 
       <p class="max-w-xs mx-auto mb-8 px-8 text-lg">
         Becoming a fundraising hero is now easier than ever.
       </p>
 
       <RouterLink to="/dashboard" class="w-48 mb-6 py-2 inline-block font-bold rounded-full shadow border-2 border-blue-500 text-white bg-blue-500 hover:bg-blue-400 active:bg-blue-600 focus:outline-none focus:shadow-outline">
-        Login
+        Get Started
       </RouterLink>
       <!-- <div class="flex flex-col items-center justify-center">
         <button class="w-48 py-2 block font-bold rounded-full shadow-lg border sm:bg-white">
@@ -18,7 +24,7 @@
         </button>
         <div class="w-48 is-divider" data-content="OR" />
       </div> -->
-      <SlackLogo />
+      <!-- <SlackLogo /> -->
 
       <section class="flex flex-col items-center justify-center w-full max-w-lg mx-auto">
         <div class="flex flex-wrap mb-6">
@@ -47,18 +53,19 @@
         <div class="flex items-center justify-center w-full max-w-sm
          mx-auto"
         >
-          <button class="holder mx-3 p-3 rounded-full shadow-lg focus:outline-none focus:shadow-outline transform duration-150 ease-in-out hover:scale-105 hover:bg-gray-200">
+          <!-- <button class="holder mx-3 p-3 rounded-full shadow-lg focus:outline-none focus:shadow-outline transform duration-150 ease-in-out hover:scale-105 hover:bg-gray-200">
             <FacebookIcon style="color: #3b5998" />
-          </button>
-          <button class="holder mx-3 p-3 rounded-full shadow-lg focus:outline-none focus:shadow-outline transform duration-150 ease-in-out hover:scale-105 hover:bg-gray-200">
-            <TwitterIcon style="color: #1da1f2" />
-          </button>
-          <button class="holder mx-3 p-3 rounded-full shadow-lg focus:outline-none focus:shadow-outline transform duration-150 ease-in-out hover:scale-105 hover:bg-gray-200">
-            <InstagramIcon style="color: #405de6" />
-          </button>
-          <button class="holder mx-3 p-3 rounded-full shadow-lg focus:outline-none focus:shadow-outline transform duration-150 ease-in-out hover:scale-105 hover:bg-gray-200">
-            <PinterestIcon style="color: #405de6" />
-          </button>
+          </button> -->
+          <a href="https://twitter.com/design_coder" class="holder mx-3 p-3 bg-twitter text-white rounded-full shadow-lg focus:outline-none focus:shadow-outline transform duration-150 ease-in-out hover:scale-105 hover:bg-gray-200">
+            <TwitterIcon />
+          </a>
+          <a href="https://www.instagram.com/design_coder" class="holder mx-3 p-3 bg-instagram rounded-full shadow-lg focus:outline-none focus:shadow-outline transform duration-150 ease-in-out hover:scale-105 hover:bg-gray-200">
+            <InstagramIcon />
+          </a>
+          <a href="https://github.com/victortolbert" class="holder mx-3 p-3 bg-black text-white rounded-full shadow-lg focus:outline-none focus:shadow-outline transform duration-150 ease-in-out hover:scale-105 hover:bg-gray-200">
+            <GithubIcon />
+          </a>
+          <!-- <a href="mailto:victortolbert@boosterthon.com"></a> -->
         </div>
       </section>
     </div>
