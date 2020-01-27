@@ -1,3 +1,4 @@
+import '@babel/polyfill'
 import Vue from 'vue'
 import TestApp from './TestApp.vue'
 import './assets/css/main.css'
