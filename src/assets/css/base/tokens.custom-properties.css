@@ -1,7 +1,7 @@
 :root {
   --color-primary: theme('colors.green.700');
   --color-secondary: theme('colors.blue.700');
-  --color-tertiary: theme('colors.orange.700');
+  --color-tertiary: theme('colors.orange.500');
   --color-danger: theme('colors.red.700');
   --color-warning: theme('colors.yellow.700');
   --color-success: theme('colors.green.700');

@@ -5,6 +5,7 @@ import Default from './layouts/Default.vue'
 import FullScreen from './layouts/FullScreen.vue'
 import router from './router'
 import store from './store'
+// import { makeServer } from './server'
 
 import './assets/css/main.css'
 import './assets/sass/bulma.sass'
@@ -12,10 +13,24 @@ import './assets/sass/bulma.sass'
 import './plugins'
 import './registerServiceWorker'
 
+// PROJECT: COMMONS
+import development from '@/config/development.json'
+import production from '@/config/production.json'
+
 Vue.component('DefaultLayout', Default)
 Vue.component('FullScreenLayout', FullScreen)
 
 Vue.config.productionTip = false
+
+// if (process.env.NODE_ENV === 'development') {
+//   makeServer()
+// }
+
+if (process.env.NODE_ENV === 'production') {
+  Vue.prototype.$config = Object.freeze(production)
+} else {
+  Vue.prototype.$config = Object.freeze(development)
+}
 
 // Vue.prototype.$appEyebrow = 'tolbertdesign'
 // Vue.prototype.$appEyebrow = '@victortolbert/frontier'

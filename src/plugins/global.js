@@ -8,6 +8,7 @@ import {
   BoldIcon,
   FlagIcon,
   GithubIcon,
+  LinkedinIcon,
   GlobeIcon,
   HeartIcon,
   InfoIcon,
@@ -25,6 +26,7 @@ import {
 // import TitanLogoMark from '../components/TitanLogoMark'
 // import VTLogo from '../components/VTLogo'
 // import VueIcon from '../components/VueIcon'
+import ColorPalette from '../components/ColorPalette'
 import AngularLogo from '../components/AngularLogo'
 import AddContactsButtons from '../components/AddContactsButtons'
 import BaseAvatar from '../components/Avatar'
@@ -51,6 +53,7 @@ import LabLogo from '../components/LabLogo'
 import LaravelLogo from '../components/LaravelLogo'
 import LocaleChanger from '../components/LocaleChanger'
 import LocaleToggle from '../components/LocaleToggle'
+import LoadingIndicator from '../components/LoadingIndicator'
 import OvalLoadingIndicator from '../components/OvalLoadingIndicator'
 import AudioLoadingIndicator from '../components/AudioLoadingIndicator'
 import BarsLoadingIndicator from '../components/BarsLoadingIndicator'
@@ -63,6 +66,7 @@ import PledgeButton from '../components/PledgeButton'
 import ProfileForm from '../components/ProfileForm'
 import ProfilePhoto from '../components/ProfilePhoto'
 import ProgramHeader from '../components/ProgramHeader'
+import Popup from '../components/Popup'
 import ProgramName from '../components/ProgramName'
 import ProgramOverview from '../components/ProgramOverview'
 import ProgramVideo from '../components/ProgramVideo'
@@ -81,6 +85,7 @@ import ViewRewardsButton from '../components/ViewRewardsButton'
 import VisitorChart from '../components/VisitorChart'
 import VTLogo from '../components/VTLogo'
 import VueLogo from '../components/VueLogo'
+import YoutubeIcon from '../components/YoutubeIcon'
 
 // #########################################################
 
@@ -89,6 +94,7 @@ import VueLogo from '../components/VueLogo'
 Vue.component('AddContactsButtons', AddContactsButtons)
 Vue.component('AlertCircleIcon', AlertCircleIcon)
 Vue.component('AlertTriangleIcon', AlertTriangleIcon)
+Vue.component('ColorPalette', ColorPalette)
 Vue.component('AngularLogo', AngularLogo)
 Vue.component('AwardIcon', AwardIcon)
 Vue.component('BaseAvatar', BaseAvatar)
@@ -121,10 +127,12 @@ Vue.component('InstagramIcon', InstagramIcon)
 Vue.component('ItalicIcon', ItalicIcon)
 Vue.component('LabLogo', LabLogo)
 Vue.component('LaravelLogo', LaravelLogo)
+Vue.component('LoadingIndicator', LoadingIndicator)
 Vue.component('OvalLoadingIndicator', OvalLoadingIndicator)
 Vue.component('AudioLoadingIndicator', AudioLoadingIndicator)
 Vue.component('BarsLoadingIndicator', BarsLoadingIndicator)
 Vue.component('ThreeDotsLoadingIndicator', ThreeDotsLoadingIndicator)
+Vue.component('LinkedinIcon', LinkedinIcon)
 Vue.component('LocaleChanger', LocaleChanger)
 Vue.component('LocaleToggle', LocaleToggle)
 Vue.component('MapPinIcon', MapPinIcon)
@@ -136,6 +144,7 @@ Vue.component('PledgeButton', PledgeButton)
 Vue.component('ProfileForm', ProfileForm)
 Vue.component('ProfilePhoto', ProfilePhoto)
 Vue.component('ProgramHeader', ProgramHeader)
+Vue.component('Popup', Popup)
 Vue.component('ProgramName', ProgramName)
 Vue.component('ProgramOverview', ProgramOverview)
 Vue.component('ProgramVideo', ProgramVideo)
@@ -154,6 +163,7 @@ Vue.component('TwitterIcon', TwitterIcon)
 Vue.component('UserIcon', UserIcon)
 Vue.component('ViewRewardsButton', ViewRewardsButton)
 Vue.component('VisitorChart', VisitorChart)
+Vue.component('YoutubeIcon', YoutubeIcon)
 Vue.component('VTLogo', VTLogo)
 Vue.component('VueLogo', VueLogo)
 Vue.component('XIcon', IconSprite)

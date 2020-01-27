@@ -2,7 +2,104 @@ import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
 
 <Meta title="Notes/Scratchpad" />
 
-# Scratchpad
+# 1. Scratchpad
+
+<!-- TOC -->
+
+- [1. Scratchpad](#1-scratchpad)
+  - [1.1. Merge defaults with options](#11-merge-defaults-with-options)
+  - [1.2. Converting M4A 3](#12-converting-m4a-3)
+  - [1.3. Commit message guidelines](#13-commit-message-guidelines)
+    - [1.3.1. Type](#131-type)
+  - [1.4. Make clicks pass-through](#14-make-clicks-pass-through)
+  - [1.5. A set of organized tools, patterns & practices.](#15-a-set-of-organized-tools-patterns--practices)
+  - [1.6. Themimg](#16-themimg)
+- [2. tips](#2-tips)
+- [3. checklist](#3-checklist)
+- [4. Rackspace](#4-rackspace)
+- [5. Error in TrapperKeeper Commit hook](#5-error-in-trapperkeeper-commit-hook)
+- [6. To allow security scanning script to run](#6-to-allow-security-scanning-script-to-run)
+- [7. Source Sans Pro Font Weights (Google CDN)](#7-source-sans-pro-font-weights-google-cdn)
+- [8. National and International Brands from the Greater Atlanta area](#8-national-and-international-brands-from-the-greater-atlanta-area)
+
+<!-- /TOC -->
+
+## 1.1. Merge defaults with options
+
+```js
+const options = {
+  ...defaults,
+  visible: true
+}
+const options = Object.assign(
+  {}, defaults,
+  { visible: true })
+
+
+
+const users = [
+  ...admins,
+  ...editors,
+  'rstacruz'
+]
+
+const users = admins
+  .concat(editors)
+  .concat([ 'rstacruz' ])
+```
+
+
+## 1.2. Converting M4A 3
+
+`for f in *.m4a; do ffmpeg -i "$f" -codec:v copy -codec:a libmp3lame -q:a 2 newfiles/"${f%.m4a}.mp3"; done`
+
+
+## 1.3. Commit message guidelines
+
+```bash
+git commit -am "<type>(<scope>): <subject>"
+
+# 3. Here are some samples
+git commit -am "docs(changelog): update changelog to beta.5"
+git commit -am "fix(release): need to depend on latest rxjs and zone.js"
+```
+
+### 1.3.1. Type
+
+Must be one of the following:
+
+- **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+- **ci**: Changes to our CI configuration files and scripts (example scopes: Circle, BrowserStack, SauceLabs)
+- **docs**: Documentation only changes
+- **feat**: A new feature
+- **fix**: A bug fix
+- **perf**: A code change that improves performance
+- **refactor**: A code change that neither fixes a bug nor adds a feature
+- **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- **test**: Adding missing tests or correcting existing tests
+
+---
+
+```js
+const options = {
+  ...defaults,
+  visible: true
+}
+
+const options = Object.assign(
+  {}, defaults,
+  { visible: true })
+
+const users = [
+  ...admins,
+  ...editors,
+  'rstacruz'
+]
+
+const users = admins
+  .concat(editors)
+  .concat([ 'rstacruz' ])
+```
 
 For those of you who are in a hurry, here’s a brief Slack vs Discord comparison table:
 
@@ -11,7 +108,7 @@ For those of you who are in a hurry, here’s a brief Slack vs Discord compariso
 | Tailwinds | 0.74  |       1.2 |
 | B         |   •   |           |
 
-## Make clicks pass-through
+## 1.4. Make clicks pass-through
 
 ```css
 /* Make clicks pass-through */
@@ -20,7 +117,7 @@ For those of you who are in a hurry, here’s a brief Slack vs Discord compariso
 }
 ```
 
-## A set of organized tools, patterns & practices. 
+## 1.5. A set of organized tools, patterns & practices. 
 
 - The foundation for your application development. 
 - component based workflow
@@ -28,7 +125,7 @@ For those of you who are in a hurry, here’s a brief Slack vs Discord compariso
 
 Table of contents
 
-## Themimg
+## 1.6. Themimg
 
 ```css
 :root {
@@ -48,12 +145,12 @@ Table of contents
 }
 ```
 
-# tips
+# 2. tips
 
 - trash alias
 
 
-# checklist
+# 3. checklist
 
 
 - do you need to white list with purge css
@@ -75,20 +172,21 @@ stories serve as examples of how to use a component (more than just prop values,
 } />
 ```
 
-# Rackspace 
+# 4. Rackspace 
 
 app1.vticonsulting.com
 
-# Error in TrapperKeeper Commit hook
+# 5. Error in TrapperKeeper Commit hook
 
 `.git/hooks/post-commit: /usr/local/bin/doing: /System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby: bad interpreter: No such file or directory`
 ```sh
-#!/bin/bash
+
+# 4. !/bin/bash
 
 git log --pretty=format:"%s @${PWD##*/}%n%b" -1 HEAD | doing done
 ```
 
-# To allow security scanning script to run
+# 6. To allow security scanning script to run
 
 ```php 
   public function check_access_rate($ip_address) {
@@ -98,7 +196,7 @@ git log --pretty=format:"%s @${PWD##*/}%n%b" -1 HEAD | doing done
 ```
 `application/models/Booster_login_attemp_model.php`
 
-# Source Sans Pro Font Weights (Google CDN)
+# 7. Source Sans Pro Font Weights (Google CDN)
 
 | 200 | extra-light |
 | 200 | extra-light Italic |
@@ -113,7 +211,7 @@ git log --pretty=format:"%s @${PWD##*/}%n%b" -1 HEAD | doing done
 | 900 | black |
 | 900 | black 900 Italic |
 
-# National and International Brands from the Greater Atlanta area
+# 8. National and International Brands from the Greater Atlanta area
 
 - Krystals, Dunwoody
 - Waffle House, Decatur

@@ -11,6 +11,7 @@
         <ProgramHeader class="flex-1">
           <template #program-logo>
             <AppLogo />
+
           </template>
           <template #program-name>
             <ProgramName />
@@ -28,7 +29,6 @@
           />
         </div>
         <PortalTarget name="menu-outlet" />
-
       </div>
     </slot>
   </div>

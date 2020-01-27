@@ -1,7 +1,8 @@
 const path = require('path');module.exports = {
   stories: [
-    "../src/docs/scratch.stories.mdx",
     "../src/docs/Intro.stories.mdx",
+    "../src/docs/whats-new.stories.mdx",
+    "../src/docs/getting-started.stories.mdx",
     "../src/**/*.stories.(js|mdx)"],
   addons: [
     "@storybook/addon-a11y",
@@ -25,8 +26,8 @@ const path = require('path');module.exports = {
 
     // Make whatever fine-grained changes you need
     config.module.rules.push({
-      test: /\.scss$/,
-      use: ['style-loader', 'css-loader', 'sass-loader'],
+      test: /\.s[ac]ss$/i,
+      use: ['vue-style-loader', 'css-loader', 'sass-loader'],
       include: path.resolve(__dirname, '../'),
     });
 

@@ -24,3 +24,5 @@ yarn-error.log*
 *.sw?
 
 storybook-static
+.jest-test-results.json
+.test

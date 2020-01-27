@@ -1,5 +1,6 @@
 // const { colors } = require('tailwindcss/defaultTheme')
 const defaultTheme = require('tailwindcss/defaultTheme')
+const tinycolor = require('tinycolor2')
 
 module.exports = {
   theme: {
@@ -13,7 +14,17 @@ module.exports = {
         'booster-blue': '#003E7E', // hsla(210, 100%, 25%, 1)
         'booster-red': '#B3282D', // hsla(358, 63%, 43%, 1)
         primary: 'var(--color-primary)',
+        'primary-25': tinycolor('#2f855a').setAlpha(0.25).toRgbString(),
+        'primary-50': tinycolor('#2f855a').setAlpha(0.5).toRgbString(),
+        'primary-75': tinycolor('#2f855a').setAlpha(0.75).toRgbString(),
         secondary: 'var(--color-secondary)',
+        'secondary-25': tinycolor('#2b6cb0').setAlpha(0.25).toRgbString(),
+        'secondary-50': tinycolor('#2b6cb0').setAlpha(0.5).toRgbString(),
+        'secondary-75': tinycolor('#2b6cb0').setAlpha(0.75).toRgbString(),
+        tertiary: 'var(--color-tertiary)',
+        'tertiary-25': tinycolor('#ed8936').setAlpha(0.25).toRgbString(),
+        'tertiary-50': tinycolor('#ed8936').setAlpha(0.5).toRgbString(),
+        'tertiary-75': tinycolor('#ed8936').setAlpha(0.75).toRgbString(),
         danger: 'var(--color-danger)',
         warning: 'var(--color-warning)',
         success: 'var(--color-success)',
@@ -23,6 +34,7 @@ module.exports = {
         brand: '#1B2A60',
         facebook: '#3b5998',
         twitter: '#1da1f2',
+        linkedin: '#0077b5',
         tailwind: {
           100: '#f7fafc',
           200: '#edf2f7',

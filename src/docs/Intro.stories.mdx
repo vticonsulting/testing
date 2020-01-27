@@ -1,10 +1,80 @@
 import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
 import poster from '../../public/img/poster.jpg'
 
-<Meta title="Documentation" />
+<Meta title="Introduction" />
 
-# Getting Started
+# 1. Getting Started
+<!-- TOC -->
 
+- [1. Getting Started](#1-getting-started)
+- [2. Tips and Tricks](#2-tips-and-tricks)
+  - [2.1. Alfred Workflows](#21-alfred-workflows)
+  - [2.2. Developer Scripts](#22-developer-scripts)
+  - [2.3. Standards](#23-standards)
+  - [2.4. icons](#24-icons)
+    - [2.4.1. No scoped styles](#241-no-scoped-styles)
+  - [2.5. Data Dictionary](#25-data-dictionary)
+  - [Title: Text dump of Data Dictionary](#title-text-dump-of-data-dictionary)
+  - [2.6. Table Of Contents](#26-table-of-contents)
+  - [2.7. FAQ/Help Desk Pages - Not Logged In](#27-faqhelp-desk-pages---not-logged-in)
+    - [2.7.1. Business Logic/Functionality](#271-business-logicfunctionality)
+    - [2.7.2. FAQ (not logged in)](#272-faq-not-logged-in)
+  - [2.8. FAQ/Help Desk Pages - Logged In](#28-faqhelp-desk-pages---logged-in)
+    - [2.8.1. Business Logic/Functionality](#281-business-logicfunctionality)
+    - [2.8.2. FAQ (logged in)](#282-faq-logged-in)
+  - [2.9. Auth Login Page](#29-auth-login-page)
+  - [2.10. Sign up page](#210-sign-up-page)
+  - [2.11. Forgot Password Page](#211-forgot-password-page)
+  - [2.12. Get Pledges](#212-get-pledges)
+  - [2.13. Get Pledges - Easy Emailer](#213-get-pledges---easy-emailer)
+  - [2.14. Get Pledges - Share](#214-get-pledges---share)
+  - [2.15. Home Dashboard](#215-home-dashboard)
+- [3. #Pledge Process (Step 3)](#3-pledge-process-step-3)
+  - [3.1. Pay Online Pledges Now](#31-pay-online-pledges-now)
+  - [3.2. Pay Online Pledges Now - Payment Details](#32-pay-online-pledges-now---payment-details)
+  - [3.3. Public Dashboard](#33-public-dashboard)
+  - [3.4. Registration Page](#34-registration-page)
+  - [3.5. Registration Page - Register Participant](#35-registration-page---register-participant)
+  - [3.6. Rewards Page](#36-rewards-page)
+  - [3.7. Locker Ads](#37-locker-ads)
+  - [3.8. My Pledges](#38-my-pledges)
+  - [3.9. My Pledges - My Sponsors](#39-my-pledges---my-sponsors)
+  - [3.10. Student Dashboard](#310-student-dashboard)
+  - [3.11. Stats Page](#311-stats-page)
+  - [3.12. State Map](#312-state-map)
+  - [3.13. Edit Account Profile Page](#313-edit-account-profile-page)
+  - [3.14. Update Student Profile Page](#314-update-student-profile-page)
+  - [3.15. Update Student Profile Page - About You](#315-update-student-profile-page---about-you)
+  - [3.16. Update Student Profile Page - Personalize](#316-update-student-profile-page---personalize)
+  - [3.17. Update Student Profile Page - View Participant Agreement](#317-update-student-profile-page---view-participant-agreement)
+  - [3.18. Locker Prizes](#318-locker-prizes)
+  - [3.19. Locker Prize List - Create/Edit Prize](#319-locker-prize-list---createedit-prize)
+  - [3.20. Task Lists Page](#320-task-lists-page)
+  - [3.21. Task Lists Page - Edit Task List](#321-task-lists-page---edit-task-list)
+  - [3.22. Participants Page](#322-participants-page)
+  - [3.23. Teachers Page](#323-teachers-page)
+  - [3.24. Sponsors Page](#324-sponsors-page)
+  - [3.25. Classes Page](#325-classes-page)
+  - [3.26. Classes Page - Add a Class](#326-classes-page---add-a-class)
+  - [3.27. Classes Page - Upload Class List](#327-classes-page---upload-class-list)
+  - [3.28. Classes Page - Add All Missing {Unit Types}](#328-classes-page---add-all-missing-unit-types)
+  - [3.29. Classes Page - View Class](#329-classes-page---view-class)
+  - [3.30. Classes Page - Edit Class](#330-classes-page---edit-class)
+  - [3.31. Classes Page - Add Participant](#331-classes-page---add-participant)
+  - [3.32. Classes Page - Add {Unit Types}](#332-classes-page---add-unit-types)
+  - [3.33. Users Tab](#333-users-tab)
+  - [3.34. User Groups Tab](#334-user-groups-tab)
+  - [3.35. User Groups Tab - Edit User Group](#335-user-groups-tab---edit-user-group)
+  - [3.36. Schools Tab](#336-schools-tab)
+- [4. #Schools Tab - Programs](#4-schools-tab---programs)
+  - [4.1. Schools Tab - Merchant Account](#41-schools-tab---merchant-account)
+  - [4.2. Schools Tab - Locker Administrators](#42-schools-tab---locker-administrators)
+  - [4.3. Schools Tab - School Info](#43-schools-tab---school-info)
+  - [4.4. Convenience Fees](#44-convenience-fees)
+  - [4.5. Global Components (Hyperlinks)](#45-global-components-hyperlinks)
+  - [4.6. Additional Components (Tooltips)](#46-additional-components-tooltips)
+
+<!-- /TOC -->
 ```css
 @font-face {
   font-family: "lobster-custom";
@@ -60,9 +130,9 @@ Changelog: See releases pafge for the full changelog.
 
 
 
-# Tips and Tricks
+# 2. Tips and Tricks
 
-## Alfred Workflows
+## 2.1. Alfred Workflows
 
 - [Can I Use] search
 - Kill Process
@@ -73,7 +143,7 @@ Entry point `main.js`
 
 `?utm_campaign=vue-i18n-2019-01`
 
-## Developer Scripts
+## 2.2. Developer Scripts
 
 | Command           | Description    | Url                   |
 |-------------------|----------------|-----------------------|
@@ -81,19 +151,19 @@ Entry point `main.js`
 |`yarn storybook`   | Component Docs | http://localhost:6006 |
 |`yarn json-server` | Mock API       | http://localhost:3000 |
 
-## Standards
+## 2.3. Standards
 
 Avatar
 
 <Story id="avatar--default" />
 
-## icons
+## 2.4. icons
 
 Facebook
 <Story id="icons-facebook--default" />
 
 
-### No scoped styles
+### 2.4.1. No scoped styles
 
 Instead, give the component's base element a class and use that instead.
 
@@ -125,12 +195,14 @@ Instead, give the component's base element a class and use that instead.
 > This type of element contains non-vital functionality and can be hidden 
 > behind a click or hover to conserve space.
 
-## Data Dictionary
+**[⬆ back to top](#table-of-contents)**
+
+## 2.5. Data Dictionary
 
 Title: Text dump of Data Dictionary
 -----
 
-## Table Of Contents
+## 2.6. Table Of Contents
 
 - FAQ/Help Desk Pages - Not Logged In
 - FAQ/Help Desk Pages - Logged In
@@ -174,16 +246,16 @@ Title: Text dump of Data Dictionary
 - Global Components (Hyperlinks)
 - Additional Components (Tooltips)
 
-## FAQ/Help Desk Pages - Not Logged In
+## 2.7. FAQ/Help Desk Pages - Not Logged In
 
 The FAQ Pages are questions and answers that parents and/or sponsors may potentially have and can access on their own without reaching out to customer support. The Help Desk is a way for parents and/or sponsors to reach out to customer support for specific questions, which will be replied back via Zendesk.
 
-### Business Logic/Functionality
+### 2.7.1. Business Logic/Functionality
 
 - Clicking each question, will expand text displaying the answer. Each question can be clicked again to collapse the answer.
 - The User Type will default to “Sponsor” for the Help Desk.
 
-### FAQ (not logged in)
+### 2.7.2. FAQ (not logged in)
 
 **How do I log in?**
 
@@ -240,16 +312,16 @@ If sponsors choose to send check or cash directly to the school, please have the
   - Student Last Name
   - Issue Type (Select One)
 
-## FAQ/Help Desk Pages - Logged In
+## 2.8. FAQ/Help Desk Pages - Logged In
 
 The FAQ Pages are questions and answers that parents and/or sponsors may potentially have and can access on their own without reaching out to customer support. The Help Desk is a way for parents and/or sponsors to reach out to customer support for specific questions, which will be replied back via Zendesk.
 
-### Business Logic/Functionality
+### 2.8.1. Business Logic/Functionality
 
 The “Your Name” and the “Your Email” fields will prefill the Parent first and last name and the Parent email address. 
 No other fields are pre-selected or filled.
 
-### FAQ (logged in)
+### 2.8.2. FAQ (logged in)
 
 **How do I edit/delete a pledge?**
 
@@ -362,7 +434,7 @@ Only if you paid for a pledge online will the pledge be marked as “paid.” If
   - Issue Type (Select One)
 - FAQ (from Student Dashboard - logged in): same as FAQ logged in page.
 
-## Auth Login Page
+## 2.9. Auth Login Page
 
 This is where KDMs and Boosterthon team members log into the admin portal.They can edit programs, participants, modify values and everything related to the front end side of the website.
 
@@ -388,7 +460,7 @@ If “Remember Me” is pressed and the login is successful, when the user quits
   - Login with code
   - Privacy Policy
 
-## Sign up page
+## 2.10. Sign up page
 
 The sign up page is essentially the landing page for all potential parents/sponsors.
 
@@ -415,7 +487,7 @@ The sign up page is essentially the landing page for all potential parents/spons
   - Phone Num#heading=h.cmqvg14q9u5aber Field
   - Birthday Field
 
-## Forgot Password Page
+## 2.11. Forgot Password Page
 
 For resetting forgotten passwords.
 
@@ -428,7 +500,7 @@ For resetting forgotten passwords.
   - Sign up.
   - Reset Password
 
-## Get Pledges
+## 2.12. Get Pledges
 
 The Get Pledges page is the information portal for parents/teachers to begin the process of reaching out to potential sponsors for pledges. On this page you’ll find a video link, a phone script, information on the “Easy E-Mailer” feature, information on the how to create a student star video, and how to best share your public pledge page to maximize pledges.
 
@@ -446,7 +518,7 @@ The Get Pledges page is the information portal for parents/teachers to begin the
   - Use our Easy-Emailer
   - Share your Pledge Page
 
-## Get Pledges - Easy Emailer
+## 2.13. Get Pledges - Easy Emailer
 
 The Easy Emailer is an essential function for parents to ask their family/friends to make a pledge for their students. If the parent has entered an email in a previous event or funrun then it will be saved so that the parent can choose to send emails to their family and friends in future events as well.
 
@@ -469,7 +541,7 @@ The Easy Emailer is an essential function for parents to ask their family/friend
   - Click here for an email template
   - View Sample Emails
 
-## Get Pledges - Share
+## 2.14. Get Pledges - Share
 
 The share page acts as a another communication portal for parents to ask for pledges via facebook or other site functionality.
 
@@ -489,7 +561,7 @@ The share page acts as a another communication portal for parents to ask for ple
   - Facebook Link (edit)
   - Easy Emailer Link
 
-## Home Dashboard
+## 2.15. Home Dashboard
 
 The home page is where parents or teachers can access all of their participants. It is the first page after login and registration.
 
@@ -517,7 +589,7 @@ The home page is where parents or teachers can access all of their participants.
   - Edit
   - Add Photo
 
-# #Pledge Process (Step 3)
+# 3. #Pledge Process (Step 3)
 
 The third step of the pledge process is where the user has the option to either pay for the pledge online at that moment or pay later. There is various functionality that affects this page and the two options that appear.
 
@@ -554,7 +626,7 @@ The third step of the pledge process is where the user has the option to either 
   - Submit Payment (goes forward to the confirmation page of the pledge process)
   - X (in the upper right-hand corner that takes the user back to the page they came from)
 
-## Pay Online Pledges Now
+## 3.1. Pay Online Pledges Now
 
 The Pay Online Pledges page has several functions, it may serve as a window for sponsors and parents to see what pledges their students has and what status they are in. You may also pay for any outstanding pledges at the “confirmed” status. The pledges are ordered from oldest to newest. We display the sponsor’s name, the participant they pledged, the pledge they made, and the estimated totals.
 
@@ -572,7 +644,7 @@ The Pay Online Pledges page has several functions, it may serve as a window for 
   - Global Component (2)
   - Global Component (3)
 
-## Pay Online Pledges Now - Payment Details
+## 3.2. Pay Online Pledges Now - Payment Details
 
 This is the 2nd page of the Pay Online Pledges button workflow. It handles the process of taking the user’s name, details, and credit card information. Here the user will have selected at least 1 pledge to pay for on the previous page.
 
@@ -592,7 +664,7 @@ This is the 2nd page of the Pay Online Pledges button workflow. It handles the p
   - Year
   - Security Code (CVV)
 
-## Public Dashboard
+## 3.3. Public Dashboard
 
 The public dashboard serves as a means for sponsors to pledge participants.
 
@@ -646,7 +718,7 @@ The My Goal bar is just the goal and progress amount of the one participant sele
 
 - Tooltip: There are no tooltips on this page.
 
-## Registration Page
+## 3.4. Registration Page
 
 This page can be reached from the student’s dashboard and is the primary way that parents and teachers may register their students. A code is given to Teachers they may use to register themselves which is unique to them as it displays the Fun-Run dashboard pages differently. Parents are also given a code which is unique and will modify the way the pages display as well.
 
@@ -661,7 +733,7 @@ This page can be reached from the student’s dashboard and is the primary way t
   - Global Component (3)
   - Global Component (8)
 
-## Registration Page - Register Participant
+## 3.5. Registration Page - Register Participant
 
 This is the 2nd page of the registration process. On this page the parent or teacher is asked for the first and last name of the student along with what class they are in. In order to reduce confusion we do ask if the person registering the participant is the parent or guardian.
 
@@ -686,7 +758,7 @@ This is the 2nd page of the registration process. On this page the parent or tea
 	
 - Tooltip: There are no tooltips on this page.
 
-## Rewards Page
+## 3.6. Rewards Page
 
 The rewards page allows sponsors or parents to examine the prizes Boosterthon offers and what prizes the student has earned. This page contains information related to prizes such as the donation amounts necessary to unlock a prize, prize videos, and the current status of your total pledges.
 
@@ -719,7 +791,7 @@ The rewards page allows sponsors or parents to examine the prizes Boosterthon of
 - Rewards Page Btns (Non-Pending Pledges and Pending Pledges)
 - Rewards Page Btn (Pending Pledges)
 
-## Locker Ads
+## 3.7. Locker Ads
 
 The Ads page on Locker serves as the configuration page for the ads that appear in FunRun and in various emails.
 
@@ -742,7 +814,7 @@ The Ads page on Locker serves as the configuration page for the ads that appear 
 	
 - Tooltips: There are no tooltips on this page.
 
-## My Pledges
+## 3.8. My Pledges
 
 The My Pledges page is an easy way for parents to see what pledges their student has received, from whom, and what status they are at. This page is also configured to allow the parents to edit pledges if necessary.
 
@@ -783,7 +855,7 @@ The My Pledges page is an easy way for parents to see what pledges their student
 - Totals “Pending Pledge” box
 - Delete This Comment
 
-## My Pledges - My Sponsors
+## 3.9. My Pledges - My Sponsors
 
 The My Sponsors page lists the emails of current sponsor’s that have generously given a pledge to the parent student. This email allows the parent to send a quick templated “Thank you” email.
 
@@ -805,7 +877,7 @@ The My Sponsors page lists the emails of current sponsor’s that have generousl
 - Tooltip:  
 - No Tooltips to consider.
 
-## Student Dashboard
+## 3.10. Student Dashboard
 
 The student dashboard acts as the main access point of a particular participant allowing parents to navigate to all of the various avenues of that participant’s profile. This page has many objectives and acts as an information portal.
 
@@ -852,7 +924,7 @@ The student dashboard acts as the main access point of a particular participant 
 
 - Tooltip: There are no tooltips on this page.
 
-## Stats Page
+## 3.11. Stats Page
 
 This Stats page displays the student’s Classroom Progress chart and the Pledge-O-Meter for all Classes chart. The Classroom Progress chart shows the student’s classroom progress compared to the classroom’s goal. The Pledge-O-Meter for All Classes chart will display the pledge-o-meter progress for each classroom in the program.
 
@@ -875,7 +947,7 @@ This Stats page displays the student’s Classroom Progress chart and the Pledge
 	
 - Tooltips: There are no tooltips on this page.
 
-## State Map 
+## 3.12. State Map 
 
 This State Map page displays a map of all the US states and highlights the states that the student has received pledges from.
 
@@ -897,7 +969,7 @@ This State Map page displays a map of all the US states and highlights the state
 
 - Tooltips: There are no tooltips on this page.
 
-## Edit Account Profile Page
+## 3.13. Edit Account Profile Page
 
 Allows parents to edit their profile information.
 
@@ -927,11 +999,11 @@ Allows parents to edit their profile information.
 - Phone Number Field (Edit Sponsor Info)
 - Birthday Field
 
-## Update Student Profile Page 
+## 3.14. Update Student Profile Page 
 
 This page allows parents to edit their participants’ information. It has three subpages, which are listed below:
 
-## Update Student Profile Page - About You
+## 3.15. Update Student Profile Page - About You
 
 This page allows parents to enable family pledging, delete their participant, change the participant name, classroom, and pledge goal.
 
@@ -965,7 +1037,7 @@ This page allows parents to enable family pledging, delete their participant, ch
 
 - Tooltip: There are no tooltips on this page.
 
-## Update Student Profile Page - Personalize
+## 3.16. Update Student Profile Page - Personalize
 
 This page allows parents to upload and edit a profile picture and create/edit the pledge page message.
 
@@ -995,7 +1067,7 @@ This page allows parents to upload and edit a profile picture and create/edit th
 
 - Tooltip: There are no tooltips on this page.
 
-## Update Student Profile Page - View Participant Agreement
+## 3.17. Update Student Profile Page - View Participant Agreement
 
 This page allows parents to view the participant agreement.
 
@@ -1015,7 +1087,7 @@ This page allows parents to view the participant agreement.
 
 - Tooltip: There are no tooltips on this page.
 
-## Locker Prizes
+## 3.18. Locker Prizes
 
 Allows admins to create, view, and edit prize lists.
 
@@ -1048,7 +1120,7 @@ Allows admins to create, view, and edit prize lists.
 
 - Tooltip: There are no tooltips on this page.
 
-## Locker Prize List - Create/Edit Prize
+## 3.19. Locker Prize List - Create/Edit Prize
 
 Allows admins to Create/Edit a prize.
 
@@ -1070,7 +1142,7 @@ Allows admins to Create/Edit a prize.
 
 - Tooltip: There are no tooltips on this page.
 
-## Task Lists Page
+## 3.20. Task Lists Page
 
 Allows users to create and edit task lists.
 
@@ -1092,7 +1164,7 @@ Allows users to create and edit task lists.
 
 - Tooltip: There are no tooltips on this page.
 
-## Task Lists Page - Edit Task List
+## 3.21. Task Lists Page - Edit Task List
 
 Allows users to edit the details of a task list.
 
@@ -1120,7 +1192,7 @@ Allows users to edit the details of a task list.
 
 - Tooltip: There are no tooltips on this page.
 
-## Participants Page
+## 3.22. Participants Page
 
 Allows admins to create, sort, view, and edit participants as well as add cash, check, or cmg payments. Can also look up notes, access codes, classes, and teachers of participants.
 
@@ -1158,7 +1230,7 @@ Allows admins to create, sort, view, and edit participants as well as add cash, 
 
 - Tooltip: There are no tooltips on this page.
 
-## Teachers Page
+## 3.23. Teachers Page
 
 Allows admins to sort, view, and edit teachers as well as add cash, check, or cmg payments. Can also look up/sort by program group name, access codes, classes, and grades.
 
@@ -1192,7 +1264,7 @@ Allows admins to sort, view, and edit teachers as well as add cash, check, or cm
 
 - Tooltip: There are no tooltips on this page.
 
-## Sponsors Page
+## 3.24. Sponsors Page
 
 Allows admins to sort, view, and edit sponsors as well as look up/sort by first name, last name, email, phone number, and access code.
 
@@ -1318,7 +1390,7 @@ Allows admins to sort, view, and edit parents as well as look up/sort by first n
 
 - Tooltip: There are no tooltips on this page.
 
-## Classes Page
+## 3.25. Classes Page
 
 Allows admins to create, sort, view, and edit classes as well as look up/sort by grade, class name, # of participants, student registration codes and # missing {units}. A user can also upload a class list, add all missing {Unit types}, add participants and add {Unit types}.
 
@@ -1347,7 +1419,7 @@ Allows admins to create, sort, view, and edit classes as well as look up/sort by
 
 - Tooltip: There are no tooltips on this page.
 
-## Classes Page - Add a Class
+## 3.26. Classes Page - Add a Class
 
 Allows admins to create a class with a class name, number of students, “Pledge O’Meter Goal”, grade and group.
 
@@ -1369,7 +1441,7 @@ Allows admins to create a class with a class name, number of students, “Pledge
 
 - Tooltip: There are no tooltips on this page.
 
-## Classes Page - Upload Class List
+## 3.27. Classes Page - Upload Class List
 
 Allows users to upload class lists from their computers, select a particular group and set the Pledge O’Meter Goal *per {unit type}.
 
@@ -1389,7 +1461,7 @@ Allows users to upload class lists from their computers, select a particular gro
 
 - Tooltip: There are no tooltips on this page.
 
-## Classes Page - Add All Missing {Unit Types}
+## 3.28. Classes Page - Add All Missing {Unit Types}
 
 Allows admins to view all of the students, within the program, with PPU pledges AND missing {unit types}; admins can enter, edit, and save {unit types} for multiple students at a time.
 
@@ -1411,7 +1483,7 @@ Allows admins to view all of the students, within the program, with PPU pledges 
 
 - Tooltip: There are no tooltips on this page.
 
-## Classes Page - View Class
+## 3.29. Classes Page - View Class
 
 Allows admins to sort and view participants by first and last name, grade, class access code, user group, program name, and unit types.
 
@@ -1440,7 +1512,7 @@ Allows admins to sort and view participants by first and last name, grade, class
 
 - Tooltip: There are no tooltips on this page.
 
-## Classes Page - Edit Class
+## 3.30. Classes Page - Edit Class
 
 Allows admins to edit the name, grade, # of students, and Pledge O’Meter Goal of a class as well as access the student and teacher registration codes.
 
@@ -1465,7 +1537,7 @@ Allows admins to edit the name, grade, # of students, and Pledge O’Meter Goal 
 
 - Tooltip: There are no tooltips on this page.
 
-## Classes Page - Add Participant
+## 3.31. Classes Page - Add Participant
 
 Allows an admin to add a participant to a particular class; can specify the participant first name, last name, participant type, and classroom.
 
@@ -1486,7 +1558,7 @@ Business Logic/Functionality
 
 - Tooltip: There are no tooltips on this page.
 
-## Classes Page - Add {Unit Types}
+## 3.32. Classes Page - Add {Unit Types}
 
 Allows admins to view all of the students, in a particular class, and add, edit or save {unit types}; can save {unit types} for multiple students at a time.
 
@@ -1509,7 +1581,7 @@ Business Logic/Functionality
 
 - Tooltip: There are no tooltips on this page.
 
-## Users Tab
+## 3.33. Users Tab
 
 Allows admins to search and sort users by First Name, Last Name, and Email. Also enables admins to quick create a new user with First Name, Last Name, and Email fields as well as edit existing users, which is under the “Actions” column on the data table.
 
@@ -1543,7 +1615,7 @@ Business Logic/Functionality
 
 - Tooltip: There are no tooltips on this page.
 
-## User Groups Tab
+## 3.34. User Groups Tab
 
 Allows admins to create new, edit or delete existing, and sort by type all User Groups. Quick creating a new group requires Name, Description and Type fields to be set.
 
@@ -1566,7 +1638,7 @@ Business Logic/Functionality
 
 - Tooltip: There are no tooltips on this page.
 
-## User Groups Tab - Edit User Group
+## 3.35. User Groups Tab - Edit User Group
 
 Allows admins to edit the desired user group by adjusting the Name, Description, and Type.
 
@@ -1583,7 +1655,7 @@ Allows admins to edit the desired user group by adjusting the Name, Description,
 
 - Tooltip: There are no tooltips on this page.
 
-## Schools Tab
+## 3.36. Schools Tab
 
 Allows admins to search, sort and ultimately manage schools. Admins can access schools’ programs, merchant accounts, and locker administrators. The admin can also sort by School Name, Type, City, and State.
 
@@ -1603,7 +1675,7 @@ Allows admins to search, sort and ultimately manage schools. Admins can access s
 
 - Tooltip: There are no tooltips on this page.
 
-# #Schools Tab - Programs
+# 4. #Schools Tab - Programs
 
 Allows admins to search, sort and view various programs for a school. Admins can sort by school name, CC, semester, pep rally date, and fun run date.
 
@@ -1628,7 +1700,7 @@ Allows admins to search, sort and view various programs for a school. Admins can
 
 - Tooltip: There are no tooltips on this page.
 
-## Schools Tab - Merchant Account
+## 4.1. Schools Tab - Merchant Account
 
 Allows admins to edit the Braintree Merchant Account Details of a particular school.
 
@@ -1675,7 +1747,7 @@ Year
 
 - Tooltip: There are no tooltips on this page.
 
-## Schools Tab - Locker Administrators
+## 4.2. Schools Tab - Locker Administrators
 
 Allows admins to create and manipulate locker administrators. You can enter the first and last name including an email of whom you wish to make a locker admin. Then you can choose to resend the welcome email to that admin, delete the admin, or check a box whether or not they are to receive task emails.
 
@@ -1703,7 +1775,7 @@ Allows admins to create and manipulate locker administrators. You can enter the 
 
 - Tooltip: There are no tooltips on this page.
 
-## Schools Tab - School Info
+## 4.3. Schools Tab - School Info
 
 Allows admins to edit the information of the school.
 
@@ -1731,7 +1803,7 @@ Allows admins to edit the information of the school.
 
 - Tooltip: There are no tooltips on this page.
 
-## Convenience Fees
+## 4.4. Convenience Fees
 
 Allows admins to search and sort users by First Name, Last Name, and Email. Also enables admins to quick create a new user with First Name, Last Name, and Email fields as well as edit existing users, which is under the “Actions” column on the data table.
 
@@ -1768,7 +1840,7 @@ Allows admins to search and sort users by First Name, Last Name, and Email. Also
 
 The sponsor convenience fee is paid to Boosterthon to cover the cost of your online transaction. Bypass the fee by selecting "Pay Later" and pay with either cash or check.
 
-## Global Components (Hyperlinks)
+## 4.5. Global Components (Hyperlinks)
 
 - Global Component (1): Privacy Policy, Give Us Feedback, Facebook Like Button
 - Global Component (2): Home, Pledges, Participant Dropdown: (Enter Pledge, Dashboard, Get Pledges, Stats, My Pledges, Rewards, Alerts, Edit My Page), Help, My Profile Dropdown: (Edit Profile, Log Out)
@@ -1859,7 +1931,7 @@ The sponsor convenience fee is paid to Boosterthon to cover the cost of your onl
 - Program Name
 - Program Picture
 
-## Additional Components (Tooltips)
+## 4.6. Additional Components (Tooltips)
 
 - Birthday Field: “Your date of birth helps us provide you with the right experience for your age. We we will not display it.”
 - Email Field: ”We ask for your email to send you pledge notifications and payment details.”

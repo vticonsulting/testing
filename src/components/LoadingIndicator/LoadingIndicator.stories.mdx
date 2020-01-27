@@ -1,0 +1,22 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
+import LoadingIndicator from '.'
+
+<Meta title="Base/Loading Indicator" />
+
+# Loading Indicator
+
+<Preview withToolbar>
+  <Story name="Default">
+    {{
+      components: { 
+        LoadingIndicator
+      },
+      template: `
+      <div class="flex items-center text-gray-500">
+        <LoadingIndicator class="mx-3" />
+        <LoadingIndicator variant="audio" class="mx-3" />
+      </div>
+      `
+    }}
+  </Story>
+</Preview>

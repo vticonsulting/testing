@@ -2,7 +2,9 @@
   <div>
     <h1 class="border-b text-lg my-8">
       Team
-    </h1>        <div class="flex">
+    </h1>
+
+    <div class="flex">
       <Bars
         :data="[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]"
         :gradient="['#be0005', '#42b983']"

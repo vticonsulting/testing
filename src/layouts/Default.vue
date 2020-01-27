@@ -6,7 +6,6 @@
       @menu-open="showMenu"
       @alerts-open="showAlerts"
     />
-
     <main class="flex-1 overflow-auto w-full border h-full mx-auto pt-28 lg:pt-44 pb-32">
       <slot />
 

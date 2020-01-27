@@ -45,7 +45,7 @@
             </svg>
           </button>
         </header> -->
-        <div class="flex-1 border-t border-gray-400 text-right">
+        <div class="flex-1 border-t border-gray-400 text-lg">
           <a
             class="block p-3 px-6 bg-gray-100 hover:bg-gray-200 border-b transform duration-300 ease-in-out"
             href="#"

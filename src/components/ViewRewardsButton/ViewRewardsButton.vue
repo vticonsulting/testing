@@ -2,7 +2,7 @@
   <button
     @click="toggle"
     label="view-rewards-button"
-    class="py-2 px-6 w-64"
+    class="py-1 px-1 text-sm font-bold w-56"
   >
     <div class="flex items-center justify-center">
       <span>{{ $t('view_rewards') }}</span>
