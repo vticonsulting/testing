@@ -69,6 +69,7 @@ import ProgramHeader from '../components/ProgramHeader'
 import Popup from '../components/Popup'
 import ProgramName from '../components/ProgramName'
 import ProgramOverview from '../components/ProgramOverview'
+import PrivacyPolicy from '../components/PrivacyPolicy'
 import ProgramVideo from '../components/ProgramVideo'
 import ProgressBar from '../components/ProgressBar'
 import PulsingDot from '../components/PulsingDot'
@@ -160,6 +161,7 @@ Vue.component('ThePledges', ThePledges)
 Vue.component('TitanLogo', TitanLogo)
 Vue.component('TwitterBoxIcon', TwitterBoxIcon)
 Vue.component('TwitterIcon', TwitterIcon)
+Vue.component('PrivacyPolicy', PrivacyPolicy)
 Vue.component('UserIcon', UserIcon)
 Vue.component('ViewRewardsButton', ViewRewardsButton)
 Vue.component('VisitorChart', VisitorChart)

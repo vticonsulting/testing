@@ -8,7 +8,7 @@ module.exports = {
     proxy: 'http://localhost:8080',
     host: '0.0.0.0',
     open: 'Google Chrome',
-    openPage: 'dashboard',
+    // openPage: 'dashboard',
   },
   pluginOptions: {
     i18n: {

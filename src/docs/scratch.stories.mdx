@@ -7,13 +7,20 @@ import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
 <!-- TOC -->
 
 - [1. Scratchpad](#1-scratchpad)
-  - [1.1. Merge defaults with options](#11-merge-defaults-with-options)
-  - [1.2. Converting M4A 3](#12-converting-m4a-3)
-  - [1.3. Commit message guidelines](#13-commit-message-guidelines)
-    - [1.3.1. Type](#131-type)
-  - [1.4. Make clicks pass-through](#14-make-clicks-pass-through)
-  - [1.5. A set of organized tools, patterns & practices.](#15-a-set-of-organized-tools-patterns--practices)
-  - [1.6. Themimg](#16-themimg)
+  - [1.1. Tips and Tricks](#11-tips-and-tricks)
+    - [1.1.1. Alfred Workflows](#111-alfred-workflows)
+    - [1.1.2. Developer Scripts](#112-developer-scripts)
+  - [1.2. Standards](#12-standards)
+  - [1.3. Icons](#13-icons)
+    - [1.3.1. No scoped styles](#131-no-scoped-styles)
+  - [1.4. Production Build](#14-production-build)
+  - [1.5. Merge defaults with options](#15-merge-defaults-with-options)
+  - [1.6. Converting M4A 3](#16-converting-m4a-3)
+  - [1.7. Commit message guidelines](#17-commit-message-guidelines)
+    - [1.7.1. Type](#171-type)
+  - [1.8. Make clicks pass-through](#18-make-clicks-pass-through)
+  - [1.9. A set of organized tools, patterns & practices.](#19-a-set-of-organized-tools-patterns--practices)
+  - [1.10. Themimg](#110-themimg)
 - [2. tips](#2-tips)
 - [3. checklist](#3-checklist)
 - [4. Rackspace](#4-rackspace)
@@ -24,7 +31,174 @@ import { Meta, Preview, Story } from '@storybook/addon-docs/blocks'
 
 <!-- /TOC -->
 
-## 1.1. Merge defaults with options
+
+
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg 'The Stormtroopocat')
+
+```css
+@font-face {
+  font-family: "lobster-custom";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./lobster.ttf") format("truetype");
+}
+```
+
+<details class="mx-auto w-full max-w-2xl mb-6">
+  <summary class="bg-gray-200 p-3 cursor-pointer shadow rounded-md focus:outline-none focus:shadow-outline">
+    What is semantic HTML?
+  </summary>
+  <div class="content p-6">
+    <p>
+      There are many different elements that HTML provides that convey
+      meaning to a document.
+    </p>
+    <p>
+      <kbd>&lt;form></kbd> for example is a semantic element that will mark that
+      the contents inside of it as an interactive form. The browser and
+      the user know what the content should be like here.
+    </p>
+    <p>
+      &lt;div> for example is not a semantic element. It has
+      no implied meaning and is used as a generic container when other
+      elements are unsuitable.
+    </p>
+    <p>
+      Writing semantic HTML requires developers to make use of as many
+      correct semantic elements as possible to make sure the document
+      outline can be understood without having to see it on screen.
+    </p>
+  </div>
+</details>
+
+---
+
+Tokens
+Elements
+Patterns
+Templates
+
+---
+
+Spacing: A framework for creating a predictable and harmonious spacing.
+Component Status: Clear labels that reflect the state of completion.
+Component QA: How to review new components and keep the quality high.
+Contributing: A set of guidelines for contributing to the system.
+Code of Conduct: By participating you agree to abide by its terms.
+Frequently Asked Questions: How to use icons, how to use font-face, etc.
+Changelog: See releases pafge for the full changelog.
+
+
+
+## 1.1. Tips and Tricks
+
+### 1.1.1. Alfred Workflows
+
+- [Can I Use] search
+- Kill Process
+
+<img src={poster} height="200px" />
+
+Entry point `main.js`
+
+`?utm_campaign=vue-i18n-2019-01`
+
+### 1.1.2. Developer Scripts
+
+| Command           | Description    | Url                   |
+|-------------------|----------------|-----------------------|
+|`yarn serve`       | Demo App       | http://localhost:8080 |
+|`yarn storybook`   | Component Docs | http://localhost:6006 |
+|`yarn json-server` | Mock API       | http://localhost:3000 |
+
+## 1.2. Standards
+
+Avatar
+
+<Story id="avatar--default" />
+
+## 1.3. Icons
+
+Facebook
+<Story id="icons-facebook--default" />
+
+
+### 1.3.1. No scoped styles
+
+Instead, give the component's base element a class and use that instead.
+
+```html
+<!-- ✔ GOOD -->
+<template>
+  <div class="component">
+  </div>
+</template>
+
+<style>
+.component {}
+</style>
+
+ <!-- ✘ BAD -->
+<style scoped>
+.component {}
+</style>
+```
+
+
+
+> A **tooltip** is an element containing simple text content describing a
+> particular element. It's hidden until the user desires more information 
+> from the element, e.g. before deciding to click a button.
+
+> A **popover** is an interactive HTML tooltip. It can be a dropdown, menu, or 
+> any other kind of box that pops out from the normal flow of the document.
+> This type of element contains non-vital functionality and can be hidden 
+> behind a click or hover to conserve space.
+
+**[⬆ back to top](#1-table-of-contents)**
+
+## 1.4. Production Build  
+
+asset size limit: The following asset(s) exceed the recommended size limit (879 KiB).
+
+Assets: 
+  css/app.2129d4b3.css (2.75 MiB)
+  js/chunk-vendors.c547582b.js (1.62 MiB)
+  js/pdfmake.120616c8.js (1.96 MiB)
+  js/xlsx.254ff5e6.js (899 KiB)
+  img/Feed_iOS_withoutStories.png (1010 KiB)
+  img/Feed_iOS.png (1.12 MiB)
+  img/SearchAndExplore_iOS.png (1.09 MiB)
+  img/Live_CoBroadcast_iOS.png (1.16 MiB)
+  img/Live_iOS.png (1.21 MiB)
+  img/Filters_iOS.png (1.21 MiB)
+  img/Stories_Consumption_iOS.png (1.24 MiB)
+  img/Stories_Capture_iOS.png (1.36 MiB)
+  img/Stories_Review_iOS.png (1.57 MiB)
+
+  File                                      Size             Gzipped
+  dist/js/pdfmake.120616c8.js               2005.91 KiB      886.07 KiB
+  dist/js/chunk-vendors.c547582b.js         1660.50 KiB      424.39 KiB
+  dist/js/xlsx.254ff5e6.js                  898.84 KiB       319.61 KiB
+  dist/js/app.238dacec.js                   226.67 KiB       51.68 KiB
+  dist/js/home.0ac8b742.js                  98.45 KiB        33.85 KiB
+  dist/js/canvg.bcabb96b.js                 85.34 KiB        23.09 KiB
+  dist/js/dashboard.a9796f62.js             2.59 KiB         1.24 KiB
+  dist/js/easy-emailer.88920a8e.js          0.49 KiB         0.36 KiB
+  dist/css/app.2129d4b3.css                 2817.35 KiB      320.26 KiB
+  dist/v3-assets/dashboard/css/tailwind.css    519.74 KiB       66.82 KiB
+  dist/v3-assets/dashboard/css/dashboard.css    416.77 KiB       46.55 KiB
+  dist/v3-assets/dashboard/css/main.css     416.52 KiB       46.58 KiB
+  dist/v3-assets/dashboard/css/app.css      315.82 KiB       48.30 KiB
+  dist/v3-assets/dashboard/css/registration.css    310.64 KiB       47.67 KiB
+  dist/css/chunk-vendors.b74f3bb4.css       30.47 KiB        4.57 KiB
+  dist/css/home.c404004b.css                1.78 KiB         0.56 KiB
+
+
+
+
+## 1.5. Merge defaults with options
 
 ```js
 const options = {
@@ -49,12 +223,12 @@ const users = admins
 ```
 
 
-## 1.2. Converting M4A 3
+## 1.6. Converting M4A 3
 
 `for f in *.m4a; do ffmpeg -i "$f" -codec:v copy -codec:a libmp3lame -q:a 2 newfiles/"${f%.m4a}.mp3"; done`
 
 
-## 1.3. Commit message guidelines
+## 1.7. Commit message guidelines
 
 ```bash
 git commit -am "<type>(<scope>): <subject>"
@@ -64,7 +238,7 @@ git commit -am "docs(changelog): update changelog to beta.5"
 git commit -am "fix(release): need to depend on latest rxjs and zone.js"
 ```
 
-### 1.3.1. Type
+### 1.7.1. Type
 
 Must be one of the following:
 
@@ -108,7 +282,7 @@ For those of you who are in a hurry, here’s a brief Slack vs Discord compariso
 | Tailwinds | 0.74  |       1.2 |
 | B         |   •   |           |
 
-## 1.4. Make clicks pass-through
+## 1.8. Make clicks pass-through
 
 ```css
 /* Make clicks pass-through */
@@ -117,7 +291,7 @@ For those of you who are in a hurry, here’s a brief Slack vs Discord compariso
 }
 ```
 
-## 1.5. A set of organized tools, patterns & practices. 
+## 1.9. A set of organized tools, patterns & practices. 
 
 - The foundation for your application development. 
 - component based workflow
@@ -125,7 +299,7 @@ For those of you who are in a hurry, here’s a brief Slack vs Discord compariso
 
 Table of contents
 
-## 1.6. Themimg
+## 1.10. Themimg
 
 ```css
 :root {
