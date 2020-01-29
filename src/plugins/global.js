@@ -47,9 +47,11 @@ import ProgramOverview from '../components/ProgramOverview'
 import ProgramVideo from '../components/ProgramVideo'
 import ProgressBar from '../components/ProgressBar'
 import PulsatingDot from '../components/PulsatingDot'
+
 import PulsingDot from '../components/PulsingDot'
 import SchoolGoalsAndStats from '../components/SchoolGoalsAndStats'
 import SearchForm from '../components/SearchForm'
+import InstallButton from '../components/InstallButton'
 import ShareButtons from '../components/ShareButtons'
 import SlackLogo from '../components/SlackLogo'
 import StudentStarVideo from '../components/StudentStarVideo'
@@ -111,6 +113,7 @@ Vue.component('ProfilePhoto', ProfilePhoto)
 Vue.component('ProgramHeader', ProgramHeader)
 Vue.component('ProgramName', ProgramName)
 Vue.component('ProgramOverview', ProgramOverview)
+Vue.component('InstallButton', InstallButton)
 Vue.component('ProgramVideo', ProgramVideo)
 Vue.component('ProgressBar', ProgressBar)
 Vue.component('PulsatingDot', PulsatingDot)

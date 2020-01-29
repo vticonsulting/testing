@@ -24,7 +24,7 @@ export default {
     await unsplash.photos.getRandomPhoto({ username: 'naoufal' })
       .then(res => {
         res.json().then(json => {
-          console.log(json)
+          // console.log(json)
           this.photo = json
         })
       })

@@ -17,8 +17,8 @@
       <slot>
         <RouterLink to="/">
           <!-- <img class="rounded-full p-3" src="http://cominex.net/assets/images/booster_u.png"> -->
-          <img class="rounded-full p-3 transform scale-100 hover:scale-95 duration-200" src="http://cominex.net/assets/images/booster_avatar.png">
-          <!-- <VTLogo class="h-12" /> -->
+          <!-- <img class="rounded-full p-3 transform scale-100 hover:scale-95 duration-200" src="http://cominex.net/assets/images/booster_avatar.png"> -->
+          <VTLogo class="h-12" />
           <!-- <span class="text-5xl">✨</span> -->
         </RouterLink>
       </slot>

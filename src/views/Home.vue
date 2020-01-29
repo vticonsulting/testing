@@ -1,12 +1,13 @@
 <template>
   <article class="flex flex-col items-center justify-center w-full mx-auto max-w-lg">
-    <div class="fade-vertical w-128 pt-6 pb-16 sm:bg-gray-100 text-white sm:text-black text-center shadow-lg rounded-xl">
-      <h1 class="mb-2 text-4xl font-semibold leading-none">
+    <div class="hidden fade-vertical w-128 pt-6 pb-16 sm:bg-transparent text-white sm:text-black text-center shadow-lg rounded-xl">
+      <!-- <h1 class="mb-2 text-4xl font-semibold leading-none">
         Welcome!
-      </h1>
+      </h1> -->
 
-      <div class="w-full max-w-sm mx-auto">
-        <v-select label="name" :filterable="false" :options="options" @search="onSearch">
+      <!--
+      <div class="w-full max-w-sm my-12 mx-auto">
+        <v-select label="name" :filterable="false" :options="options" @search="onSearch" placeholder="Search...">
           <template slot="no-options">
             type to search GitHub repositories..
           </template>
@@ -23,13 +24,13 @@
             </div>
           </template>
         </v-select>
-      </div>
+      </div> -->
 
-      <RouterLink to="/dashboard" class="w-48 mb-6 py-2 inline-block font-bold rounded-full shadow border-2 border-blue-500 text-white bg-blue-500 hover:bg-blue-400 active:bg-blue-600 focus:outline-none focus:shadow-outline">
+      <!-- <RouterLink to="/dashboard" class="w-48 mb-6 py-2 inline-block font-bold rounded-full shadow border-2 border-blue-500 text-white bg-blue-500 hover:bg-blue-400 active:bg-blue-600 focus:outline-none focus:shadow-outline">
         Get Started
-      </RouterLink>
+      </RouterLink> -->
 
-      <section class="flex flex-col items-center justify-center w-full max-w-lg mx-auto">
+      <!-- <section class="flex flex-col items-center justify-center w-full max-w-lg mx-auto">
         <Trend
           :data="[ 1, 6, 40, 12, 50, 7, 4, 90, ]"
           auto-draw
@@ -38,7 +39,10 @@
           stroke-width="6"
           class="h-6 mb-6 stroke-3 stroke-current text-white"
         />
-      </section>
+      </section> -->
+    </div>
+    <div class="my-20">
+      <InstallButton />
     </div>
   </article>
 </template>
@@ -104,14 +108,14 @@ export default {
         })
       })
 
-    let confetti = this.$confetti
-    confetti.start({
-      shape: 'rect',
-    })
+    // let confetti = this.$confetti
+    // confetti.start({
+    //   shape: 'rect',
+    // })
 
-    setTimeout(function () {
-      confetti.stop()
-    }, 3000)
+    // setTimeout(function () {
+    //   confetti.stop()
+    // }, 3000)
   },
 }
 </script>
