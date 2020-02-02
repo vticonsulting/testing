@@ -1,9 +1,10 @@
 const path = require('path');module.exports = {
   stories: [
     "../src/docs/Intro.stories.mdx",
-    "../src/docs/whats-new.stories.mdx",
     "../src/docs/getting-started.stories.mdx",
-    "../src/**/*.stories.(js|mdx)"],
+    "../src/docs/whats-new.stories.mdx",
+    // "../src/**/*.stories.(js|mdx)"
+  ],
   addons: [
     "@storybook/addon-a11y",
     "@storybook/addon-actions",
@@ -15,7 +16,20 @@ const path = require('path');module.exports = {
     "@storybook/addon-viewport",
     {
       name: "@storybook/addon-docs",
-      options: { configureJSX: true }
+      options: {
+        configureJSX: true,
+        // https://github.com/storybookjs/storybook/issues/8096
+        babelOptions: {
+          presets: [
+            [
+              '@vue/cli-plugin-babel/preset',
+              {
+                jsx: false
+              }
+            ]
+          ]
+        }
+      }
     }
   ],
   // webpackFinal: (config) => console.dir(config, { depth: null }) || config,
@@ -30,6 +44,16 @@ const path = require('path');module.exports = {
       use: ['vue-style-loader', 'css-loader', 'sass-loader'],
       include: path.resolve(__dirname, '../'),
     });
+
+    // config.module.rules.push({
+    //   test: /\.s[ac]ss$/,
+    //   use: ["vue-style-loader", "css-loader", "sass-loader"]
+    // });
+
+    // config.module.rules.push({
+    //   test: /\.pug$/,
+    //   use: "pug-plain-loader"
+    // });
 
     // Return the altered config
     return config;

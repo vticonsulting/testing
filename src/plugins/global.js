@@ -6,6 +6,7 @@ import AudioLoadingIndicator from '../components/AudioLoadingIndicator'
 import BarsLoadingIndicator from '../components/BarsLoadingIndicator'
 import BaseAvatar from '../components/Avatar'
 import BaseButton from '../components/Button'
+import BaseInput from '../components/Input'
 import BaseCarousel from '../components/Carousel'
 import BaseVideo from '../components/Video'
 import BusinessLeaderboard from '../components/BusinessLeaderboard'
@@ -47,6 +48,7 @@ import ProgramOverview from '../components/ProgramOverview'
 import ProgramVideo from '../components/ProgramVideo'
 import ProgressBar from '../components/ProgressBar'
 import PulsatingDot from '../components/PulsatingDot'
+import Week from '../components/Week'
 
 import PulsingDot from '../components/PulsingDot'
 import SchoolGoalsAndStats from '../components/SchoolGoalsAndStats'
@@ -75,6 +77,7 @@ Vue.component('AudioLoadingIndicator', AudioLoadingIndicator)
 Vue.component('BarsLoadingIndicator', BarsLoadingIndicator)
 Vue.component('BaseAvatar', BaseAvatar)
 Vue.component('BaseButton', BaseButton)
+Vue.component('BaseInput', BaseInput)
 Vue.component('BaseCarousel', BaseCarousel)
 Vue.component('BaseVideo', BaseVideo)
 Vue.component('BusinessLeaderboard', BusinessLeaderboard)
@@ -133,4 +136,5 @@ Vue.component('VisitorChart', VisitorChart)
 Vue.component('VTLogo', VTLogo)
 Vue.component('VueLogo', VueLogo)
 Vue.component('XIcon', IconSprite)
+Vue.component('Week', Week)
 Vue.component('YoutubeIcon', YoutubeIcon)

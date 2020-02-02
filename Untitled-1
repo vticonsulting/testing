@@ -1,0 +1,88 @@
+  // "eslint.autoFixOnSave": false,
+  // "eslint.validate": [
+  //   "javascript",
+  //   "javascriptreact",
+  //   "typescript",
+  //   "typescriptreact",
+  // ],
+  // "eslint.options": {
+  //   "browser": true,
+  //   "jest/globals": true,
+  //   "es6": true
+  // },
+  // "prettier.eslintIntegration": false,
+  // "prettier.bracketSpacing": false,
+  // "prettier.printWidth": 80,
+  // "prettier.tabWidth": 2,s
+  // "prettier.singleQuote": true,
+  // "prettier.trailingComma": "all",
+  // "prettier.jsxBracketSameLine": false,
+  // "prettier.semi": false,
+  // "prettier.useTabs": false,
+  // "prettier.proseWrap": "always",
+  // turn it off for JS and JSX, we will do this via eslint
+      // egghead
+    /*
+  "editor.fontSize": 22,
+  "terminal.integrated.fontSize": 16,
+  "scm.diffDecorations": "none",
+  "editor.lineNumbers": "off",
+  "workbench.editor.showTabs": false,
+  "workbench.statusBar.visible": false,
+  "editor.cursorBlinking": "solid",
+  "breadcrumbs.enabled": false
+  /**/
+    // workshop
+    /*
+  "editor.fontSize": 22,
+  "terminal.integrated.fontSize": 16,
+  "scm.diffDecorations": "none",
+  "editor.lineNumbers": "off",
+  "workbench.statusBar.visible": false,
+  "editor.cursorBlinking": "solid"
+  /**/
+    // livestream
+    /*
+  "window.zoomLevel": 2,
+  "editor.fontSize": 22,
+  "terminal.integrated.fontSize": 16,
+  "scm.diffDecorations": "none",
+  "editor.lineNumbers": "off",
+  "workbench.statusBar.visible": false,
+  "editor.cursorBlinking": "solid"
+  /**/
+
+
+  <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.js
+
+module.exports = {
+  presets: [
+    ['@vue/app', {
+      polyfills: [
+        'es6.promise', // already default included now
+        'es6.array.iterator', // already default included now
+        'es6.symbol', 
+        'es6.object.assign'
+      ]
+    }]
+  ]
+}
+
+
+// "presets": [
+//     [
+//         "@vue/app",
+//         {
+//             "debug": true,
+//             "useBuiltIns": "entry",
+//             "corejs": {
+//                 "version": 3,
+//                 "proposals": true
+//             },
+//             "targets": {
+//                 "ie": "11"
+//             }
+//         }
+//     ]
+// ],

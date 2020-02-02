@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap mb-6">
+  <div data-testid="add-contacts-buttons" class="flex flex-wrap mb-6">
     <button class="mx-3 p-3 border rounded-full shadow-lg focus:outline-none focus:shadow-outline transform duration-150 ease-in-out hover:scale-105 hover:bg-gray-200">
       <x-Icon name="add" />
     </button>

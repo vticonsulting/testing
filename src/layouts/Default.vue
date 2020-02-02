@@ -26,7 +26,12 @@ import AppFooter from '../components/AppFooter'
 
 export default {
   name: 'DefaultLayout',
-  components: { AppHelloBar, AppHeader, AppInfo, AppFooter, CookieConsent },
+  components: { AppHelloBar,
+    AppHeader,
+    AppInfo,
+    AppFooter,
+    CookieConsent,
+  },
   data: () => ({
     menuOpen: false,
     rewardsOpen: false,

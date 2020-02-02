@@ -1,4 +1,9 @@
+import 'core-js/stable' // to polyfill ECMAScript features
+import 'regenerator-runtime/runtime' // needed to use transpiled generator functions
+
 import Vue from 'vue'
+import VueCompositionApi from '@vue/composition-api'
+
 import i18n from './i18n'
 import App from './App.vue'
 import Default from './layouts/Default.vue'
@@ -11,16 +16,28 @@ import './assets/css/main.css'
 import './assets/sass/bulma.sass'
 
 import './plugins'
+
+// Globally register all `_base`-prefixed components
+// import '@/components/_globals'
+
 import './registerServiceWorker'
 
 // PROJECT: COMMONS
 import development from '@/config/development.json'
 import production from '@/config/production.json'
 
+Vue.use(VueCompositionApi)
 Vue.component('DefaultLayout', Default)
 Vue.component('FullScreenLayout', FullScreen)
 
-Vue.config.productionTip = false
+// Don't warn about using the dev version of Vue in development.
+Vue.config.productionTip = process.env.NODE_ENV === 'production'
+
+// If running inside Cypress...
+if (process.env.VUE_APP_TEST === 'e2e') {
+  // Ensure tests fail when Vue emits an error.
+  Vue.config.errorHandler = window.Cypress.cy.onUncaughtException
+}
 
 // if (process.env.NODE_ENV === 'development') {
 //   makeServer()
@@ -70,3 +87,11 @@ new Vue({
   i18n,
   render: h => h(App),
 }).$mount('#app')
+
+// If running e2e tests...
+if (process.env.VUE_APP_TEST === 'e2e') {
+  // Attach the app to the window, which can be useful
+  // for manually setting state in Cypress commands
+  // such as `cy.logIn()`.
+  window.__app__ = App
+}

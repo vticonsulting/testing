@@ -44,7 +44,7 @@
 <script>
 export default {
   name: 'Team',
-  metaInfo: {
+  page: {
     title: 'Team',
     meta: [
       { charset: 'utf-8' },

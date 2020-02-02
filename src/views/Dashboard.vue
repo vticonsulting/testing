@@ -1,8 +1,12 @@
 <template>
   <article id="dashboard" class="mx-auto w-full" style="backdrop-filter: blur(20px)">
-
     <details class="mx-auto w-full max-w-2xl mb-6">
       <summary class="bg-gray-200 p-3 cursor-pointer shadow rounded-md focus:outline-none focus:shadow-outline">
+        <Week />
+        {{ week }}
+        <Week
+          :iso-date="new Date('2020-02-03')"
+        />
         What is semantic HTML?
       </summary>
       <div class="content p-6">
@@ -52,6 +56,8 @@
 </template>
 
 <script>
+import getWeek from 'date-fns/getWeek'
+
 export default {
   name: 'Dashboard',
   data: () => ({
@@ -60,6 +66,7 @@ export default {
   }),
   created () {
     this.$store.dispatch('getUser')
+    this.$buefy.toast.open('created')
   },
   watch: {
     rewardsOpen: {
@@ -79,12 +86,20 @@ export default {
       },
     },
   },
+  computed: {
+    week () {
+      return getWeek(new Date('2020-02-03'), {
+        weekStartsOn: 1,
+        firstWeekContainsDate: 4,
+      })
+    },
+  },
   methods: {
     showRewards (payload) {
       this.rewardsOpen = payload
     },
   },
-  metaInfo: {
+  page: {
     // title will be injected into parent titleTemplate
     title: 'Dashboard',
     meta: [

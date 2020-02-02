@@ -1,10 +1,26 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
+import user from './modules/user'
+import auth from './modules/auth'
+// import dispatchActionForAllModules from '@/utils/dispatchActionForAllModules'
+
+// import modules from './modules'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+// const debug = process.env.NODE_ENV !== 'production'
+
+const store = new Vuex.Store({
+  modules: {
+    user,
+    auth,
+  },
+  // strict: debug,
+  // Enable strict mode in development to get a warning
+  // when mutating state outside of a mutation.
+  // https://vuex.vuejs.org/guide/strict.html
+  strict: process.env.NODE_ENV !== 'production',
   state: {
     loading: false,
     showRewards: false,
@@ -12,7 +28,6 @@ export default new Vuex.Store({
       unitType: null,
       unitModifier: 'per',
     },
-    user: {},
   },
   getters: {
     user (state) {
@@ -114,5 +129,10 @@ export default new Vuex.Store({
       commit('SET_USER', user)
     },
   },
-  modules: {},
 })
+
+export default store
+
+// Automatically run the `init` action for every module,
+// if one exists.
+// dispatchActionForAllModules('init')

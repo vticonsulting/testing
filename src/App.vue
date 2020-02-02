@@ -1,7 +1,12 @@
 <template>
   <div id="app" class="h-screen w-full transition-all duration-300">
+    <!-- <Navigation /> -->
     <Component :is="layout">
-      <RouterView />
+      <!--
+      Even when routes use the same component, treat them
+      as distinct and create the component again.
+      -->
+      <RouterView :key="$route.fullPath" />
     </Component>
   </div>
 </template>
@@ -9,6 +14,8 @@
 <script>
 // import unsplash from '@/services/unsplash'
 import locale from 'date-fns/locale/sk'
+// import Navigation from '@/components/Navigation'
+import appConfig from '@/app.config'
 
 import CrudComponent from './components/Crud.vue'
 
@@ -36,6 +43,7 @@ export default {
   // },
   components: {
     CrudComponent,
+    // Navigation,
   },
   data: () => ({
     cruds: [],
@@ -59,6 +67,7 @@ export default {
     async read () {
       this.mute = true
       const { data } = await window.axios.get('/api/cruds')
+      // const { data } = await window.axios.get('https://api.coindesk.com/v1/bpi/currentprice.json')
       data.forEach(crud => this.cruds.push(new Crud(crud)))
       this.mute = false
     },
@@ -78,10 +87,15 @@ export default {
     // this.read()
     // await console.log(unsplash('cats'))
   },
-  metaInfo: {
+  page: {
     title: 'Demo App',
-    titleTemplate: (titleChunk) => {
-      return titleChunk ? `${titleChunk} - Demo App ` : 'Demo App'
+    // titleTemplate: (titleChunk) => {
+    //   return titleChunk ? `${titleChunk} - Demo App ` : 'Demo App'
+    // },
+    // All subcomponent titles will be injected into this template.
+    titleTemplate (title) {
+      title = typeof title === 'function' ? title(this.$store) : title
+      return title ? `${title} | ${appConfig.title}` : appConfig.title
     },
     htmlAttrs: {
       lang: 'en',

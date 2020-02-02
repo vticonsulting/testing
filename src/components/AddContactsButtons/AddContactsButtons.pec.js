@@ -5,7 +5,8 @@ describe('AddContactsButtons.vue', () => {
   it('should render correct contents', () => {
     const Constructor = Vue.extend(AddContactsButtons)
     const vm = new Constructor().$mount()
-    expect(vm.el.querySelector('.hello h1').textContent)
+    console.log(vm.$el)
+    expect(vm.$el.querySelector('[data-testid]').textContent)
       .to.equal('Welcome to Your Vue.js App')
   })
 })

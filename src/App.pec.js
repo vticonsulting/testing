@@ -1,3 +1,5 @@
+/* eslint no-use-before-define: 0 */ // --> OFF
+
 // src/App.spec.js
 import { mount } from '@vue/test-utils'
 import { Response } from 'miragejs'

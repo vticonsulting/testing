@@ -1,5 +1,20 @@
 <template>
   <article class="flex flex-col items-center justify-center w-full mx-auto max-w-lg">
+    <img class="max-w-full h-8 mx-auto" src="https://cominex.net/assets/images/booster_ui.png">
+    <loading v-if="loading" />
+    <!-- <div class="w-full" v-if="isAuthenticated">
+      <FeedItem
+        v-for="(feed, index) in fakeFeed"
+        :key="index"
+        :feed="feed"
+      />
+    </div> -->
+    <div
+      class="w-full"
+      v-if="!isAuthenticated && authStatus !== 'loading'"
+    >
+      <Login />
+    </div>
     <div class="hidden fade-vertical w-128 pt-6 pb-16 sm:bg-transparent text-white sm:text-black text-center shadow-lg rounded-xl">
       <!-- <h1 class="mb-2 text-4xl font-semibold leading-none">
         Welcome!
@@ -48,11 +63,21 @@
 </template>
 
 <script>
+import fakeFeed from '@/utils/fakeFeed'
+import FeedItem from '@/components/FeedItem'
+
+import { mapGetters } from 'vuex'
+import Login from './Login'
+
 import { debounce } from 'lodash'
 import Unsplash from 'unsplash-js'
 const unsplash = new Unsplash({ accessKey: '00ad9b56c5998633216cab9393e30c6b97a6e3ba4bff0061c11b243c0144993f' })
 
 export default {
+  components: {
+    Login,
+    FeedItem,
+  },
   data: function () {
     return {
       // options: {},
@@ -67,7 +92,14 @@ export default {
       serverError: null,
       showSnow: true,
       results: [],
+      fakeFeed,
     }
+  },
+  computed: {
+    ...mapGetters(['isAuthenticated', 'authStatus']),
+    loading: function () {
+      return this.authStatus === 'loading' && !this.isAuthenticated
+    },
   },
   methods: {
     onSearch (search, loading) {
@@ -83,7 +115,7 @@ export default {
       })
     }, 350),
   },
-  metaInfo: {
+  page: {
     // title: 'My Awesome Webapp',
     // override the parent template and just use the above title only
     titleTemplate: null,
